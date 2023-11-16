@@ -4,7 +4,11 @@ extends CanvasLayer
 
 
 func _on_settings_button_toggled(button_pressed):
-	SettingsMenu.popup_centered()
+	if SettingsMenu.is_visible():
+		SettingsMenu.set_visible(false)
+	else:
+		SettingsMenu.set_visible(true)
+		SettingsMenu.popup_centered()
 	
 
 
