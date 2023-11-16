@@ -5,6 +5,7 @@ extends CanvasLayer
 
 func _on_settings_button_toggled(button_pressed):
 	SettingsMenu.popup_centered()
+	
 
 
 func _on_quit_button_toggled(button_pressed):

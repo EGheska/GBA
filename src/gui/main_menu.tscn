@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bfskk4kagkjnd"]
+[gd_scene load_steps=15 format=3 uid="uid://bfskk4kagkjnd"]
 
 [ext_resource type="Script" path="res://src/gui/main_menu.gd" id="1_4djdb"]
 [ext_resource type="PackedScene" uid="uid://dq8wkquhigvch" path="res://src/gui/settings_menu.tscn" id="1_cmkqd"]
 [ext_resource type="Texture2D" uid="uid://dot7h15ilfddc" path="res://assets/background.jpg" id="2_ygwdg"]
+[ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="3_d6gmq"]
+[ext_resource type="Texture2D" uid="uid://nf0f8rk1tlmx" path="res://assets/werkbedrijf-lucrato.png" id="4_ysusw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihmy4"]
 content_margin_left = 10.0
@@ -15,6 +17,7 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqdlt"]
 content_margin_left = 10.0
+content_margin_right = 10.0
 bg_color = Color(0.00392157, 0.627451, 0.776471, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
@@ -122,6 +125,7 @@ theme_override_constants/separation = 15
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_d6gmq")
 theme_override_font_sizes/font_size = 62
 text = "Game Title"
 
@@ -133,6 +137,7 @@ theme_override_constants/margin_top = 80
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_d6gmq")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_ihmy4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_qqdlt")
@@ -144,6 +149,7 @@ text = "Start Game"
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_d6gmq")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_kt67b")
 theme_override_styles/hover = SubResource("StyleBoxFlat_61o7t")
@@ -155,6 +161,7 @@ text = "Settings"
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("3_d6gmq")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_57u3u")
 theme_override_styles/hover = SubResource("StyleBoxFlat_te34a")
@@ -164,6 +171,11 @@ text = "Quit"
 
 [node name="SettingsMenu" parent="." instance=ExtResource("1_cmkqd")]
 visible = false
+
+[node name="Werkbedrijf-lucrato" type="Sprite2D" parent="."]
+position = Vector2(1072, 88)
+scale = Vector2(0.492593, 0.492593)
+texture = ExtResource("4_ysusw")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="toggled" from="Menu/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_toggled"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dq8wkquhigvch"]
+[gd_scene load_steps=9 format=3 uid="uid://dq8wkquhigvch"]
 
 [ext_resource type="Script" path="res://src/gui/settings_menu.gd" id="1_q8eo4"]
+[ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="2_ewsvq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2byqy"]
 content_margin_left = 10.0
@@ -23,6 +24,32 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpqtk"]
 bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dt6i7"]
+bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_36vdy"]
+bg_color = Color(0.00392157, 0.627451, 0.776471, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_utq3f"]
+bg_color = Color(0.733333, 0.870588, 0.901961, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 20
 
 [node name="SettingsMenu" type="Popup"]
 position = Vector2i(214, 33)
@@ -49,6 +76,7 @@ grow_vertical = 2
 
 [node name="General" type="TabBar" parent="SettingsTab"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ewsvq")
 
 [node name="MarginContainer" type="MarginContainer" parent="SettingsTab/General"]
 layout_mode = 1
@@ -68,11 +96,13 @@ columns = 2
 
 [node name="DisplayModeLabel" type="Label" parent="SettingsTab/General/MarginContainer/GeneralSettings"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ewsvq")
 text = "Display mode"
 
 [node name="DisplayModeButton" type="OptionButton" parent="SettingsTab/General/MarginContainer/GeneralSettings"]
 layout_mode = 2
 size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("2_ewsvq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2byqy")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5sht0")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vpqtk")
@@ -85,18 +115,23 @@ popup/item_1/id = 1
 
 [node name="SoundLabel" type="Label" parent="SettingsTab/General/MarginContainer/GeneralSettings"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ewsvq")
 text = "Sound"
 
-[node name="CheckButton" type="CheckButton" parent="SettingsTab/General/MarginContainer/GeneralSettings"]
+[node name="SoundButton" type="CheckButton" parent="SettingsTab/General/MarginContainer/GeneralSettings"]
 layout_mode = 2
 size_flags_horizontal = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_dt6i7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_36vdy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_utq3f")
 button_pressed = true
 
-[node name="Gameplay" type="TabBar" parent="SettingsTab"]
+[node name="Advanced" type="TabBar" parent="SettingsTab"]
 visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ewsvq")
 
-[node name="MarginContainer" type="MarginContainer" parent="SettingsTab/Gameplay"]
+[node name="MarginContainer" type="MarginContainer" parent="SettingsTab/Advanced"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -108,32 +143,34 @@ theme_override_constants/margin_top = 25
 theme_override_constants/margin_right = 25
 theme_override_constants/margin_bottom = 25
 
-[node name="GameplaySettings" type="GridContainer" parent="SettingsTab/Gameplay/MarginContainer"]
+[node name="AdvanvedSettings" type="GridContainer" parent="SettingsTab/Advanced/MarginContainer"]
 layout_mode = 2
 columns = 2
 
-[node name="DifficultyLabel" type="Label" parent="SettingsTab/Gameplay/MarginContainer/GameplaySettings"]
+[node name="ColorBlindnessLabel" type="Label" parent="SettingsTab/Advanced/MarginContainer/AdvanvedSettings"]
 layout_mode = 2
-text = "Difficulty
+theme_override_fonts/font = ExtResource("2_ewsvq")
+text = "Color blindness
 "
 
-[node name="DifficultyModeButton" type="OptionButton" parent="SettingsTab/Gameplay/MarginContainer/GameplaySettings"]
+[node name="ColorBlindnessButton" type="CheckButton" parent="SettingsTab/Advanced/MarginContainer/AdvanvedSettings"]
 layout_mode = 2
-size_flags_horizontal = 10
-item_count = 3
-selected = 1
-popup/item_0/text = "Easy"
-popup/item_0/id = 0
-popup/item_1/text = "Medium"
-popup/item_1/id = 1
-popup/item_2/text = "Hard"
-popup/item_2/id = 2
 
-[node name="HelpLable" type="Label" parent="SettingsTab/Gameplay/MarginContainer/GameplaySettings"]
+[node name="DyslexiaLabel" type="Label" parent="SettingsTab/Advanced/MarginContainer/AdvanvedSettings"]
 layout_mode = 2
-text = "Help"
+theme_override_fonts/font = ExtResource("2_ewsvq")
+text = "Increased text size
+"
 
-[node name="HelpCheckButton" type="CheckButton" parent="SettingsTab/Gameplay/MarginContainer/GameplaySettings"]
+[node name="DyslexiaButton" type="CheckButton" parent="SettingsTab/Advanced/MarginContainer/AdvanvedSettings"]
+layout_mode = 2
+
+[node name="LanguageLabel" type="Label" parent="SettingsTab/Advanced/MarginContainer/AdvanvedSettings"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ewsvq")
+text = "Change language"
+
+[node name="LanguageButton" type="CheckButton" parent="SettingsTab/Advanced/MarginContainer/AdvanvedSettings"]
 layout_mode = 2
 size_flags_horizontal = 10
 
@@ -184,7 +221,6 @@ layout_mode = 2
 text = "Skills menu"
 
 [connection signal="item_selected" from="SettingsTab/General/MarginContainer/GeneralSettings/DisplayModeButton" to="." method="_on_display_mode_button_item_selected"]
-[connection signal="toggled" from="SettingsTab/General/MarginContainer/GeneralSettings/CheckButton" to="." method="_on_check_button_toggled"]
-[connection signal="item_selected" from="SettingsTab/Gameplay/MarginContainer/GameplaySettings/DifficultyModeButton" to="." method="_on_difficulty_mode_button_item_selected"]
-[connection signal="toggled" from="SettingsTab/Gameplay/MarginContainer/GameplaySettings/HelpCheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="toggled" from="SettingsTab/General/MarginContainer/GeneralSettings/SoundButton" to="." method="_on_sound_button_toggled"]
+[connection signal="toggled" from="SettingsTab/Advanced/MarginContainer/AdvanvedSettings/LanguageButton" to="." method="_on_check_button_toggled"]
 [connection signal="toggled" from="SettingsTab/Account/MarginContainer/GeneralSettings/SkillsmenuButton" to="." method="_on_skillsmenu_button_toggled"]
