@@ -1,0 +1,164 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq8wkquhigvch"]
+
+[ext_resource type="Script" path="res://src/gui/settings_menu.gd" id="1_q8eo4"]
+
+[node name="SettingsMenu" type="Popup"]
+initial_position = 2
+size = Vector2i(920, 590)
+visible = true
+min_size = Vector2i(920, 590)
+script = ExtResource("1_q8eo4")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SettingsTab" type="TabContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="General" type="TabBar" parent="SettingsTab"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsTab/General"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="GeneralSettings" type="GridContainer" parent="SettingsTab/General/MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="DisplayModeLabel" type="Label" parent="SettingsTab/General/MarginContainer/GeneralSettings"]
+layout_mode = 2
+text = "Display mode"
+
+[node name="DisplayModeButton" type="OptionButton" parent="SettingsTab/General/MarginContainer/GeneralSettings"]
+layout_mode = 2
+size_flags_horizontal = 10
+item_count = 2
+selected = 1
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+
+[node name="SoundLabel" type="Label" parent="SettingsTab/General/MarginContainer/GeneralSettings"]
+layout_mode = 2
+text = "Sound"
+
+[node name="CheckButton" type="CheckButton" parent="SettingsTab/General/MarginContainer/GeneralSettings"]
+layout_mode = 2
+size_flags_horizontal = 10
+button_pressed = true
+
+[node name="Gameplay" type="TabBar" parent="SettingsTab"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsTab/Gameplay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="GameplaySettings" type="GridContainer" parent="SettingsTab/Gameplay/MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="DifficultyLabel" type="Label" parent="SettingsTab/Gameplay/MarginContainer/GameplaySettings"]
+layout_mode = 2
+text = "Difficulty
+"
+
+[node name="DifficultyModeButton" type="OptionButton" parent="SettingsTab/Gameplay/MarginContainer/GameplaySettings"]
+layout_mode = 2
+size_flags_horizontal = 10
+item_count = 3
+selected = 1
+popup/item_0/text = "Easy"
+popup/item_0/id = 0
+popup/item_1/text = "Medium"
+popup/item_1/id = 1
+popup/item_2/text = "Hard"
+popup/item_2/id = 2
+
+[node name="HelpLable" type="Label" parent="SettingsTab/Gameplay/MarginContainer/GameplaySettings"]
+layout_mode = 2
+text = "Help"
+
+[node name="HelpCheckButton" type="CheckButton" parent="SettingsTab/Gameplay/MarginContainer/GameplaySettings"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="Account" type="TabBar" parent="SettingsTab"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsTab/Account"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="GeneralSettings" type="GridContainer" parent="SettingsTab/Account/MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="NameLabel" type="Label" parent="SettingsTab/Account/MarginContainer/GeneralSettings"]
+layout_mode = 2
+text = "Name"
+
+[node name="ActualNameLabel" type="Label" parent="SettingsTab/Account/MarginContainer/GeneralSettings"]
+layout_mode = 2
+
+[node name="LastnameLabel" type="Label" parent="SettingsTab/Account/MarginContainer/GeneralSettings"]
+layout_mode = 2
+text = "Last name
+"
+
+[node name="ActualLastNameLabel" type="Label" parent="SettingsTab/Account/MarginContainer/GeneralSettings"]
+layout_mode = 2
+
+[node name="HighscoreLabel" type="Label" parent="SettingsTab/Account/MarginContainer/GeneralSettings"]
+layout_mode = 2
+text = "High score"
+
+[node name="ActualHighScoreLabel" type="Label" parent="SettingsTab/Account/MarginContainer/GeneralSettings"]
+layout_mode = 2
+
+[node name="SkillsmenuButton" type="Button" parent="SettingsTab/Account/MarginContainer/GeneralSettings"]
+layout_mode = 2
+text = "Skills menu"
+
+[connection signal="item_selected" from="SettingsTab/General/MarginContainer/GeneralSettings/DisplayModeButton" to="." method="_on_display_mode_button_item_selected"]
+[connection signal="toggled" from="SettingsTab/General/MarginContainer/GeneralSettings/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="item_selected" from="SettingsTab/Gameplay/MarginContainer/GameplaySettings/DifficultyModeButton" to="." method="_on_difficulty_mode_button_item_selected"]
+[connection signal="toggled" from="SettingsTab/Gameplay/MarginContainer/GameplaySettings/HelpCheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="toggled" from="SettingsTab/Account/MarginContainer/GeneralSettings/SkillsmenuButton" to="." method="_on_skillsmenu_button_toggled"]
