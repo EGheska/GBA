@@ -26,9 +26,9 @@ bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
 
 [node name="SettingsMenu" type="Popup"]
 position = Vector2i(214, 33)
-size = Vector2i(920, 590)
+size = Vector2i(620, 400)
 visible = true
-min_size = Vector2i(920, 590)
+min_size = Vector2i(620, 400)
 script = ExtResource("1_q8eo4")
 
 [node name="Background" type="ColorRect" parent="."]
@@ -90,9 +90,6 @@ text = "Sound"
 [node name="CheckButton" type="CheckButton" parent="SettingsTab/General/MarginContainer/GeneralSettings"]
 layout_mode = 2
 size_flags_horizontal = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_2byqy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5sht0")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_vpqtk")
 button_pressed = true
 
 [node name="Gameplay" type="TabBar" parent="SettingsTab"]

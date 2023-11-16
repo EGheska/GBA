@@ -165,5 +165,6 @@ text = "Quit"
 [node name="SettingsMenu" parent="." instance=ExtResource("1_cmkqd")]
 visible = false
 
+[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="toggled" from="Menu/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_toggled"]
 [connection signal="toggled" from="Menu/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_toggled"]

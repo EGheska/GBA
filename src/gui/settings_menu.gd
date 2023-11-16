@@ -10,18 +10,19 @@ extends Popup
 @onready var help_button = $SettingsTab/Gameplay/MarginContainer/GameplaySettings/HelpCheckButton
 # Account Settings
 @onready var skills_menu = $SettingsTab/Account/MarginContainer/GeneralSettings/SkillsmenuButton
-
-
+@onready var PopUp = $"."
 
 func _ready():
 	pass
-
+	
 
 func _on_display_mode_button_item_selected(index):
 	if index == 0:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		PopUp.popup_centered()	
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		PopUp.popup_centered()
 		
 
 
