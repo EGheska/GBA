@@ -1,9 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://dq8wkquhigvch"]
+[gd_scene load_steps=5 format=3 uid="uid://dq8wkquhigvch"]
 
 [ext_resource type="Script" path="res://src/gui/settings_menu.gd" id="1_q8eo4"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2byqy"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5sht0"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.00392157, 0.627451, 0.776471, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpqtk"]
+bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
+
 [node name="SettingsMenu" type="Popup"]
-initial_position = 2
+position = Vector2i(214, 33)
 size = Vector2i(920, 590)
 visible = true
 min_size = Vector2i(920, 590)
@@ -15,6 +37,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.733333, 0.870588, 0.901961, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="SettingsTab" type="TabContainer" parent="."]
@@ -50,6 +73,9 @@ text = "Display mode"
 [node name="DisplayModeButton" type="OptionButton" parent="SettingsTab/General/MarginContainer/GeneralSettings"]
 layout_mode = 2
 size_flags_horizontal = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_2byqy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5sht0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vpqtk")
 item_count = 2
 selected = 1
 popup/item_0/text = "Fullscreen"
@@ -64,6 +90,9 @@ text = "Sound"
 [node name="CheckButton" type="CheckButton" parent="SettingsTab/General/MarginContainer/GeneralSettings"]
 layout_mode = 2
 size_flags_horizontal = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_2byqy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5sht0")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vpqtk")
 button_pressed = true
 
 [node name="Gameplay" type="TabBar" parent="SettingsTab"]
