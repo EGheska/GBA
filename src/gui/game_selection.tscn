@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhj2658etlghd"]
+[gd_scene load_steps=7 format=3 uid="uid://dhj2658etlghd"]
 
 [ext_resource type="Texture2D" uid="uid://dot7h15ilfddc" path="res://assets/background.jpg" id="1_s65or"]
 [ext_resource type="Script" path="res://src/gui/game_selection.gd" id="1_sooat"]
 [ext_resource type="Texture2D" uid="uid://nf0f8rk1tlmx" path="res://assets/werkbedrijf-lucrato.png" id="2_hw71x"]
+[ext_resource type="PackedScene" uid="uid://dq8wkquhigvch" path="res://src/gui/settings_menu.tscn" id="4_h4g76"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7r1mc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7xtn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="GameSelect" type="CanvasLayer"]
 script = ExtResource("1_sooat")
@@ -61,9 +68,23 @@ text = "Game 3"
 layout_mode = 2
 text = "Game 4"
 
+[node name="SettingsButton" type="Button" parent="GameSelection/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="EmptyButton" type="Button" parent="GameSelection/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_styles/disabled = SubResource("StyleBoxFlat_7r1mc")
+disabled = true
+
 [node name="BackButton" type="Button" parent="GameSelection/MarginContainer/GridContainer"]
 layout_mode = 2
 theme_override_constants/h_separation = 0
+theme_override_styles/disabled = SubResource("StyleBoxFlat_q7xtn")
 text = "Back"
 
+[node name="SettingsMenu" parent="." instance=ExtResource("4_h4g76")]
+visible = false
+
+[connection signal="pressed" from="GameSelection/MarginContainer/GridContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="GameSelection/MarginContainer/GridContainer/BackButton" to="." method="_on_back_button_pressed"]
