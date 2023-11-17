@@ -15,4 +15,3 @@ func _on_settings_button_pressed():
 		SettingsMenu.popup_centered()
 	else:
 		SettingsMenu.set_visible(false)
-		

@@ -20,9 +20,11 @@ func _on_display_mode_button_item_selected(index):
 	if index == 0:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 		PopUp.popup_centered()
+		display_options.select(index)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		PopUp.popup_centered()
+		display_options.select(index)
 
 
 
