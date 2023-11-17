@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://bfskk4kagkjnd"]
+[gd_scene load_steps=16 format=3 uid="uid://bfskk4kagkjnd"]
 
 [ext_resource type="Script" path="res://src/gui/main_menu.gd" id="1_4djdb"]
 [ext_resource type="PackedScene" uid="uid://dq8wkquhigvch" path="res://src/gui/settings_menu.tscn" id="1_cmkqd"]
 [ext_resource type="Texture2D" uid="uid://dot7h15ilfddc" path="res://assets/background.jpg" id="2_ygwdg"]
 [ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="3_d6gmq"]
 [ext_resource type="Texture2D" uid="uid://nf0f8rk1tlmx" path="res://assets/werkbedrijf-lucrato.png" id="4_ysusw"]
+[ext_resource type="PackedScene" uid="uid://dhj2658etlghd" path="res://src/gui/game_selection.tscn" id="6_cro08"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihmy4"]
 content_margin_left = 10.0
@@ -177,6 +178,10 @@ position = Vector2(1072, 88)
 scale = Vector2(0.492593, 0.492593)
 texture = ExtResource("4_ysusw")
 
+[node name="GameSelection" parent="." instance=ExtResource("6_cro08")]
+visible = false
+
 [connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="toggled" from="Menu/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_toggled"]
 [connection signal="toggled" from="Menu/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_toggled"]
