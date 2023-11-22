@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalSettings="*res://src/global_settings.gd"
+MainMenu="*res://src/gui/main_menu.tscn"
 
 [rendering]
 

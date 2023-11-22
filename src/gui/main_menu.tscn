@@ -110,7 +110,7 @@ texture = ExtResource("2_ygwdg")
 
 [node name="MarginContainer" type="MarginContainer" parent="Menu"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -183,7 +183,6 @@ texture = ExtResource("4_ysusw")
 visible = false
 
 [connection signal="ready" from="." to="." method="_on_ready"]
-[connection signal="resized" from="Menu" to="." method="_on_menu_resized"]
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="toggled" from="Menu/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_toggled"]
-[connection signal="toggled" from="Menu/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_toggled"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
