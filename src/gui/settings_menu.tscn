@@ -3,6 +3,8 @@
 [ext_resource type="Script" path="res://src/gui/settings_menu.gd" id="1_q8eo4"]
 [ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="2_ewsvq"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v7k8d"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2byqy"]
 content_margin_left = 10.0
 content_margin_right = 10.0
@@ -22,9 +24,6 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpqtk"]
-bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dt6i7"]
 bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
 border_color = Color(0.8, 0.8, 0.8, 0)
@@ -43,13 +42,7 @@ corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 corner_detail = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_utq3f"]
-bg_color = Color(0.733333, 0.870588, 0.901961, 1)
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
-corner_detail = 20
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x3tnx"]
 
 [node name="SettingsMenu" type="Popup"]
 position = Vector2i(214, 33)
@@ -103,9 +96,11 @@ text = "Display mode"
 layout_mode = 2
 size_flags_horizontal = 10
 theme_override_fonts/font = ExtResource("2_ewsvq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v7k8d")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2byqy")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5sht0")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_vpqtk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2byqy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_2byqy")
 item_count = 2
 selected = 1
 popup/item_0/text = "Fullscreen"
@@ -123,7 +118,8 @@ layout_mode = 2
 size_flags_horizontal = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_dt6i7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_36vdy")
-theme_override_styles/hover = SubResource("StyleBoxFlat_utq3f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_36vdy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x3tnx")
 button_pressed = true
 
 [node name="Advanced" type="TabBar" parent="SettingsTab"]
