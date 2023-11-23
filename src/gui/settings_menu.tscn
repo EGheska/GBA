@@ -93,6 +93,7 @@ theme_override_fonts/font = ExtResource("2_ewsvq")
 text = "Display mode"
 
 [node name="DisplayModeButton" type="OptionButton" parent="SettingsTab/General/MarginContainer/GeneralSettings"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 10
 theme_override_fonts/font = ExtResource("2_ewsvq")

@@ -31,6 +31,7 @@ func _on_settings_button_pressed():
 		SettingsMenu.set_visible(true)
 		SettingButton.set_pressed_no_signal(false)
 		SettingsMenu.popup_centered()
+		
 
 
 func _on_quit_button_pressed():

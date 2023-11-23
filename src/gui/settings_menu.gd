@@ -12,22 +12,21 @@ extends Popup
 # Account Settings
 @onready var skills_menu = $SettingsTab/Account/MarginContainer/GeneralSettings/SkillsmenuButton
 @onready var PopUp = $"."
+@onready var DisplayOpts = %DisplayModeButton
 
-
-
+var user_prefs : UserPreferences
+var idx
 
 func _ready():
 	pass
-	
 
-func _on_display_mode_button_item_selected(index):	
-	if index == 0:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-		PopUp.popup_centered()
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-		PopUp.popup_centered()
-		display_options.select(index)
+func _on_display_mode_button_item_selected(index):
+	GlobalSettings.toggle_fullscreen(index)
+	idx = index
+	DisplayOpts.select(idx)
+	DisplayOpts.select(index)
+	PopUp.popup_centered()
+	
 
 
 
