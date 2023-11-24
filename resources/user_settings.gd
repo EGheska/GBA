@@ -1,6 +1,5 @@
 class_name UserPreferences extends Resource
 
-@export var displayOptions : GlobalSettings = GlobalSettings._getValue()
 
 func save() -> void:
 	ResourceSaver.save(self, "user://userset.tres")

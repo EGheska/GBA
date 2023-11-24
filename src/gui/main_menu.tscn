@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dot7h15ilfddc" path="res://assets/background.jpg" id="2_ygwdg"]
 [ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="3_d6gmq"]
 [ext_resource type="Texture2D" uid="uid://nf0f8rk1tlmx" path="res://assets/werkbedrijf-lucrato.png" id="4_ysusw"]
-[ext_resource type="PackedScene" uid="uid://bjo6acqq3p6v6" path="res://src/gui/game_selection.tscn" id="6_cro08"]
+[ext_resource type="PackedScene" uid="uid://dhj2658etlghd" path="res://src/gui/game_selection.tscn" id="6_cro08"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihmy4"]
 content_margin_left = 10.0

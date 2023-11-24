@@ -6,6 +6,8 @@ extends CanvasLayer
 @onready var BackButton = $GameSelection/MarginContainer/VBoxContainer/BackButton
 @onready var SettingButton = $GameSelection/MarginContainer/VBoxContainer/SettingsButton
 
+func _ready():
+	pass
 
 func _on_back_button_pressed():
 	if ThisTile.is_visible():

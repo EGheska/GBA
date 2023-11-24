@@ -3,13 +3,9 @@ extends CanvasLayer
 @onready var SettingsMenu = $SettingsMenu
 @onready var GameSelection = $GameSelection
 
-@onready var MarginContainers = $Menu/MarginContainer/VBoxContainer/MarginBetween2
-
 @onready var StartButton = $Menu/MarginContainer/VBoxContainer/StartButton
 @onready var SettingButton = $Menu/MarginContainer/VBoxContainer/SettingsButton
 @onready var QuitButton = $Menu/MarginContainer/VBoxContainer/QuitButton
-
-
 
 
 func _ready():
@@ -31,7 +27,6 @@ func _on_settings_button_pressed():
 		SettingsMenu.set_visible(true)
 		SettingButton.set_pressed_no_signal(false)
 		SettingsMenu.popup_centered()
-		
 
 
 func _on_quit_button_pressed():
