@@ -60,3 +60,7 @@ func _on_sound_button_toggled(button_pressed):
 	else:
 		AudioServer.set_bus_volume_db(0, 0)
 		print("Volume set to 100")
+
+
+func _on_dyslexia_button_toggled(button_pressed):
+	pass # Replace with function body.
