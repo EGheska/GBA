@@ -13,28 +13,41 @@ extends Popup
 
 @onready var config = ConfigFile.new()
 
+@onready var buttonState = false
+
 
 func _ready():
 	costyl()
+	Dyslexia.set_pressed(buttonState)
 
 
 func _on_visibility_changed():
 	costyl()
+	Dyslexia.set_pressed(buttonState)
+	
 
 
 func costyl():
-	print("Costyl")
 	if config.load("res://settings.cfg") != OK:
 		print("Failed to read")
 		config.set_value("display", "mode", "window")
+		print("display mode setted")
+		config.set_value("color", "mode", "normal")
+		print(config.get_value("color", "mode"))
 
-	# print(config.get_value("display", "mode"))
 	if config.get_value("display", "mode") == "window":
 		display_options.select(1)
+		#print("display mode window")
 	else:
 		display_options.select(0)
-	# print(display_options.selected)
+		print("display mode full")
+			
+	if config.get_value("color", "mode") == "blind":
+		buttonState = true
+	elif config.get_value("color", "mode") == "normal":
+		pass
 	config.save("res://settings.cfg")
+	
 
 
 func _on_display_mode_button_item_selected(index):
@@ -48,8 +61,8 @@ func _on_display_mode_button_item_selected(index):
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		PopUp.popup_centered()
 		config.set_value("display", "mode", "window")
-	print(config.get_value("display", "mode"))
-	print(display_options.selected)
+	#print(config.get_value("display", "mode"))
+	#print(display_options.selected)
 	config.save("res://settings.cfg")
 
 
@@ -63,4 +76,12 @@ func _on_sound_button_toggled(button_pressed):
 
 
 func _on_dyslexia_button_toggled(button_pressed):
-	pass # Replace with function body.
+	config.load("res://settings.cfg")
+	if button_pressed:
+		config.set_value("color", "mode", "blind")
+		print("color mode blind")
+		print(config.get_value("color", "mode"))
+	elif !button_pressed:
+		config.set_value("color", "mode", "normal")	
+		print(config.get_value("color", "mode"))
+	config.save("res://settings.cfg")

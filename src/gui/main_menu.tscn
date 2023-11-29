@@ -175,6 +175,14 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_nqghy")
 toggle_mode = true
 text = "Start Game"
 
+[node name="MarginBetween" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer/StartButton"]
+layout_mode = 0
+theme_override_constants/margin_top = 80
+
+[node name="MarginBetween" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer/StartButton/MarginBetween"]
+layout_mode = 2
+theme_override_constants/margin_top = 80
+
 [node name="SettingsButton" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
