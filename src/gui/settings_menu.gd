@@ -6,25 +6,19 @@ extends Popup
 # Advanced Settings
 @onready var Dyslexia = $SettingsTab/Advanced/MarginContainer/AdvanvedSettings/DyslexiaButton
 
-
 # Account Settings
 @onready var skills_menu = $SettingsTab/Account/MarginContainer/GeneralSettings/SkillsmenuButton
 @onready var PopUp = $"."
 
 @onready var config = ConfigFile.new()
 
-@onready var buttonState = false
-
 
 func _ready():
 	costyl()
-	Dyslexia.set_pressed(buttonState)
 
 
 func _on_visibility_changed():
 	costyl()
-	Dyslexia.set_pressed(buttonState)
-	
 
 
 func costyl():
@@ -37,15 +31,15 @@ func costyl():
 
 	if config.get_value("display", "mode") == "window":
 		display_options.select(1)
-		#print("display mode window")
+		print("display mode window")
 	else:
 		display_options.select(0)
 		print("display mode full")
-			
+		
 	if config.get_value("color", "mode") == "blind":
-		buttonState = true
+		Dyslexia.set("button_pressed", true)
 	elif config.get_value("color", "mode") == "normal":
-		pass
+		Dyslexia.set("button_pressed", false)
 	config.save("res://settings.cfg")
 	
 
