@@ -23,3 +23,7 @@ func _on_settings_button_pressed():
 	else:
 		SettingsMenu.set_visible(false)
 		SettingButton.set_pressed_no_signal(false)
+
+
+func _on_game_button_pressed():
+	pass # Replace with function body.

@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://dhj2658etlghd"]
 
-[ext_resource type="Texture2D" uid="uid://dot7h15ilfddc" path="res://assets/background.jpg" id="1_s65or"]
 [ext_resource type="Script" path="res://src/gui/game_selection.gd" id="1_sooat"]
 [ext_resource type="Texture2D" uid="uid://nf0f8rk1tlmx" path="res://assets/werkbedrijf-lucrato.png" id="2_hw71x"]
+[ext_resource type="Texture2D" uid="uid://dot7h15ilfddc" path="res://background.jpg" id="2_kpje4"]
 [ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="4_5wvys"]
 [ext_resource type="PackedScene" uid="uid://dq8wkquhigvch" path="res://src/gui/settings_menu.tscn" id="4_h4g76"]
 
@@ -55,7 +55,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_s65or")
+texture = ExtResource("2_kpje4")
 
 [node name="GameSelection" type="Control" parent="."]
 layout_mode = 3
@@ -155,5 +155,6 @@ expand_mode = 1
 [node name="SettingsMenu" parent="." instance=ExtResource("4_h4g76")]
 visible = false
 
+[connection signal="pressed" from="GameSelection/MarginContainer/GridContainer/GameButton" to="." method="_on_game_button_pressed"]
 [connection signal="pressed" from="GameSelection/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="GameSelection/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

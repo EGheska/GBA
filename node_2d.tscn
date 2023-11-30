@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch1chaxtla77l"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_tfjxh"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_tfjxh")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 279.0
+offset_right = 592.0
+offset_bottom = 369.0
+
+[connection signal="pressed" from="CanvasLayer/Control/Button" to="." method="_on_button_pressed"]
