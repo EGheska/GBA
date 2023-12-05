@@ -26,4 +26,4 @@ func _on_settings_button_pressed():
 
 
 func _on_game_button_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://src/maze_game.tscn")

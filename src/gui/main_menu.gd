@@ -14,7 +14,7 @@ func _ready():
 
 func _on_start_button_pressed():
 	if !GameSelection.is_visible():
-		GameSelection.set_visible(true);
+		GameSelection.set_visible(true)
 		StartButton.set_pressed_no_signal(false)
 	
 

@@ -7095,8 +7095,6 @@ render_mode blend_mix;
 void fragment() {
 // Input:6
 	vec2 n_out6p0 = UV;
-	float n_out6p1 = n_out6p0.r;
-	float n_out6p2 = n_out6p0.g;
 
 
 	vec3 n_out3p0;
