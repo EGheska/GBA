@@ -1,8 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://bfskk4kagkjnd"]
+[gd_scene load_steps=19 format=3 uid="uid://bfskk4kagkjnd"]
 
 [ext_resource type="Script" path="res://src/gui/main_menu.gd" id="1_4djdb"]
 [ext_resource type="PackedScene" uid="uid://dq8wkquhigvch" path="res://src/gui/settings_menu.tscn" id="1_cmkqd"]
-[ext_resource type="Texture2D" uid="uid://dot7h15ilfddc" path="res://background.jpg" id="2_rol5y"]
+[ext_resource type="Texture2D" uid="uid://dot7h15ilfddc" path="res://assets/background.jpg" id="2_grd8o"]
 [ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="3_d6gmq"]
 [ext_resource type="Texture2D" uid="uid://nf0f8rk1tlmx" path="res://assets/werkbedrijf-lucrato.png" id="4_ysusw"]
 [ext_resource type="PackedScene" uid="uid://dhj2658etlghd" path="res://src/gui/game_selection.tscn" id="6_cro08"]
@@ -35,8 +35,6 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nqghy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kt67b"]
 content_margin_left = 10.0
@@ -114,7 +112,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_rol5y")
+texture = ExtResource("2_grd8o")
 
 [node name="Werkbedrijf-lucrato" type="Sprite2D" parent="Menu"]
 visible = false
@@ -174,7 +172,6 @@ theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_ihmy4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_qqdlt")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_uc8ij")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_nqghy")
 toggle_mode = true
 text = "Start Game"
 

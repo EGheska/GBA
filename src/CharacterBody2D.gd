@@ -1,8 +1,13 @@
-extends CharacterBody2D
+class_name Character extends CharacterBody2D
 
+var SPEED
+var can_move
 
-const SPEED = 300.0
+func _init():
+	SPEED = 300
 
+func _ready():
+	pass	
 
 func movement(delta):
 	if Input.is_key_pressed(KEY_D):
@@ -21,5 +26,12 @@ func get_input():
 
 func _physics_process(delta):
 	get_input()
-	movement(delta)
+	if can_move:
+		movement(delta)
 	move_and_collide(velocity * delta)
+
+func _get_speed():
+	return SPEED
+	
+func _set_speed(val):
+	SPEED = val
