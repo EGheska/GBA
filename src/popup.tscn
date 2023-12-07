@@ -1,74 +1,138 @@
-[gd_scene load_steps=3 format=3 uid="uid://du0fwtx53xudu"]
+[gd_scene load_steps=7 format=3 uid="uid://du0fwtx53xudu"]
 
-[ext_resource type="Texture2D" uid="uid://dot7h15ilfddc" path="res://assets/background.jpg" id="1_q0iyt"]
+[ext_resource type="Script" path="res://src/popup.gd" id="1_fa4yr"]
+[ext_resource type="Texture2D" uid="uid://dmk1201koe4nx" path="res://code1Maz`e.png" id="2_me7jh"]
+[ext_resource type="Texture2D" uid="uid://51mt5ow1ylin" path="res://codeCheetSheet.png" id="3_uf6i5"]
+[ext_resource type="Texture2D" uid="uid://d4ldeoqqei0eg" path="res://Robot (2) (2).svg" id="4_sp7gr"]
+[ext_resource type="Texture2D" uid="uid://6uvlavv3xr7r" path="res://question-mark-12-48.png" id="5_ax3iv"]
 
-[sub_resource type="GDScript" id="GDScript_6i8bx"]
-script/source = "extends Popup
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-func _on_button_pressed():
-	pass
-"
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihmy4"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Popup" type="Popup"]
-size = Vector2i(728, 455)
+process_mode = 3
+size = Vector2i(1153, 648)
 visible = true
-script = SubResource("GDScript_6i8bx")
+script = ExtResource("1_fa4yr")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_q0iyt")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -103.0
-offset_top = -19.0
-offset_right = 103.0
-offset_bottom = 19.0
+offset_left = -247.21
+offset_top = -50.0
+offset_right = 247.21
+offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 30
+texture = ExtResource("2_me7jh")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -212.958
+offset_top = -37.5
+offset_bottom = 37.5
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("3_uf6i5")
+expand_mode = 3
+
+[node name="LineEdit" type="LineEdit" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -248.0
+offset_right = 104.0
+offset_bottom = -217.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ihmy4")
+placeholder_text = "Write your answer here!"
 alignment = 1
+expand_to_text_length = true
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-layout_mode = 2
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.5
+offset_top = 100.0
+offset_right = 240.5
+offset_bottom = 127.0
+grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "HERE WILL BE A QUESTION"
+text = "Based on the code on the right suggest a answer for the maze!"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+position = Vector2(961, 133)
+texture = ExtResource("4_sp7gr")
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-text = "Answer "
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = 44.0
+offset_right = -62.0
+offset_bottom = 70.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Cheet Sheet"
 
-[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-text = "Answer 2"
+[node name="TextureButton" type="TextureButton" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -48.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("5_ax3iv")
 
-[node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-text = "Answer 3
-"
-
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="text_submitted" from="Control/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="Control/TextureButton" to="." method="_on_texture_button_pressed"]

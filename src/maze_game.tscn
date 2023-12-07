@@ -1,10 +1,8 @@
-[gd_scene load_steps=65 format=3 uid="uid://bisil64e8ifnv"]
+[gd_scene load_steps=62 format=3 uid="uid://bisil64e8ifnv"]
 
 [ext_resource type="Script" path="res://src/maze_game.gd" id="1_spyab"]
-[ext_resource type="Texture2D" uid="uid://dot7h15ilfddc" path="res://assets/background.jpg" id="2_n1r6i"]
 [ext_resource type="Texture2D" uid="uid://crh3b3s472q10" path="res://addons/WhatsApp Image 2023-12-06 at 12.18.46.jpeg" id="3_oprqe"]
 [ext_resource type="Script" path="res://src/CharacterBody2D.gd" id="4_hx27m"]
-[ext_resource type="Texture2D" uid="uid://dp3n2afvnkpsw" path="res://addons/bar.png" id="6_mmwg0"]
 [ext_resource type="PackedScene" uid="uid://du0fwtx53xudu" path="res://src/popup.tscn" id="7_05smw"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_kflki"]
@@ -215,9 +213,6 @@ b = Vector2(244.642, -298.413)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3sx4y"]
 size = Vector2(32.0001, 33)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8hco"]
-size = Vector2(143, 23)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wn2q7"]
 size = Vector2(8, 42)
 
@@ -231,6 +226,7 @@ size = Vector2(54, 4)
 size = Vector2(54, 4)
 
 [node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 1
 script = ExtResource("1_spyab")
 
 [node name="Control" type="Control" parent="."]
@@ -241,17 +237,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="." groups=["PlayGround"]]
+[node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_n1r6i")
 
 [node name="Maze" type="Sprite2D" parent="."]
-position = Vector2(579, 330)
-scale = Vector2(0.719419, 0.63)
+position = Vector2(577.733, 330)
+scale = Vector2(0.717834, 0.63)
 texture = ExtResource("3_oprqe")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Maze"]
@@ -435,19 +430,6 @@ offset_right = -27.0001
 offset_bottom = 286.0
 color = Color(0, 0, 0, 1)
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(984, 240)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(63, 64)
-shape = SubResource("RectangleShape2D_x8hco")
-
-[node name="TextureRect" type="TextureRect" parent="Area2D"]
-offset_left = 1.0
-offset_right = 129.0
-offset_bottom = 128.0
-texture = ExtResource("6_mmwg0")
-
 [node name="Popup" parent="." instance=ExtResource("7_05smw")]
 visible = false
 
@@ -458,13 +440,14 @@ position = Vector2(636, 325)
 shape = SubResource("RectangleShape2D_wn2q7")
 
 [node name="ColorRect" type="ColorRect" parent="Area2D2"]
-offset_left = -4.0
+offset_left = -6.0
 offset_top = -21.0
-offset_right = 4.0
+offset_right = 2.0
 offset_bottom = 22.0
 color = Color(1, 0, 0, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Area2D2"]
+position = Vector2(-1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2/StaticBody2D"]
 position = Vector2(-7, 1)
@@ -482,9 +465,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 289.0
+offset_left = 288.0
 offset_top = 413.0
-offset_right = 345.0
+offset_right = 343.0
 offset_bottom = 417.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -496,5 +479,6 @@ color = Color(1, 0, 0, 1)
 position = Vector2(316, 410)
 shape = SubResource("RectangleShape2D_kj66l")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="visibility_changed" from="Popup" to="." method="_on_popup_visibility_changed"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]
