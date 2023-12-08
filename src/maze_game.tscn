@@ -1,8 +1,9 @@
-[gd_scene load_steps=62 format=3 uid="uid://bisil64e8ifnv"]
+[gd_scene load_steps=73 format=3 uid="uid://bisil64e8ifnv"]
 
 [ext_resource type="Script" path="res://src/maze_game.gd" id="1_spyab"]
 [ext_resource type="Texture2D" uid="uid://crh3b3s472q10" path="res://addons/WhatsApp Image 2023-12-06 at 12.18.46.jpeg" id="3_oprqe"]
 [ext_resource type="Script" path="res://src/CharacterBody2D.gd" id="4_hx27m"]
+[ext_resource type="Texture2D" uid="uid://d4ldeoqqei0eg" path="res://Robot (2) (2).svg" id="5_miepr"]
 [ext_resource type="PackedScene" uid="uid://du0fwtx53xudu" path="res://src/popup.tscn" id="7_05smw"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_kflki"]
@@ -210,6 +211,14 @@ b = Vector2(323.873, -131.746)
 a = Vector2(322.483, -298.413)
 b = Vector2(244.642, -298.413)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_vxdlm"]
+a = Vector2(0, -24)
+b = Vector2(0, 8)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_etcrf"]
+a = Vector2(0, -24)
+b = Vector2(0, 8)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3sx4y"]
 size = Vector2(32.0001, 33)
 
@@ -224,6 +233,38 @@ size = Vector2(54, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kj66l"]
 size = Vector2(54, 4)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_kbm1a"]
+a = Vector2(0, -24)
+b = Vector2(0, 16)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6e5ef"]
+a = Vector2(8, -24)
+b = Vector2(8, 16)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5362g"]
+a = Vector2(0, -24)
+b = Vector2(0, 24)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qc11h"]
+a = Vector2(8, -24)
+b = Vector2(8, 24)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_gfove"]
+a = Vector2(32, 0)
+b = Vector2(-16, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6o8kf"]
+a = Vector2(-24, -8)
+b = Vector2(32, -8)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4yuut"]
+a = Vector2(-24, 0)
+b = Vector2(24, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y3x6r"]
+a = Vector2(-24, 0)
+b = Vector2(24, 0)
 
 [node name="CanvasLayer" type="CanvasLayer"]
 process_mode = 1
@@ -244,222 +285,261 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Maze" type="Sprite2D" parent="."]
-position = Vector2(577.733, 330)
+[node name="Control3" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.503
+anchor_top = 0.506
+anchor_right = 0.503
+anchor_bottom = 0.506
+offset_left = -291.456
+offset_top = -255.888
+offset_right = 292.544
+offset_bottom = 256.112
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Maze" type="Sprite2D" parent="Control3"]
+position = Vector2(289.733, 258)
 scale = Vector2(0.717834, 0.63)
 texture = ExtResource("3_oprqe")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Maze"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Control3/Maze"]
 position = Vector2(0.00012207, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_kflki")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_jumgl")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_papp4")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_6fg2j")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_rprit")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_oe58l")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_jjnmb")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 position = Vector2(4.17004, 0)
 shape = SubResource("SegmentShape2D_icvo6")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_3y6k8")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_xs0tr")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_fj12u")
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_j2aiu")
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_atilx")
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_xacxf")
 
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_yvvf5")
 
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_dvxbl")
 
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_nybkw")
 
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_5cq0y")
 
-[node name="CollisionShape2D19" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_nqch6")
 
-[node name="CollisionShape2D20" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_l7ynw")
 
-[node name="CollisionShape2D21" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_wkurs")
 
-[node name="CollisionShape2D22" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_c1l1x")
 
-[node name="CollisionShape2D23" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_gpntm")
 
-[node name="CollisionShape2D24" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_aio13")
 
-[node name="CollisionShape2D25" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_r13ld")
 
-[node name="CollisionShape2D26" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_k44aj")
 
-[node name="CollisionShape2D27" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_v5l36")
 
-[node name="CollisionShape2D28" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_w6sao")
 
-[node name="CollisionShape2D29" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_vtqdp")
 
-[node name="CollisionShape2D30" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_ybvdp")
 
-[node name="CollisionShape2D31" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 position = Vector2(-0.559875, 47.8571)
 shape = SubResource("RectangleShape2D_yxjhw")
 
-[node name="CollisionShape2D32" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 position = Vector2(-1.25494, -63.254)
 shape = SubResource("RectangleShape2D_1but0")
 
-[node name="CollisionShape2D33" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 position = Vector2(-81.8757, -8.96823)
 shape = SubResource("RectangleShape2D_sh6lw")
 
-[node name="CollisionShape2D34" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_3lph0")
 
-[node name="CollisionShape2D35" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 position = Vector2(0, 1.58731)
 shape = SubResource("SegmentShape2D_gnn13")
 
-[node name="CollisionShape2D36" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D36" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_4b33w")
 
-[node name="CollisionShape2D37" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D37" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_gv4jt")
 
-[node name="CollisionShape2D38" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D38" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_lqsih")
 
-[node name="CollisionShape2D39" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D39" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_6op7y")
 
-[node name="CollisionShape2D40" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D40" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_odm75")
 
-[node name="CollisionShape2D41" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D41" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_2smpj")
 
-[node name="CollisionShape2D42" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D42" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_k1ntk")
 
-[node name="CollisionShape2D43" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D43" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_a8flw")
 
-[node name="CollisionShape2D44" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D44" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_ucayn")
 
-[node name="CollisionShape2D45" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D45" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_cba3c")
 
-[node name="CollisionShape2D46" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D46" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_4ifnt")
 
-[node name="CollisionShape2D47" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D47" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_pte2d")
 
-[node name="CollisionShape2D48" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D48" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_260b4")
 
-[node name="CollisionShape2D49" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D49" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_25k08")
 
-[node name="CollisionShape2D50" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D50" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_f38ql")
 
-[node name="CollisionShape2D51" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D51" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_pngsa")
 
-[node name="CollisionShape2D52" type="CollisionShape2D" parent="Maze/StaticBody2D"]
+[node name="CollisionShape2D52" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_ffib7")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(358, 295)
+[node name="FakedoorArea1" type="Area2D" parent="Control3"]
+position = Vector2(448, 496)
+scale = Vector2(1, 0.999999)
+
+[node name="ColorRect2" type="ColorRect" parent="Control3/FakedoorArea1"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = -20.0
+offset_right = 39.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/FakedoorArea1"]
+position = Vector2(0, 8)
+shape = SubResource("SegmentShape2D_vxdlm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control3/FakedoorArea1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/FakedoorArea1/StaticBody2D"]
+position = Vector2(-8, 8)
+shape = SubResource("SegmentShape2D_etcrf")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Control3"]
+position = Vector2(70, 223)
 scale = Vector2(0.999998, 0.999998)
 input_pickable = true
 script = ExtResource("4_hx27m")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/CharacterBody2D"]
 position = Vector2(-43.0001, 269.501)
 shape = SubResource("RectangleShape2D_3sx4y")
 
-[node name="ColorRect" type="ColorRect" parent="CharacterBody2D"]
+[node name="ColorRect" type="ColorRect" parent="Control3/CharacterBody2D"]
 offset_left = -60.0001
 offset_top = 253.0
 offset_right = -27.0001
 offset_bottom = 286.0
 color = Color(0, 0, 0, 1)
 
-[node name="Popup" parent="." instance=ExtResource("7_05smw")]
-visible = false
+[node name="Area2D2" type="Area2D" parent="Control3"]
+position = Vector2(348, 253)
 
-[node name="Area2D2" type="Area2D" parent="."]
-position = Vector2(636, 325)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D2"]
 shape = SubResource("RectangleShape2D_wn2q7")
 
-[node name="ColorRect" type="ColorRect" parent="Area2D2"]
+[node name="ColorRect" type="ColorRect" parent="Control3/Area2D2"]
 offset_left = -6.0
 offset_top = -21.0
 offset_right = 2.0
 offset_bottom = 22.0
 color = Color(1, 0, 0, 1)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Area2D2"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Control3/Area2D2"]
 position = Vector2(-1, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D2/StaticBody2D"]
 position = Vector2(-7, 1)
 shape = SubResource("RectangleShape2D_0fbxh")
 
-[node name="Area2D3" type="Area2D" parent="."]
+[node name="Area2D3" type="Area2D" parent="Control3"]
+position = Vector2(-288, -72)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D3"]
 position = Vector2(316, 415)
 shape = SubResource("RectangleShape2D_4nrtj")
 
-[node name="ColorRect" type="ColorRect" parent="Area2D3"]
+[node name="ColorRect" type="ColorRect" parent="Control3/Area2D3"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -473,12 +553,149 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0, 0, 1)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Area2D3"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Control3/Area2D3"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D3/StaticBody2D"]
 position = Vector2(316, 410)
 shape = SubResource("RectangleShape2D_kj66l")
 
+[node name="Area2D" type="Area2D" parent="Control3"]
+position = Vector2(56, 368)
+
+[node name="ColorRect2" type="ColorRect" parent="Control3/Area2D"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -24.0
+offset_right = 40.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D"]
+shape = SubResource("SegmentShape2D_kbm1a")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control3/Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D/StaticBody2D"]
+shape = SubResource("SegmentShape2D_6e5ef")
+
+[node name="Area2D4" type="Area2D" parent="Control3"]
+position = Vector2(448, 384)
+
+[node name="ColorRect2" type="ColorRect" parent="Control3/Area2D4"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = -26.0
+offset_right = 51.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D4"]
+shape = SubResource("SegmentShape2D_5362g")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control3/Area2D4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D4/StaticBody2D"]
+shape = SubResource("SegmentShape2D_qc11h")
+
+[node name="Area2D5" type="Area2D" parent="Control3"]
+position = Vector2(544, 224)
+
+[node name="ColorRect2" type="ColorRect" parent="Control3/Area2D5"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_right = 32.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D5"]
+shape = SubResource("SegmentShape2D_gfove")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control3/Area2D5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D5/StaticBody2D"]
+shape = SubResource("SegmentShape2D_6o8kf")
+
+[node name="Area2D6" type="Area2D" parent="Control3"]
+position = Vector2(256, 96)
+
+[node name="ColorRect2" type="ColorRect" parent="Control3/Area2D6"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_right = 32.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D6"]
+shape = SubResource("SegmentShape2D_4yuut")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control3/Area2D6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D6/StaticBody2D"]
+position = Vector2(0, 8)
+shape = SubResource("SegmentShape2D_y3x6r")
+
+[node name="Popup" parent="." instance=ExtResource("7_05smw")]
+visible = false
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.049
+anchor_top = 0.488
+anchor_right = 0.049
+anchor_bottom = 0.488
+offset_left = -0.448002
+offset_top = -52.224
+offset_right = 279.552
+offset_bottom = 51.776
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Controls:
+To control the character:
+Use arrows on keyboard
+Back: ESC button
+"
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.146
+anchor_top = 0.778
+anchor_right = 0.146
+anchor_bottom = 0.778
+offset_left = -80.192
+offset_top = -128.144
+offset_right = 87.808
+offset_bottom = 127.856
+
+[node name="Sprite2D" type="Sprite2D" parent="Control2"]
+position = Vector2(80, 120)
+texture = ExtResource("5_miepr")
+
+[connection signal="body_entered" from="Control3/FakedoorArea1" to="." method="_on_fakedoor_area_1_body_entered"]
+[connection signal="body_entered" from="Control3/Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Control3/Area2D3" to="." method="_on_area_2d_3_body_entered"]
+[connection signal="body_entered" from="Control3/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Control3/Area2D4" to="." method="_on_area_2d_4_body_entered"]
+[connection signal="body_entered" from="Control3/Area2D5" to="." method="_on_area_2d_5_body_entered"]
+[connection signal="body_entered" from="Control3/Area2D6" to="." method="_on_area_2d_6_body_entered"]
 [connection signal="visibility_changed" from="Popup" to="." method="_on_popup_visibility_changed"]
-[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
-[connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]

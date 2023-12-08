@@ -1,12 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://du0fwtx53xudu"]
+[gd_scene load_steps=7 format=3 uid="uid://dhjeatydwtj1p"]
 
-[ext_resource type="Script" path="res://src/popup.gd" id="1_fa4yr"]
-[ext_resource type="Texture2D" uid="uid://dmk1201koe4nx" path="res://code1Maz`e.png" id="2_me7jh"]
-[ext_resource type="Texture2D" uid="uid://51mt5ow1ylin" path="res://codeCheetSheet.png" id="3_uf6i5"]
-[ext_resource type="Texture2D" uid="uid://d4ldeoqqei0eg" path="res://Robot (2) (2).svg" id="4_sp7gr"]
-[ext_resource type="Texture2D" uid="uid://6uvlavv3xr7r" path="res://question-mark-12-48.png" id="5_ax3iv"]
+[ext_resource type="Script" path="res://CanvasLayer.gd" id="1_h0wy1"]
+[ext_resource type="Texture2D" uid="uid://dmk1201koe4nx" path="res://code1Maz`e.png" id="2_hp5x7"]
+[ext_resource type="Texture2D" uid="uid://51mt5ow1ylin" path="res://codeCheetSheet.png" id="3_x1s1r"]
+[ext_resource type="Texture2D" uid="uid://d4ldeoqqei0eg" path="res://Robot (2) (2).svg" id="4_fc1d7"]
+[ext_resource type="Texture2D" uid="uid://6uvlavv3xr7r" path="res://question-mark-12-48.png" id="5_up4mm"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihmy4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nvoef"]
 content_margin_left = 10.0
 content_margin_right = 10.0
 bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
@@ -15,11 +15,8 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="Popup" type="Popup"]
-process_mode = 3
-size = Vector2i(1153, 648)
-visible = true
-script = ExtResource("1_fa4yr")
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_h0wy1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -49,7 +46,7 @@ offset_right = 247.21
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_me7jh")
+texture = ExtResource("2_hp5x7")
 expand_mode = 3
 
 [node name="CheetSheet" type="TextureRect" parent="Control"]
@@ -65,7 +62,7 @@ offset_top = -37.5
 offset_bottom = 37.5
 grow_horizontal = 0
 grow_vertical = 2
-texture = ExtResource("3_uf6i5")
+texture = ExtResource("3_x1s1r")
 expand_mode = 3
 
 [node name="LineEdit" type="LineEdit" parent="Control"]
@@ -83,7 +80,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_ihmy4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nvoef")
 placeholder_text = "Write your answer here!"
 alignment = 1
 expand_to_text_length = true
@@ -103,7 +100,7 @@ text = "Based on the code on the right suggest a answer for the maze!"
 
 [node name="LucRato" type="Sprite2D" parent="Control"]
 position = Vector2(961, 133)
-texture = ExtResource("4_sp7gr")
+texture = ExtResource("4_fc1d7")
 
 [node name="Label2" type="Label" parent="Control"]
 layout_mode = 1
@@ -132,9 +129,7 @@ offset_left = -48.0
 offset_top = -48.0
 grow_horizontal = 0
 grow_vertical = 0
-texture_normal = ExtResource("5_ax3iv")
+texture_normal = ExtResource("5_up4mm")
 
-[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
-[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="text_submitted" from="Control/LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="Control/TextureButton" to="." method="_on_texture_button_pressed"]
