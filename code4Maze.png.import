@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de6lfuudggysq"
-path="res://.godot/imported/fakedoor1code.png-00417da330de7fd6a10956cb79a9d19b.ctex"
+uid="uid://4u1cbogr627x"
+path="res://.godot/imported/code4Maze.png-5d6080ae2b8387aae9d9a7af4b59c082.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fakedoor1code.png"
-dest_files=["res://.godot/imported/fakedoor1code.png-00417da330de7fd6a10956cb79a9d19b.ctex"]
+source_file="res://code4Maze.png"
+dest_files=["res://.godot/imported/code4Maze.png-5d6080ae2b8387aae9d9a7af4b59c082.ctex"]
 
 [params]
 

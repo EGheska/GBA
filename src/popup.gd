@@ -6,7 +6,7 @@ class_name solver extends Popup
 @onready var lineEdit = $Control/LineEdit
 
 
-const firstCode = "2163"
+const firstCode = "1"
 const secondCode = "6452"
 
 static var whichDoor
@@ -34,9 +34,10 @@ func _on_line_edit_text_submitted(new_text):
 	if new_text == firstCode: # if new_text == dictionary(doorCounter)
 		var t = Timer.new()
 		textLabel.set_text("Congratulations!\n You have solved the first code!")
+		print(solved)
 		_set_solve(true)
-		#print(solved)
-		t.set_wait_time(5)
+		print(solved)
+		t.set_wait_time(3)
 		t.set_one_shot(true)
 		self.add_child(t)
 		t.start()
@@ -49,18 +50,21 @@ func _on_line_edit_text_submitted(new_text):
 		textLabel.set_text("The code does not match.\n Maybe, try one more time?")
 
 func _on_visibility_changed():
+	print(whichDoor, doorCounter)
 	lineEdit.clear()
 	textLabel.set_text("Based on the code on the right suggest a answer for the maze!")
-	if whichDoor == "FirstDoor" and doorCounter == 1:
-		codetoSolve.texture = ResourceLoader.load("res://code1Maz`e.png")
-	if whichDoor == "SecondDoor" and doorCounter == 2:
-		codetoSolve.texture = ResourceLoader.load("res://code2Maze.PNG")
-	if whichDoor == "ThirdDoor" and doorCounter == 3:
-		codetoSolve.texture == ResourceLoader.load("res://code3Maze.PNG")
-	if whichDoor == "FourthDoor" and doorCounter == 4:
-		pass
-	if whichDoor == "FifthDoor" and doorCounter == 5:
-		codetoSolve.texture = ResourceLoader.load("res://fakedoor1code.PNG")	
-	if whichDoor == "FakeDoor1" and doorCounter == 100:
-		codetoSolve.texture = ResourceLoader.load("res://fakedoor1code.PNG")
+	
+	match doorCounter:
+		1:
+			codetoSolve.texture = ResourceLoader.load("res://code1Maz`e.png")
+		2:
+			codetoSolve.texture = ResourceLoader.load("res://code2Maze.PNG")
+		3:
+			codetoSolve.texture = ResourceLoader.load("res://code3Maze.PNG")
+		4:
+			codetoSolve.texture = ResourceLoader.load("res://code4Maze.png")
+		5:
+			codetoSolve.texture = ResourceLoader.load("res://code5Maze.png")
+		6:
+			codetoSolve.texture = ResourceLoader.load("res://code6Maze.png")
 	

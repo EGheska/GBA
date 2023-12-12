@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://bisil64e8ifnv"]
+[gd_scene load_steps=77 format=3 uid="uid://bisil64e8ifnv"]
 
 [ext_resource type="Script" path="res://src/maze_game.gd" id="1_spyab"]
 [ext_resource type="Texture2D" uid="uid://crh3b3s472q10" path="res://addons/WhatsApp Image 2023-12-06 at 12.18.46.jpeg" id="3_oprqe"]
@@ -137,7 +137,7 @@ size = Vector2(8.61017, 100.476)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_3lph0"]
 a = Vector2(244.642, 47.6191)
-b = Vector2(246.032, -58.7302)
+b = Vector2(245.554, -55.5555)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_gnn13"]
 a = Vector2(321.093, -58.7302)
@@ -213,7 +213,7 @@ b = Vector2(244.642, -298.413)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_vxdlm"]
 a = Vector2(0, -24)
-b = Vector2(0, 8)
+b = Vector2(0, 11)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_etcrf"]
 a = Vector2(0, -24)
@@ -250,6 +250,10 @@ b = Vector2(0, 24)
 a = Vector2(8, -24)
 b = Vector2(8, 24)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_q1cfr"]
+a = Vector2(23, 18)
+b = Vector2(-33, 18)
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_gfove"]
 a = Vector2(32, 0)
 b = Vector2(-16, 0)
@@ -264,7 +268,17 @@ b = Vector2(24, 0)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_y3x6r"]
 a = Vector2(-24, 0)
-b = Vector2(24, 0)
+b = Vector2(32, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8lomt"]
+a = Vector2(-4, -21)
+b = Vector2(-4, 27)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_aj2i1"]
+b = Vector2(0, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gatox"]
+size = Vector2(1, 48)
 
 [node name="CanvasLayer" type="CanvasLayer"]
 process_mode = 1
@@ -486,13 +500,13 @@ rotation = 1.5708
 color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/FakedoorArea1"]
-position = Vector2(0, 8)
+position = Vector2(0.999939, 4)
 shape = SubResource("SegmentShape2D_vxdlm")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Control3/FakedoorArea1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/FakedoorArea1/StaticBody2D"]
-position = Vector2(-8, 8)
+position = Vector2(-3.00006, 6)
 shape = SubResource("SegmentShape2D_etcrf")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Control3"]
@@ -567,20 +581,23 @@ anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_top = -24.0
-offset_right = 40.0
-offset_bottom = -20.0
+offset_left = 3.0
+offset_top = -23.0
+offset_right = 44.0
+offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 1.5708
 color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D"]
+position = Vector2(-6.10352e-05, 1)
 shape = SubResource("SegmentShape2D_kbm1a")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Control3/Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D/StaticBody2D"]
+position = Vector2(-4.00006, 2)
 shape = SubResource("SegmentShape2D_6e5ef")
 
 [node name="Area2D4" type="Area2D" parent="Control3"]
@@ -593,7 +610,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 3.0
 offset_top = -26.0
-offset_right = 51.0
+offset_right = 52.0
 offset_bottom = -22.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -601,34 +618,39 @@ rotation = 1.5708
 color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D4"]
+position = Vector2(-6.10352e-05, -2)
 shape = SubResource("SegmentShape2D_5362g")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Control3/Area2D4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D4/StaticBody2D"]
+position = Vector2(-4.00006, -2)
 shape = SubResource("SegmentShape2D_qc11h")
 
 [node name="Area2D5" type="Area2D" parent="Control3"]
 position = Vector2(544, 224)
 
 [node name="ColorRect2" type="ColorRect" parent="Control3/Area2D5"]
-anchors_preset = -1
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -24.0
-offset_right = 32.0
-offset_bottom = 4.0
+offset_left = -22.0001
+offset_top = -4.0
+offset_right = 34.9999
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0, 0, 1)
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Control3/Area2D5"]
+position = Vector2(10.9999, -23)
+shape = SubResource("SegmentShape2D_q1cfr")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D5"]
+position = Vector2(-6.10352e-05, 2)
 shape = SubResource("SegmentShape2D_gfove")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Control3/Area2D5"]
+position = Vector2(1.99994, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D5/StaticBody2D"]
+position = Vector2(0, 3)
 shape = SubResource("SegmentShape2D_6o8kf")
 
 [node name="Area2D6" type="Area2D" parent="Control3"]
@@ -639,21 +661,47 @@ anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -24.0
-offset_right = 32.0
-offset_bottom = 4.0
+offset_left = -25.0001
+offset_top = -2.0
+offset_right = 30.9999
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D6"]
+position = Vector2(2.99994, -3)
 shape = SubResource("SegmentShape2D_4yuut")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Control3/Area2D6"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D6/StaticBody2D"]
-position = Vector2(0, 8)
+position = Vector2(-1.00006, 1)
 shape = SubResource("SegmentShape2D_y3x6r")
+
+[node name="Area2D7" type="Area2D" parent="Control3"]
+position = Vector2(464, 119)
+
+[node name="ColorRect" type="ColorRect" parent="Control3/Area2D7"]
+offset_left = -1.0
+offset_top = -21.0
+offset_right = 4.0
+offset_bottom = 27.0
+color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D7"]
+position = Vector2(2, 0)
+shape = SubResource("SegmentShape2D_8lomt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Control3/Area2D7"]
+position = Vector2(4, -21)
+shape = SubResource("SegmentShape2D_aj2i1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control3/Area2D7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D7/StaticBody2D"]
+position = Vector2(1, 3)
+shape = SubResource("RectangleShape2D_gatox")
 
 [node name="Popup" parent="." instance=ExtResource("7_05smw")]
 visible = false
@@ -698,4 +746,5 @@ texture = ExtResource("5_miepr")
 [connection signal="body_entered" from="Control3/Area2D4" to="." method="_on_area_2d_4_body_entered"]
 [connection signal="body_entered" from="Control3/Area2D5" to="." method="_on_area_2d_5_body_entered"]
 [connection signal="body_entered" from="Control3/Area2D6" to="." method="_on_area_2d_6_body_entered"]
+[connection signal="body_entered" from="Control3/Area2D7" to="." method="_on_area_2d_7_body_entered"]
 [connection signal="visibility_changed" from="Popup" to="." method="_on_popup_visibility_changed"]
