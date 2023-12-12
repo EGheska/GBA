@@ -59,10 +59,7 @@ func _on_line_edit_text_submitted(new_text):
 			if new_text.to_int() == 2163:
 				textLabel.set_text("Congratulations!\n You have solved the first code!")
 				_set_solve(true)
-				timer_func()
-				
-#				self.set_visible(false)
-				
+				timer_func()	
 			else:
 				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
 		2:
@@ -70,9 +67,6 @@ func _on_line_edit_text_submitted(new_text):
 				textLabel.set_text("Congratulations!\n You have solved the first code!")
 				_set_solve(true)
 				timer_func()
-				self.set_visible(false)
-				textLabel.set_text("Based on the code on the right suggest a answer for the maze!")
-				lineEdit.clear()
 			else:
 				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
 		3:
@@ -80,9 +74,6 @@ func _on_line_edit_text_submitted(new_text):
 				textLabel.set_text("Congratulations!\n You have solved the third code!")
 				_set_solve(true)
 				timer_func()
-				self.set_visible(false)
-				textLabel.set_text("Based on the code on the right suggest a answer for the maze!")
-				lineEdit.clear()
 			else:
 				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
 		4:
@@ -90,9 +81,6 @@ func _on_line_edit_text_submitted(new_text):
 				textLabel.set_text("Congratulations!\n You have solved the fourth code!")
 				_set_solve(true)
 				timer_func()
-				self.set_visible(false)
-				textLabel.set_text("Based on the code on the right suggest a answer for the maze!")
-				lineEdit.clear()
 			else:
 				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
 		5:
@@ -100,9 +88,6 @@ func _on_line_edit_text_submitted(new_text):
 				textLabel.set_text("Congratulations!\n You have solved the fifth code!")
 				_set_solve(true)
 				timer_func()
-				self.set_visible(false)
-				textLabel.set_text("Based on the code on the right suggest a answer for the maze!")
-				lineEdit.clear()
 			else:
 				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
 		6:
@@ -110,9 +95,6 @@ func _on_line_edit_text_submitted(new_text):
 				textLabel.set_text("Congratulations!\n You have solved the sixth code!")
 				_set_solve(true)
 				timer_func()
-				self.set_visible(false)
-				textLabel.set_text("Based on the code on the right suggest a answer for the maze!")
-				lineEdit.clear()
 			else:
 				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
 		200:
@@ -120,9 +102,6 @@ func _on_line_edit_text_submitted(new_text):
 				textLabel.set_text("Oops! Seems like you've solved the fake door")
 				_set_solve(true)
 				timer_func()
-				self.set_visible(false)
-				textLabel.set_text("Based on the code on the right suggest a answer for the maze!")
-				lineEdit.clear()
 			else:
 				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
 		100:
@@ -130,9 +109,6 @@ func _on_line_edit_text_submitted(new_text):
 				textLabel.set_text("Oops! Seems like you've solved the fake door")
 				_set_solve(true)
 				timer_func()
-				self.set_visible(false)
-				textLabel.set_text("Based on the code on the right suggest a answer for the maze!")
-				lineEdit.clear()
 			else:
 				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
 		300:
@@ -140,13 +116,11 @@ func _on_line_edit_text_submitted(new_text):
 				textLabel.set_text("Oops! Seems like you've solved the fake door")
 				_set_solve(true)
 				timer_func()
-				self.set_visible(false)
-				textLabel.set_text("Based on the code on the right suggest a answer for the maze!")
-				lineEdit.clear()
 			else:
 				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
 		500:
 			if new_text.to_int() == 7358:
+				await get_tree().create_timer(3).timeout
 				get_tree().change_scene_to_file("res://maze_win_1st.tscn")
 			else:
 				textLabel.set_text("The code does not match.\n Maybe, try one more time?")

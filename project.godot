@@ -19,6 +19,14 @@ config/icon="res://icon.svg"
 
 GlobalSettings="*res://src/global_settings.gd"
 
+[display]
+
+mouse_cursor/custom_image="res://code2Maze.PNG"
+
+[layer_names]
+
+2d_physics/layer_1="o"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

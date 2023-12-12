@@ -1,9 +1,9 @@
-[gd_scene load_steps=81 format=3 uid="uid://bisil64e8ifnv"]
+[gd_scene load_steps=82 format=3 uid="uid://bisil64e8ifnv"]
 
 [ext_resource type="Script" path="res://src/maze_game.gd" id="1_spyab"]
 [ext_resource type="Texture2D" uid="uid://crh3b3s472q10" path="res://addons/WhatsApp Image 2023-12-06 at 12.18.46.jpeg" id="3_oprqe"]
 [ext_resource type="Script" path="res://src/CharacterBody2D.gd" id="4_hx27m"]
-[ext_resource type="Texture2D" uid="uid://d4ldeoqqei0eg" path="res://Robot (2) (2).svg" id="5_miepr"]
+[ext_resource type="Texture2D" uid="uid://bldjuloj8wgdh" path="res://WhatsApp Image 2023-11-24 at 14.24.03 (1).jpeg" id="5_cd5y4"]
 [ext_resource type="PackedScene" uid="uid://du0fwtx53xudu" path="res://src/popup.tscn" id="7_05smw"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_kflki"]
@@ -296,6 +296,9 @@ b = Vector2(0, 48)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gatox"]
 size = Vector2(1, 48)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8iarn"]
+load_path = "res://.godot/imported/Robot (2) (2).svg-b6aff528adc611be91b506b1a92b1f65.ctex"
+
 [node name="CanvasLayer" type="CanvasLayer"]
 process_mode = 1
 script = ExtResource("1_spyab")
@@ -500,7 +503,9 @@ shape = SubResource("SegmentShape2D_ffib7")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Control3"]
 position = Vector2(70, 223)
 scale = Vector2(0.999998, 0.999998)
-input_pickable = true
+disable_mode = 2
+motion_mode = 1
+wall_min_slide_angle = 3.14159
 script = ExtResource("4_hx27m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/CharacterBody2D"]
@@ -790,7 +795,7 @@ offset_bottom = 127.856
 [node name="Sprite2D" type="Sprite2D" parent="Control2"]
 visible = false
 position = Vector2(80, 120)
-texture = ExtResource("5_miepr")
+texture = SubResource("CompressedTexture2D_8iarn")
 
 [node name="TextureRect" type="TextureRect" parent="Control2"]
 layout_mode = 1
@@ -799,7 +804,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_miepr")
+texture = ExtResource("5_cd5y4")
 
 [connection signal="body_entered" from="Control3/FakedoorArea1" to="." method="_on_fakedoor_area_1_body_entered"]
 [connection signal="body_entered" from="Control3/FakedoorArea2" to="." method="_on_fakedoor_area_2_body_entered"]

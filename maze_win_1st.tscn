@@ -1,7 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://dif3v4qf8em51"]
 
 [ext_resource type="Script" path="res://maze_win_1st.gd" id="1_ek8vl"]
-[ext_resource type="Texture2D" uid="uid://d4ldeoqqei0eg" path="res://Robot (2) (2).svg" id="1_o6e6e"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8iarn"]
+load_path = "res://.godot/imported/Robot (2) (2).svg-b6aff528adc611be91b506b1a92b1f65.ctex"
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_ek8vl")
@@ -37,7 +39,7 @@ grow_vertical = 2
 [node name="Sprite2D" type="Sprite2D" parent="Control/Control"]
 position = Vector2(264, 256)
 scale = Vector2(1.85465, 1.74091)
-texture = ExtResource("1_o6e6e")
+texture = SubResource("CompressedTexture2D_8iarn")
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 1

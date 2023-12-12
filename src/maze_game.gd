@@ -38,7 +38,7 @@ const solverClass = preload("res://src/popup.gd")
 @onready var FifthDoor = $Control3/Area2D6/ColorRect2
 @onready var SixthDoor = $Control3/Area2D7/ColorRect
 
-@onready var LucRato = $Control2/Sprite2D
+@onready var LucRato = $Control2/TextureRect
 @onready var controls = $Label
 
 var person = charClass.new()
@@ -222,4 +222,4 @@ func _on_fakedoor_area_3_body_entered(body):
 
 
 func _on_control_2_resized():
-	pass # Replace with function body.
+	LucRato.set_size(Vector2(400, 200))
