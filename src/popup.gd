@@ -50,80 +50,80 @@ func timer_func():
 	lineEdit.clear()
 
 func _on_texture_button_pressed():
-	textLabel.set_text("You have to solve the puzzle!\n You can find a key for decipher the code in the message left for you.\n Use that to so")
+	textLabel.set_text("You have to solve the puzzle!\nYou can find a key for decipher the code in the message left for you.\n Use that to so")
 
 
 func _on_line_edit_text_submitted(new_text):
 	match doorCounter:
 		1:
 			if new_text.to_int() == 2163:
-				textLabel.set_text("Congratulations!\n You have solved the first code!")
+				textLabel.set_text("Congratulations!\nYou have solved the first code!")
 				_set_solve(true)
 				timer_func()	
 			else:
-				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
+				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 		2:
 			if new_text.to_int() == 6452:
-				textLabel.set_text("Congratulations!\n You have solved the first code!")
+				textLabel.set_text("Congratulations!\nYou have solved the first code!")
 				_set_solve(true)
 				timer_func()
 			else:
-				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
+				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 		3:
 			if new_text.to_int() == 5134:
-				textLabel.set_text("Congratulations!\n You have solved the third code!")
+				textLabel.set_text("Congratulations!\nYou have solved the third code!")
 				_set_solve(true)
 				timer_func()
 			else:
-				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
+				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 		4:
 			if new_text.to_int() == 4729:
-				textLabel.set_text("Congratulations!\n You have solved the fourth code!")
+				textLabel.set_text("Congratulations!\nYou have solved the fourth code!")
 				_set_solve(true)
 				timer_func()
 			else:
-				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
+				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 		5:
 			if new_text.to_int() == 6142:
-				textLabel.set_text("Congratulations!\n You have solved the fifth code!")
+				textLabel.set_text("Congratulations!\nYou have solved the fifth code!")
 				_set_solve(true)
 				timer_func()
 			else:
-				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
+				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 		6:
 			if new_text.to_int() == 3287:
-				textLabel.set_text("Congratulations!\n You have solved the sixth code!")
+				textLabel.set_text("Congratulations!\nYou have solved the sixth code!")
 				_set_solve(true)
 				timer_func()
 			else:
-				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
+				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 		200:
 			if new_text.to_int() == 1967:
 				textLabel.set_text("Oops! Seems like you've solved the fake door")
 				_set_solve(true)
 				timer_func()
 			else:
-				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
+				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 		100:
 			if new_text.to_int() == 4691:
 				textLabel.set_text("Oops! Seems like you've solved the fake door")
 				_set_solve(true)
 				timer_func()
 			else:
-				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
+				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 		300:
 			if new_text.to_int() == 9863:
 				textLabel.set_text("Oops! Seems like you've solved the fake door")
 				_set_solve(true)
 				timer_func()
 			else:
-				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
+				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 		500:
 			if new_text.to_int() == 7358:
 				await get_tree().create_timer(3).timeout
 				get_tree().change_scene_to_file("res://maze_win_1st.tscn")
 			else:
-				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
+				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 				
 func _on_visibility_changed():
 	

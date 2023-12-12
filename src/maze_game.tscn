@@ -48,7 +48,7 @@ b = Vector2(-170.971, -174.603)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_fj12u"]
 a = Vector2(-170.972, -177.778)
-b = Vector2(-325.263, -177.778)
+b = Vector2(-322.823, -177.778)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_j2aiu"]
 a = Vector2(-248.812, -114.286)
@@ -504,8 +504,6 @@ shape = SubResource("SegmentShape2D_ffib7")
 position = Vector2(70, 223)
 scale = Vector2(0.999998, 0.999998)
 disable_mode = 2
-motion_mode = 1
-wall_min_slide_angle = 3.14159
 script = ExtResource("4_hx27m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/CharacterBody2D"]
