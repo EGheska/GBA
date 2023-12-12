@@ -10,9 +10,7 @@ func _ready():
 	pass
 
 func _on_back_button_pressed():
-	if ThisTile.is_visible():
-		ThisTile.set_visible(false)
-		BackButton.set_pressed_no_signal(false)
+	get_tree().change_scene_to_file("res://src/gui/main_menu.tscn")
 
 
 func _on_settings_button_pressed():

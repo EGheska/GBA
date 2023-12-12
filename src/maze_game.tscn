@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://bisil64e8ifnv"]
+[gd_scene load_steps=81 format=3 uid="uid://bisil64e8ifnv"]
 
 [ext_resource type="Script" path="res://src/maze_game.gd" id="1_spyab"]
 [ext_resource type="Texture2D" uid="uid://crh3b3s472q10" path="res://addons/WhatsApp Image 2023-12-06 at 12.18.46.jpeg" id="3_oprqe"]
@@ -211,6 +211,9 @@ b = Vector2(323.873, -131.746)
 a = Vector2(322.483, -298.413)
 b = Vector2(244.642, -298.413)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sx4y"]
+size = Vector2(32.0001, 33)
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_vxdlm"]
 a = Vector2(0, -24)
 b = Vector2(0, 11)
@@ -219,8 +222,21 @@ b = Vector2(0, 11)
 a = Vector2(0, -24)
 b = Vector2(0, 8)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sx4y"]
-size = Vector2(32.0001, 33)
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nm34n"]
+a = Vector2(0, -21)
+b = Vector2(0, 24)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_x5uum"]
+a = Vector2(0, -16)
+b = Vector2(0, 27)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_o2nwn"]
+a = Vector2(-27, 3)
+b = Vector2(26, 3)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6hglv"]
+a = Vector2(-27, 0)
+b = Vector2(26, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wn2q7"]
 size = Vector2(8, 42)
@@ -481,6 +497,23 @@ shape = SubResource("SegmentShape2D_pngsa")
 [node name="CollisionShape2D52" type="CollisionShape2D" parent="Control3/Maze/StaticBody2D"]
 shape = SubResource("SegmentShape2D_ffib7")
 
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Control3"]
+position = Vector2(70, 223)
+scale = Vector2(0.999998, 0.999998)
+input_pickable = true
+script = ExtResource("4_hx27m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/CharacterBody2D"]
+position = Vector2(-43.0001, 269.501)
+shape = SubResource("RectangleShape2D_3sx4y")
+
+[node name="ColorRect" type="ColorRect" parent="Control3/CharacterBody2D"]
+offset_left = -60.0001
+offset_top = 253.0
+offset_right = -27.0001
+offset_bottom = 286.0
+color = Color(0, 0, 0, 1)
+
 [node name="FakedoorArea1" type="Area2D" parent="Control3"]
 position = Vector2(448, 496)
 scale = Vector2(1, 0.999999)
@@ -509,22 +542,42 @@ shape = SubResource("SegmentShape2D_vxdlm")
 position = Vector2(-3.00006, 6)
 shape = SubResource("SegmentShape2D_etcrf")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Control3"]
-position = Vector2(70, 223)
-scale = Vector2(0.999998, 0.999998)
-input_pickable = true
-script = ExtResource("4_hx27m")
+[node name="FakedoorArea2" type="Area2D" parent="Control3"]
+position = Vector2(110, 119)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/CharacterBody2D"]
-position = Vector2(-43.0001, 269.501)
-shape = SubResource("RectangleShape2D_3sx4y")
+[node name="ColorRect" type="ColorRect" parent="Control3/FakedoorArea2"]
+offset_left = -2.0
+offset_top = -21.0
+offset_right = 2.0
+offset_bottom = 25.0
+color = Color(1, 0, 0, 1)
 
-[node name="ColorRect" type="ColorRect" parent="Control3/CharacterBody2D"]
-offset_left = -60.0001
-offset_top = 253.0
-offset_right = -27.0001
-offset_bottom = 286.0
-color = Color(0, 0, 0, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/FakedoorArea2"]
+shape = SubResource("SegmentShape2D_nm34n")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control3/FakedoorArea2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/FakedoorArea2/StaticBody2D"]
+position = Vector2(3, -4)
+shape = SubResource("SegmentShape2D_x5uum")
+
+[node name="FakedoorArea3" type="Area2D" parent="Control3"]
+position = Vector2(552, 171)
+
+[node name="ColorRect" type="ColorRect" parent="Control3/FakedoorArea3"]
+offset_left = -27.0
+offset_top = 1.0
+offset_right = 27.0
+offset_bottom = 4.0
+color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/FakedoorArea3"]
+shape = SubResource("SegmentShape2D_o2nwn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control3/FakedoorArea3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/FakedoorArea3/StaticBody2D"]
+shape = SubResource("SegmentShape2D_6hglv")
 
 [node name="Area2D2" type="Area2D" parent="Control3"]
 position = Vector2(348, 253)
@@ -632,25 +685,24 @@ position = Vector2(544, 224)
 
 [node name="ColorRect2" type="ColorRect" parent="Control3/Area2D5"]
 offset_left = -22.0001
-offset_top = -4.0
+offset_top = 18.0
 offset_right = 34.9999
-grow_horizontal = 2
-grow_vertical = 2
+offset_bottom = 22.0
 color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Control3/Area2D5"]
-position = Vector2(10.9999, -23)
+position = Vector2(10.9999, -1)
 shape = SubResource("SegmentShape2D_q1cfr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D5"]
-position = Vector2(-6.10352e-05, 2)
+position = Vector2(-1.00006, 24)
 shape = SubResource("SegmentShape2D_gfove")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Control3/Area2D5"]
 position = Vector2(1.99994, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control3/Area2D5/StaticBody2D"]
-position = Vector2(0, 3)
+position = Vector2(1, 25)
 shape = SubResource("SegmentShape2D_6o8kf")
 
 [node name="Area2D6" type="Area2D" parent="Control3"]
@@ -740,6 +792,8 @@ position = Vector2(80, 120)
 texture = ExtResource("5_miepr")
 
 [connection signal="body_entered" from="Control3/FakedoorArea1" to="." method="_on_fakedoor_area_1_body_entered"]
+[connection signal="body_entered" from="Control3/FakedoorArea2" to="." method="_on_fakedoor_area_2_body_entered"]
+[connection signal="body_entered" from="Control3/FakedoorArea3" to="." method="_on_fakedoor_area_3_body_entered"]
 [connection signal="body_entered" from="Control3/Area2D2" to="." method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="Control3/Area2D3" to="." method="_on_area_2d_3_body_entered"]
 [connection signal="body_entered" from="Control3/Area2D" to="." method="_on_area_2d_body_entered"]
