@@ -36,13 +36,18 @@ func _ready():
 	
 
 func timer_func():
-	var t = Timer.new()
-	t.set_wait_time(3)
-	t.set_one_shot(true)
-	self.add_child(t)
-	t.start()
-	await t.timeout
-	print("Timeout") 
+	print("Start")
+#	var t = Timer.new()
+	await get_tree().create_timer(3).timeout
+#	self.add_child(t)
+#	t.set_wait_time(600)
+#	t.set_one_shot(true)
+#	t.start()
+#	await t.timeout
+	print("Timeout")
+	self.set_visible(false)
+	textLabel.set_text("Based on the code on the right suggest a answer for the maze!")
+	lineEdit.clear()
 
 func _on_texture_button_pressed():
 	textLabel.set_text("You have to solve the puzzle!\n You can find a key for decipher the code in the message left for you.\n Use that to so")
@@ -55,9 +60,9 @@ func _on_line_edit_text_submitted(new_text):
 				textLabel.set_text("Congratulations!\n You have solved the first code!")
 				_set_solve(true)
 				timer_func()
-				self.set_visible(false)
-				textLabel.set_text("Based on the code on the right suggest a answer for the maze!")
-				lineEdit.clear()
+				
+#				self.set_visible(false)
+				
 			else:
 				textLabel.set_text("The code does not match.\n Maybe, try one more time?")
 		2:

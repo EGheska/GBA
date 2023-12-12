@@ -788,7 +788,17 @@ offset_right = 87.808
 offset_bottom = 127.856
 
 [node name="Sprite2D" type="Sprite2D" parent="Control2"]
+visible = false
 position = Vector2(80, 120)
+texture = ExtResource("5_miepr")
+
+[node name="TextureRect" type="TextureRect" parent="Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("5_miepr")
 
 [connection signal="body_entered" from="Control3/FakedoorArea1" to="." method="_on_fakedoor_area_1_body_entered"]
@@ -802,3 +812,4 @@ texture = ExtResource("5_miepr")
 [connection signal="body_entered" from="Control3/Area2D6" to="." method="_on_area_2d_6_body_entered"]
 [connection signal="body_entered" from="Control3/Area2D7" to="." method="_on_area_2d_7_body_entered"]
 [connection signal="visibility_changed" from="Popup" to="." method="_on_popup_visibility_changed"]
+[connection signal="resized" from="Control2" to="." method="_on_control_2_resized"]

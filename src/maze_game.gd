@@ -219,3 +219,7 @@ func _on_fakedoor_area_3_body_entered(body):
 		PopUP.set_visible(true)
 		PopUP.popup_centered()
 		get_tree().paused = true
+
+
+func _on_control_2_resized():
+	pass # Replace with function body.
