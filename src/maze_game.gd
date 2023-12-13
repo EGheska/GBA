@@ -38,18 +38,27 @@ const solverClass = preload("res://src/popup.gd")
 @onready var FifthDoor = $Control3/Area2D6/ColorRect2
 @onready var SixthDoor = $Control3/Area2D7/ColorRect
 
+@onready var scoreItself = $Control2/ScoreItslef
+
+
 @onready var LucRato = $Control2/TextureRect
 @onready var controls = $Label
 
+
+
 var person = charClass.new()
 var solvers = solverClass.new()
-
-
+var t_begin_the_game
+var t_end_the_game
 
 func _ready():
+	t_begin_the_game = Time.get_ticks_msec()
 	if PopUP.is_visible():
 		PopUP.set_visible(false)
 
+
+func timer_score():
+	await get_tree().crea
 
 func _on_area_2d_body_entered(body):
 	LucRato.set_visible(false)
@@ -142,8 +151,19 @@ func _on_popup_visibility_changed():
 			SixthDoor.set_color(Color(1,1,1,0))
 			AreaCollisionSixthDoor.disconnect("body_enter", _on_area_2d_7_body_entered)
 			AreaCollisionSixthDoor2.disconnect("body_enter", _on_area_2d_7_body_entered)
-		
-		
+		if solvers.solved and solvers.doorCounter == 500:
+			t_end_the_game = Time.get_ticks_msec()
+			get_tree().change_scene_to_file("res://maze_win_1st.tscn")
+			
+func _process(delta):
+	t_end_the_game = Time.get_ticks_msec()
+	var temp = count_result()/1000
+	scoreItself.text = str(temp)
+	print(temp)
+	
+func count_result():
+	var result = t_end_the_game - t_begin_the_game
+	return result
 
 func _on_area_2d_4_body_entered(body):
 	LucRato.set_visible(false)

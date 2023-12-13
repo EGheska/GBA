@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgnnbalvowodd"]
+
+[ext_resource type="Texture2D" uid="uid://bldjuloj8wgdh" path="res://WhatsApp Image 2023-11-24 at 14.24.03 (1).jpeg" id="1_qn3wp"]
+[ext_resource type="Script" path="res://maze_intro.gd" id="1_s0jdq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57u3u"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_s0jdq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -155.0
+offset_top = -316.0
+offset_right = 165.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_qn3wp")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 100.0
+offset_right = 243.0
+offset_bottom = 191.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "The Maze Game"
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.188
+anchor_top = 0.663
+anchor_right = 0.188
+anchor_bottom = 0.663
+offset_left = -82.576
+offset_top = -18.624
+offset_right = 83.424
+offset_bottom = 18.376
+theme_override_styles/normal = SubResource("StyleBoxFlat_57u3u")
+text = "Back"
+
+[node name="Button2" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.776
+anchor_top = 0.658
+anchor_right = 0.776
+anchor_bottom = 0.658
+offset_left = -81.952
+offset_top = -19.384
+offset_right = 83.048
+offset_bottom = 19.616
+theme_override_styles/normal = SubResource("StyleBoxFlat_57u3u")
+text = "Start game!"
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.36
+anchor_right = 0.5
+anchor_bottom = 0.36
+offset_left = -254.0
+offset_top = -13.28
+offset_right = 260.0
+offset_bottom = 49.72
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "In this game you have to solve the maze by completing the puzzles with the codes for the doors"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

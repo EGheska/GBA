@@ -37,13 +37,7 @@ func _ready():
 
 func timer_func():
 	print("Start")
-#	var t = Timer.new()
 	await get_tree().create_timer(3).timeout
-#	self.add_child(t)
-#	t.set_wait_time(600)
-#	t.set_one_shot(true)
-#	t.start()
-#	await t.timeout
 	print("Timeout")
 	self.set_visible(false)
 	textLabel.set_text("Based on the code on the right suggest a answer for the maze!")
@@ -57,42 +51,42 @@ func _on_line_edit_text_submitted(new_text):
 	match doorCounter:
 		1:
 			if new_text.to_int() == 2163:
-				textLabel.set_text("Congratulations!\nYou have solved the first code!")
+				textLabel.set_text("Congratulations!\nYou have solved the code!")
 				_set_solve(true)
 				timer_func()	
 			else:
 				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 		2:
 			if new_text.to_int() == 6452:
-				textLabel.set_text("Congratulations!\nYou have solved the first code!")
+				textLabel.set_text("Congratulations!\nYou have solved the code!")
 				_set_solve(true)
 				timer_func()
 			else:
 				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 		3:
 			if new_text.to_int() == 5134:
-				textLabel.set_text("Congratulations!\nYou have solved the third code!")
+				textLabel.set_text("Congratulations!\nYou have solved the code!")
 				_set_solve(true)
 				timer_func()
 			else:
 				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 		4:
 			if new_text.to_int() == 4729:
-				textLabel.set_text("Congratulations!\nYou have solved the fourth code!")
+				textLabel.set_text("Congratulations!\nYou have solved the code!")
 				_set_solve(true)
 				timer_func()
 			else:
 				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 		5:
 			if new_text.to_int() == 6142:
-				textLabel.set_text("Congratulations!\nYou have solved the fifth code!")
+				textLabel.set_text("Congratulations!\nYou have solved the code!")
 				_set_solve(true)
 				timer_func()
 			else:
 				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 		6:
 			if new_text.to_int() == 3287:
-				textLabel.set_text("Congratulations!\nYou have solved the sixth code!")
+				textLabel.set_text("Congratulations!\nYou have solved the code!")
 				_set_solve(true)
 				timer_func()
 			else:
@@ -120,8 +114,10 @@ func _on_line_edit_text_submitted(new_text):
 				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 		500:
 			if new_text.to_int() == 7358:
+				textLabel.set_text("Congratulations!\nYou have solved the final code!")
+				_set_solve(true)
 				await get_tree().create_timer(3).timeout
-				get_tree().change_scene_to_file("res://maze_win_1st.tscn")
+				self.set_visible(false)
 			else:
 				textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 				

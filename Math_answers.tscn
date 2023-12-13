@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://c18xh6tcyyumi"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ipawt"]
+device = -1
+keycode = 49
+unicode = 49
+
+[sub_resource type="Shortcut" id="Shortcut_rksu1"]
+events = [SubResource("InputEventKey_ipawt")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_iqv4m"]
+device = -1
+keycode = 50
+unicode = 50
+
+[sub_resource type="Shortcut" id="Shortcut_7sd30"]
+events = [SubResource("InputEventKey_iqv4m")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_58iao"]
+device = -1
+keycode = 51
+unicode = 51
+
+[sub_resource type="Shortcut" id="Shortcut_0eoc7"]
+events = [SubResource("InputEventKey_58iao")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ek5lu"]
+device = -1
+keycode = 52
+unicode = 52
+
+[sub_resource type="Shortcut" id="Shortcut_20w44"]
+events = [SubResource("InputEventKey_ek5lu")]
+
+[node name="Math_Answer" type="Control"]
+layout_mode = 3
+anchor_right = 0.360243
+anchor_bottom = 0.166667
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="Button" type="Button" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+action_mode = 0
+shortcut = SubResource("Shortcut_rksu1")
+
+[node name="Button2" type="Button" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+action_mode = 0
+shortcut = SubResource("Shortcut_7sd30")
+
+[node name="Button3" type="Button" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+action_mode = 0
+shortcut = SubResource("Shortcut_0eoc7")
+
+[node name="Button4" type="Button" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+action_mode = 0
+shortcut = SubResource("Shortcut_20w44")

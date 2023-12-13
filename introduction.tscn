@@ -1,0 +1,132 @@
+[gd_scene load_steps=7 format=3 uid="uid://dek6ctonas5e8"]
+
+[ext_resource type="PackedScene" path="res://Math_answers.tscn" id="1_bmk8i"]
+[ext_resource type="Script" path="res://introduction_race.gd" id="1_s6se2"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_yeheu"]
+keycode = 32
+
+[sub_resource type="Shortcut" id="Shortcut_bd5ue"]
+events = [SubResource("InputEventKey_yeheu")]
+
+[sub_resource type="LabelSettings" id="LabelSettings_866kg"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_440mt"]
+font_size = 32
+
+[node name="Introduction" type="CanvasLayer"]
+script = ExtResource("1_s6se2")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.196078, 0.196078, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit_Button" type="Button" parent="Control/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.165
+anchor_top = 0.893333
+anchor_right = 0.89
+anchor_bottom = 0.996667
+grow_horizontal = 2
+grow_vertical = 0
+action_mode = 0
+shortcut = SubResource("Shortcut_bd5ue")
+text = "I Understand, Start Game"
+metadata/_edit_use_anchors_ = true
+
+[node name="Gameplay Explanation" type="Label" parent="Control/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.175347
+anchor_top = 0.101851
+anchor_right = 0.882813
+anchor_bottom = 0.435185
+grow_horizontal = 2
+text = "You and your enemies car will move consistently
+Answer the math questions correctly to get a speedboost and overtake your enemy!"
+label_settings = SubResource("LabelSettings_866kg")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Title Label" type="Label" parent="Control/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.209201
+anchor_top = 0.0586424
+anchor_right = 0.823785
+anchor_bottom = 0.206791
+text = "Gameplay Introduction:
+
+"
+label_settings = SubResource("LabelSettings_440mt")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button Introduction" type="Label" parent="Control/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.150174
+anchor_top = 0.442901
+anchor_right = 0.934028
+anchor_bottom = 0.739198
+text = "Use your mouse to press the correct answer in the bar you can see below
+Keyboard buttons shown in the buttons can also be used"
+label_settings = SubResource("LabelSettings_440mt")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Math_Answer" parent="Control" instance=ExtResource("1_bmk8i")]
+layout_mode = 1
+anchor_left = 0.364583
+anchor_top = 0.717592
+anchor_right = 0.724826
+anchor_bottom = 0.88426
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="GridContainer" parent="Control/Math_Answer" index="0"]
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" parent="Control/Math_Answer/GridContainer" index="0"]
+theme_override_font_sizes/font_size = 50
+text = "1"
+
+[node name="Button2" parent="Control/Math_Answer/GridContainer" index="1"]
+theme_override_font_sizes/font_size = 50
+text = "2"
+
+[node name="Button3" parent="Control/Math_Answer/GridContainer" index="2"]
+theme_override_font_sizes/font_size = 50
+text = "3"
+
+[node name="Button4" parent="Control/Math_Answer/GridContainer" index="3"]
+theme_override_font_sizes/font_size = 50
+text = "4"
+
+[connection signal="pressed" from="Control/ColorRect/Quit_Button" to="." method="_on_quit_button_pressed"]
+
+[editable path="Control/Math_Answer"]

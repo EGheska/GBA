@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://src/popup.gd" id="1_fa4yr"]
 [ext_resource type="Texture2D" uid="uid://dmk1201koe4nx" path="res://code1Maz`e.png" id="2_me7jh"]
 [ext_resource type="Texture2D" uid="uid://51mt5ow1ylin" path="res://codeCheetSheet.png" id="3_uf6i5"]
+[ext_resource type="Texture2D" uid="uid://bldjuloj8wgdh" path="res://WhatsApp Image 2023-11-24 at 14.24.03 (1).jpeg" id="4_hlhvc"]
 [ext_resource type="Texture2D" uid="uid://6uvlavv3xr7r" path="res://question-mark-12-48.png" id="5_ax3iv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihmy4"]
@@ -13,9 +14,6 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8iarn"]
-load_path = "res://.godot/imported/Robot (2) (2).svg-b6aff528adc611be91b506b1a92b1f65.ctex"
 
 [node name="Popup" type="Popup"]
 process_mode = 3
@@ -48,7 +46,7 @@ anchor_bottom = 0.5
 offset_left = -247.21
 offset_top = -50.0
 offset_right = 247.21
-offset_bottom = 50.0
+offset_bottom = 65.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_me7jh")
@@ -64,7 +62,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -212.958
 offset_top = -37.5
-offset_bottom = 37.5
+offset_bottom = 49.5
 grow_horizontal = 0
 grow_vertical = 2
 texture = ExtResource("3_uf6i5")
@@ -105,7 +103,7 @@ text = "Based on the code on the right suggest a answer for the maze!"
 
 [node name="LucRato" type="Sprite2D" parent="Control"]
 position = Vector2(961, 133)
-texture = SubResource("CompressedTexture2D_8iarn")
+texture = ExtResource("4_hlhvc")
 
 [node name="Label2" type="Label" parent="Control"]
 layout_mode = 1

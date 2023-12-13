@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://o64gamb7kel8"]
+
+[ext_resource type="Texture2D" uid="uid://cj3bwn28qghbc" path="res://assets/Player_Racecar.png" id="1_75cyi"]
+[ext_resource type="Script" path="res://Player_Movement.gd" id="2_4upd0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0kqc4"]
+font_size = 30
+outline_color = Color(1, 0, 0, 1)
+
+[sub_resource type="Curve2D" id="Curve2D_8u0qs"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 284, 227, 0, 0, 0, 0, 335, 228, 0, 0, 0, 0, 361, 230, 0, 0, 0, 0, 392, 234, 0, 0, 0, 0, 418, 242, 0, 0, 0, 0, 451, 255, 0, 0, 0, 0, 479, 274, 0, 0, 0, 0, 506, 303, 0, 0, 0, 0, 515, 336, 0, 0, 0, 0, 516, 370, 0, 0, 0, 0, 506, 402, 0, 0, 0, 0, 495, 422, 0, 0, 0, 0, 479, 435, 0, 0, 0, 0, 462, 446, 0, 0, 0, 0, 445, 455, 0, 0, 0, 0, 415, 461, 0, 0, 0, 0, 379, 467, 0, 0, 0, 0, 343, 470, 0, 0, 0, 0, 318, 468, 0, 0, 0, 0, 294, 464, 0, 0, 0, 0, 260, 454, 0, 0, 0, 0, 233, 442, 0, 0, 0, 0, 212, 426, 0, 0, 0, 0, 196, 411, 0, 0, 0, 0, 187, 389, 0, 0, 0, 0, 185, 368, 0, 0, 0, 0, 179, 339, 0, 0, 0, 0, 172, 305, 0, 0, 0, 0, 163, 274, 0, 0, 0, 0, 147, 244, 0, 0, 0, 0, 121, 222, 0, 0, 0, 0, 86, 200, 0, 0, 0, 0, 56, 185, 0, 0, 0, 0, 23, 172, 0, 0, 0, 0, -9, 163, 0, 0, 0, 0, -43, 157, 0, 0, 0, 0, -85, 152, 0, 0, 0, 0, -131, 148, 0, 0, 0, 0, -174, 148, 0, 0, 0, 0, -219, 154, 0, 0, 0, 0, -248, 164, 0, 0, 0, 0, -282, 180, 0, 0, 0, 0, -313, 199, 0, 0, 0, 0, -337, 217, 0, 0, 0, 0, -354, 237, 0, 0, 0, 0, -372, 260, 0, 0, 0, 0, -385, 282, 0, 0, 0, 0, -400, 310, 0, 0, 0, 0, -414, 342, 0, 0, 0, 0, -419, 376, 0, 0, 0, 0, -411, 404, 0, 0, 0, 0, -403, 423, 0, 0, 0, 0, -387, 443, 0, 0, 0, 0, -369, 462, 0, 0, 0, 0, -347, 482, 0, 0, 0, 0, -321, 503, 0, 0, 0, 0, -299, 515, 0, 0, 0, 0, -276, 525, 0, 0, 0, 0, -249, 536, 0, 0, 0, 0, -222, 543, 0, 0, 0, 0, -200, 547, 0, 0, 0, 0, -169, 551, 0, 0, 0, 0, -139, 554, 0, 0, 0, 0, -116, 556, 0, 0, 0, 0, -88, 557, 0, 0, 0, 0, -59, 557)
+}
+point_count = 66
+
+[node name="Player" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Lap_Label" type="Label" parent="."]
+layout_mode = 2
+anchor_left = 0.00870322
+anchor_top = 0.0702403
+anchor_right = 0.158399
+anchor_bottom = 0.22366
+offset_bottom = -1.52588e-05
+grow_horizontal = 2
+grow_vertical = 2
+auto_translate = false
+label_settings = SubResource("LabelSettings_0kqc4")
+metadata/_edit_use_anchors_ = true
+
+[node name="Player_path" type="Path2D" parent="."]
+position = Vector2(461, -48)
+curve = SubResource("Curve2D_8u0qs")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player_path"]
+position = Vector2(284, 227)
+rotation = 0.0196053
+
+[node name="Player_car" type="Sprite2D" parent="Player_path/PathFollow2D"]
+position = Vector2(-0.0197754, -0.999817)
+scale = Vector2(0.261625, 0.261625)
+texture = ExtResource("1_75cyi")
+script = ExtResource("2_4upd0")

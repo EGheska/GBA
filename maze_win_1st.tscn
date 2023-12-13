@@ -1,9 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dif3v4qf8em51"]
+[gd_scene load_steps=4 format=3 uid="uid://dif3v4qf8em51"]
 
 [ext_resource type="Script" path="res://maze_win_1st.gd" id="1_ek8vl"]
+[ext_resource type="Texture2D" uid="uid://bldjuloj8wgdh" path="res://WhatsApp Image 2023-11-24 at 14.24.03 (1).jpeg" id="2_62v2c"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8iarn"]
-load_path = "res://.godot/imported/Robot (2) (2).svg-b6aff528adc611be91b506b1a92b1f65.ctex"
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihmy4"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_ek8vl")
@@ -39,7 +46,7 @@ grow_vertical = 2
 [node name="Sprite2D" type="Sprite2D" parent="Control/Control"]
 position = Vector2(264, 256)
 scale = Vector2(1.85465, 1.74091)
-texture = SubResource("CompressedTexture2D_8iarn")
+texture = ExtResource("2_62v2c")
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 1
@@ -67,6 +74,8 @@ offset_left = -0.44001
 offset_top = -0.81604
 offset_right = -0.127991
 offset_bottom = 0.103973
+theme_override_styles/normal = SubResource("StyleBoxFlat_ihmy4")
+action_mode = 0
 text = "Back to the game selection"
 
 [node name="Button2" type="Button" parent="Control"]
@@ -80,6 +89,7 @@ offset_left = -3497.89
 offset_top = 377.672
 offset_right = -4454.89
 offset_bottom = -214.328
+theme_override_styles/normal = SubResource("StyleBoxFlat_ihmy4")
 text = "Next level"
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
