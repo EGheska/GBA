@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bw75h2ebl0svh" path="res://assets/1st racetrack.png" id="2_yyjsi"]
 [ext_resource type="Texture2D" uid="uid://c7xr2eal0x0vq" path="res://assets/Enemy_Racecar.png" id="5_c2jfv"]
 [ext_resource type="Script" path="res://Enemy_Movement.gd" id="6_gcqa2"]
-[ext_resource type="PackedScene" path="res://player_scene.tscn" id="6_xaxed"]
+[ext_resource type="PackedScene" uid="uid://8023y7easerw" path="res://player_scene.tscn" id="6_xaxed"]
 [ext_resource type="PackedScene" uid="uid://of3ei4lci41k" path="res://Victory_Screen.tscn" id="7_g523i"]
 [ext_resource type="PackedScene" path="res://Math_answers.tscn" id="7_ktthu"]
 

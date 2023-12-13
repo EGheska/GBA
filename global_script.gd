@@ -1,6 +1,6 @@
 extends Node
 
-var player_speed = 800 #105
+var player_speed = 105 #105
 const max_laps = 3
 var player_score = 0
 

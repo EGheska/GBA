@@ -6,7 +6,7 @@ extends Sprite2D
 var time_steps = (1/120)
 
 # Opponent speed variable
-var _speed :float = 800 #135
+var _speed :float = 135 #135
 
 # Variables for lap incrementing
 var new_enemy_lap = false 
