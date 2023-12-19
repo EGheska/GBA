@@ -232,5 +232,5 @@ func _write_new_question():
 
 
 func _on_quit_button_pressed():
-	get_tree().change_scene_to_file("res://math_race_level2.tscn")
+	get_tree().change_scene_to_file("res://src/appdata/math_race_level2.tscn")
 	pass # Replace with function body.

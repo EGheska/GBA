@@ -1,7 +1,7 @@
 extends CanvasLayer
 
-const charClass = preload("res://src/CharacterBody2D.gd")
-const solverClass = preload("res://src/popup.gd")
+const charClass = preload("res://src/appdata/CharacterBody2D.gd")
+const solverClass = preload("res://src/appdata/popup.gd")
 
 
 @onready var PopUP = $Popup
@@ -153,7 +153,7 @@ func _on_popup_visibility_changed():
 			AreaCollisionSixthDoor2.disconnect("body_enter", _on_area_2d_7_body_entered)
 		if solvers.solved and solvers.doorCounter == 500:
 #			t_end_the_game = Time.get_ticks_msec()
-			get_tree().change_scene_to_file("res://maze_win_1st.tscn")
+			get_tree().change_scene_to_file("res://src/appdata/maze_win_1st.tscn")
 			
 #func _process(delta):
 #	t_end_the_game = Time.get_ticks_msec()

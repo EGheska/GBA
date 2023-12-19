@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dif3v4qf8em51"]
 
-[ext_resource type="Script" path="res://maze_win_1st.gd" id="1_ek8vl"]
+[ext_resource type="Script" path="res://src/appdata/maze_win_1st.gd" id="1_ek8vl"]
 [ext_resource type="Texture2D" uid="uid://bldjuloj8wgdh" path="res://WhatsApp Image 2023-11-24 at 14.24.03 (1).jpeg" id="2_62v2c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihmy4"]

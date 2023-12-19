@@ -24,8 +24,8 @@ func _on_settings_button_pressed():
 
 
 func _on_game_button_pressed():
-	get_tree().change_scene_to_file("res://maze_intro.tscn")
+	get_tree().change_scene_to_file("res://src/appdata/maze_intro.tscn")
 
 
 func _on_game_button_2_pressed():
-	get_tree().change_scene_to_file("res://introduction.tscn")
+	get_tree().change_scene_to_file("res://src/appdata/introduction.tscn")

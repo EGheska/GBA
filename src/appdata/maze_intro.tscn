@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cgnnbalvowodd"]
 
 [ext_resource type="Texture2D" uid="uid://bldjuloj8wgdh" path="res://WhatsApp Image 2023-11-24 at 14.24.03 (1).jpeg" id="1_qn3wp"]
-[ext_resource type="Script" path="res://maze_intro.gd" id="1_s0jdq"]
+[ext_resource type="Script" path="res://src/appdata/maze_intro.gd" id="1_s0jdq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57u3u"]
 content_margin_left = 10.0

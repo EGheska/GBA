@@ -17,12 +17,12 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalSettings="*res://src/global_settings.gd"
-GlobalScript="*res://global_script.gd"
+GlobalScript="*res://src/appdata/global_script.gd"
+GlobalSettings="*res://src/appdata/global_settings.gd"
 
 [display]
 
-mouse_cursor/custom_image="res://code2Maze.PNG"
+mouse_cursor/custom_image="res://src/appdata/code2Maze.PNG"
 
 [layer_names]
 

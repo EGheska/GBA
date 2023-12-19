@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csb3t3ahcl0kb"
-path="res://.godot/imported/Maze1Final.png-438028a401145c1938da9d03cde22821.ctex"
+uid="uid://ddedrr4v26y5x"
+path="res://.godot/imported/code6Maze.png-07a00a9824e47c042a7fcce3a5a762c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Maze1Final.png"
-dest_files=["res://.godot/imported/Maze1Final.png-438028a401145c1938da9d03cde22821.ctex"]
+source_file="res://src/appdata/code6Maze.png"
+dest_files=["res://.godot/imported/code6Maze.png-07a00a9824e47c042a7fcce3a5a762c0.ctex"]
 
 [params]
 

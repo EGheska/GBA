@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dek6ctonas5e8"]
 
-[ext_resource type="PackedScene" path="res://Math_answers.tscn" id="1_bmk8i"]
-[ext_resource type="Script" path="res://introduction_race.gd" id="1_s6se2"]
+[ext_resource type="PackedScene" uid="uid://c18xh6tcyyumi" path="res://src/appdata/Math_answers.tscn" id="1_bmk8i"]
+[ext_resource type="Script" path="res://src/appdata/introduction_race.gd" id="1_s6se2"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_yeheu"]
 keycode = 32

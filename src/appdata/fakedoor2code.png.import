@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dethe0ve0q7ij"
-path="res://.godot/imported/fakedoor3code.png-423417504545fe9a76745bd03e5c6f11.ctex"
+uid="uid://bab8q5xso1nl0"
+path="res://.godot/imported/fakedoor2code.png-d9d03643df36c25ef34f423d64ac9540.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fakedoor3code.png"
-dest_files=["res://.godot/imported/fakedoor3code.png-423417504545fe9a76745bd03e5c6f11.ctex"]
+source_file="res://src/appdata/fakedoor2code.png"
+dest_files=["res://.godot/imported/fakedoor2code.png-d9d03643df36c25ef34f423d64ac9540.ctex"]
 
 [params]
 

@@ -1,13 +1,13 @@
 [gd_scene load_steps=14 format=3 uid="uid://cpbeeter00lwt"]
 
-[ext_resource type="Script" path="res://math_race_level2.gd" id="1_ub4ga"]
+[ext_resource type="Script" path="res://src/appdata/math_race_level2.gd" id="1_ub4ga"]
 [ext_resource type="Texture2D" uid="uid://bduen8e3uvluy" path="res://assets/racetrack_level2_transparent.png" id="2_hlprr"]
 [ext_resource type="Texture2D" uid="uid://cj3bwn28qghbc" path="res://assets/Player_Racecar.png" id="3_kii6l"]
-[ext_resource type="Script" path="res://Player_Movement.gd" id="4_aopmv"]
+[ext_resource type="Script" path="res://src/appdata/Player_Movement.gd" id="4_aopmv"]
+[ext_resource type="Script" path="res://src/appdata/Enemy_Movement.gd" id="4_tkjbf"]
 [ext_resource type="Texture2D" uid="uid://c7xr2eal0x0vq" path="res://assets/Enemy_Racecar.png" id="5_c2jfv"]
-[ext_resource type="Script" path="res://Enemy_Movement.gd" id="6_gcqa2"]
-[ext_resource type="PackedScene" path="res://Math_answers.tscn" id="7_ktthu"]
-[ext_resource type="PackedScene" uid="uid://of3ei4lci41k" path="res://Victory_Screen.tscn" id="8_53y33"]
+[ext_resource type="PackedScene" uid="uid://c18xh6tcyyumi" path="res://src/appdata/Math_answers.tscn" id="7_ktthu"]
+[ext_resource type="PackedScene" uid="uid://of3ei4lci41k" path="res://src/appdata/Victory_Screen.tscn" id="8_53y33"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jumnm"]
 font_size = 60
@@ -98,7 +98,7 @@ rotation = 3.14159
 position = Vector2(0.0288086, 0.151611)
 scale = Vector2(0.169498, 0.17847)
 texture = ExtResource("5_c2jfv")
-script = ExtResource("6_gcqa2")
+script = ExtResource("4_tkjbf")
 
 [node name="Lap_Label" type="Label" parent="Enemy"]
 layout_mode = 1

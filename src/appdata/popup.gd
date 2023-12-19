@@ -129,23 +129,23 @@ func _on_visibility_changed():
 	
 	match doorCounter:
 		1:
-			codetoSolve.texture = ResourceLoader.load("res://code1Maz`e.png")
+			codetoSolve.texture = ResourceLoader.load("res://src/appdata/code1Maz`e.png")
 		2:
-			codetoSolve.texture = ResourceLoader.load("res://code2Maze.PNG")
+			codetoSolve.texture = ResourceLoader.load("res://src/appdata/code2Maze.PNG")
 		3:
-			codetoSolve.texture = ResourceLoader.load("res://code3Maze.PNG")
+			codetoSolve.texture = ResourceLoader.load("res://src/appdata/code3Maze.PNG")
 		4:
-			codetoSolve.texture = ResourceLoader.load("res://code4Maze.png")
+			codetoSolve.texture = ResourceLoader.load("res://src/appdata/code4Maze.png")
 		5:
-			codetoSolve.texture = ResourceLoader.load("res://code5Maze.png")
+			codetoSolve.texture = ResourceLoader.load("res://src/appdata/code5Maze.png")
 		6:
-			codetoSolve.texture = ResourceLoader.load("res://code6Maze.png")
+			codetoSolve.texture = ResourceLoader.load("res://src/appdata/code6Maze.png")
 		100:
-			codetoSolve.texture = ResourceLoader.load("res://fakedoor1code.png")
+			codetoSolve.texture = ResourceLoader.load("res://src/appdata/fakedoor1code.png")
 		200:
-			codetoSolve.texture = ResourceLoader.load("res://fakedoor2code.png")
+			codetoSolve.texture = ResourceLoader.load("res://src/appdata/fakedoor2code.png")
 		300:
-			codetoSolve.texture = ResourceLoader.load("res://fakedoor3code.png")	
+			codetoSolve.texture = ResourceLoader.load("res://src/appdata/fakedoor3code.png")	
 		500:
-			codetoSolve.texture = ResourceLoader.load("res://Maze1Final.png")
+			codetoSolve.texture = ResourceLoader.load("res://src/appdata/Maze1Final.png")
 

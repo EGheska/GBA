@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://of3ei4lci41k"]
 
-[ext_resource type="Script" path="res://raze_Victory_Screen.gd" id="1_04n8g"]
+[ext_resource type="Script" path="res://src/appdata/raze_Victory_Screen.gd" id="1_76sgd"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_yeheu"]
 keycode = 32
@@ -12,7 +12,7 @@ events = [SubResource("InputEventKey_yeheu")]
 font_size = 32
 
 [node name="endgame_screen" type="CanvasLayer"]
-script = ExtResource("1_04n8g")
+script = ExtResource("1_76sgd")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
