@@ -1,6 +1,9 @@
-[gd_scene load_steps=73 format=3 uid="uid://duqhv6r3ecuue"]
+[gd_scene load_steps=79 format=3 uid="uid://duqhv6r3ecuue"]
 
+[ext_resource type="Script" path="res://src/appdata/maze_game_lvl2.gd" id="1_bn7af"]
 [ext_resource type="Texture2D" uid="uid://bgwrvascf4rd0" path="res://src/appdata/Снимок экрана 2023-12-19 в 10.34.56.png" id="1_e6iub"]
+[ext_resource type="Script" path="res://src/appdata/CharacterBody2D.gd" id="3_hrd87"]
+[ext_resource type="PackedScene" uid="uid://du0fwtx53xudu" path="res://src/appdata/popup.tscn" id="4_ctuhy"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yp465"]
 a = Vector2(-595.755, -632.93)
@@ -219,10 +222,10 @@ size = Vector2(98.3646, 7.4884)
 size = Vector2(8.33447, 107.977)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aifh6"]
-size = Vector2(223.962, 7.51157)
+size = Vector2(222.297, 7.51157)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j1w4s"]
-size = Vector2(7.22296, 99.1862)
+size = Vector2(5.8345, 99.1862)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xkj13"]
 size = Vector2(109.479, 7.53487)
@@ -254,7 +257,17 @@ size = Vector2(7.22302, 104.209)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ossf"]
 size = Vector2(315.104, 8.7674)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5h1i"]
+size = Vector2(41, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8a8mh"]
+size = Vector2(41, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3mhmv"]
+size = Vector2(32.5, 31)
+
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_bn7af")
 metadata/_edit_vertical_guides_ = [286.0, 870.0, 330.0]
 metadata/_edit_horizontal_guides_ = [587.0, 74.0]
 
@@ -512,12 +525,12 @@ scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1x0kr")
 
 [node name="CollisionShape2D60" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(258.697, 543.755)
+position = Vector2(257.864, 543.755)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_aifh6")
 
 [node name="CollisionShape2D61" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(366.789, 595.895)
+position = Vector2(366.095, 595.895)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_j1w4s")
 
@@ -570,3 +583,43 @@ shape = SubResource("RectangleShape2D_3eo16")
 position = Vector2(-6.94739, -533.104)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_5ossf")
+
+[node name="FisrtDoor" type="Area2D" parent="Control2"]
+position = Vector2(-264, 46)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FisrtDoor"]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_n5h1i")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/FisrtDoor"]
+offset_left = -21.0
+offset_top = 1.0
+offset_right = 20.0
+offset_bottom = 3.0
+color = Color(1, 0, 0, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/FisrtDoor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FisrtDoor/StaticBody2D"]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_8a8mh")
+
+[node name="Character" type="CharacterBody2D" parent="Control2"]
+position = Vector2(-265, 238)
+script = ExtResource("3_hrd87")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/Character"]
+position = Vector2(-0.25, -0.5)
+shape = SubResource("RectangleShape2D_3mhmv")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/Character"]
+offset_left = -17.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 17.0
+color = Color(0, 0, 0, 1)
+
+[node name="Popup" parent="." instance=ExtResource("4_ctuhy")]
+visible = false
+
+[connection signal="body_entered" from="Control2/FisrtDoor" to="." method="_on_fisrt_door_body_entered"]

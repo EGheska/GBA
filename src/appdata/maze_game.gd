@@ -55,6 +55,7 @@ func _ready():
 #	t_begin_the_game = Time.get_ticks_msec()
 	if PopUP.is_visible():
 		PopUP.set_visible(false)
+	solvers.setLevelCounter(1)
 #
 #
 #func timer_score():
