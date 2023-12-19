@@ -302,6 +302,8 @@ load_path = "res://.godot/imported/Robot (2) (2).svg-b6aff528adc611be91b506b1a92
 [node name="CanvasLayer" type="CanvasLayer"]
 process_mode = 1
 script = ExtResource("1_spyab")
+metadata/_edit_vertical_guides_ = [286.0, 865.0]
+metadata/_edit_horizontal_guides_ = [587.0, 74.0]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
