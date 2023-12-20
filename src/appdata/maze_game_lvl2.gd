@@ -18,6 +18,7 @@ const solverClass = preload("res://src/appdata/popup.gd")
 @onready var AreaCollision3 = $Control2/ThirdDoor/CollisionShape2D
 @onready var AreaCollision4 = $Control2/FourthDoor/CollisionShape2D
 @onready var AreaCollision5 = $Control2/FifthDoor/CollisionShape2D
+@onready var AreaCollision5and2 = $Control2/FifthDoor/CollisionShape2D2
 @onready var AreaCollision6 = $Control2/SixthDoor/CollisionShape2D
 @onready var AreaCollisionFinal = $Control2/FinalDoor/CollisionShape2D
 
@@ -154,7 +155,9 @@ func _on_popup_visibility_changed():
 			FourthColor.set_color(Color(1,1,1,0))
 		if solvers.solved and solvers.doorCounter == 5:
 			AreaCollision5.disabled = true
+			AreaCollision5and2.disabled = true
 			AreaCollision5.disconnect("body_enter", _on_fifth_door_body_entered)
+			AreaCollision5and2.disconnect("body_enter", _on_fifth_door_body_entered)
 			FifthDoor.set_disabled(true)
 			FifthColor.set_color(Color(1,1,1,0))
 		if solvers.solved and solvers.doorCounter == 6:
