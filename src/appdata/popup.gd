@@ -136,7 +136,76 @@ func _on_line_edit_text_submitted(new_text):
 					timer_func()
 				else:
 					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
-				
+			2:
+				if new_text.to_int() == 3492:
+					textLabel.set_text("Congratulations!\nYou have solved the code!")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
+			3:
+				if new_text.to_int() == 8567:
+					textLabel.set_text("Congratulations!\nYou have solved the code!")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
+			4:
+				if new_text.to_int() == 8642:
+					textLabel.set_text("Congratulations!\nYou have solved the code!")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
+			5:
+				if new_text.to_int() == 6273:
+					textLabel.set_text("Congratulations!\nYou have solved the code!")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
+			6:
+				if new_text.to_int() == 1928:
+					textLabel.set_text("Congratulations!\nYou have solved the code!")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
+			7:
+				if new_text.to_int() == 7329:
+					textLabel.set_text("Congratulations!\nYou have solved the final code!")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
+			100:
+				if new_text.to_int() == 4961:
+					textLabel.set_text("Oops! Seems like you've solved the fake door")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
+			200:
+				if new_text.to_int() == 5316:
+					textLabel.set_text("Oops! Seems like you've solved the fake door")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")	
+			300:
+				if new_text.to_int() == 5861:
+					textLabel.set_text("Oops! Seems like you've solved the fake door")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
+			400:
+				if new_text.to_int() == 6945:
+					textLabel.set_text("Oops! Seems like you've solved the fake door")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 func _on_visibility_changed():
 	
 	
