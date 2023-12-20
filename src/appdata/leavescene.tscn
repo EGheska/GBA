@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://dntea3iaghivx"]
+
+[ext_resource type="Script" path="res://src/appdata/leavescript.gd" id="1_7wcf0"]
+
+[node name="Popup" type="Popup"]
+size = Vector2i(700, 400)
+visible = true
+script = ExtResource("1_7wcf0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="YraBut" type="Button" parent="."]
+offset_left = 400.0
+offset_top = 200.0
+offset_right = 435.0
+offset_bottom = 231.0
+text = "Yes"
+
+[node name="NoBut" type="Button" parent="."]
+offset_left = 200.0
+offset_top = 200.0
+offset_right = 231.0
+offset_bottom = 231.0
+text = "No"
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -266.0
+offset_right = 266.0
+offset_bottom = 26.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Are you sure that you want to leave? Your progress will not be saved "
+
+[connection signal="pressed" from="YraBut" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="NoBut" to="." method="_on_no_but_pressed"]

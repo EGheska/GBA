@@ -40,6 +40,7 @@ const solverClass = preload("res://src/appdata/popup.gd")
 
 @onready var scoreItself = $Control2/ScoreItslef
 
+@onready var LeaveScene = $Popup2
 
 @onready var LucRato = $Control2/TextureRect
 @onready var controls = $Label
@@ -162,9 +163,9 @@ func _on_popup_visibility_changed():
 #	scoreItself.text = str(temp)
 #	print(temp)
 #
-func count_result():
-	var result = t_end_the_game - t_begin_the_game
-	return result
+#func count_result():
+#	var result = t_end_the_game - t_begin_the_game
+#	return result
 
 func _on_area_2d_4_body_entered(body):
 	LucRato.set_visible(false)
@@ -244,3 +245,8 @@ func _on_fakedoor_area_3_body_entered(body):
 
 func _on_control_2_resized():
 	LucRato.set_size(Vector2(400, 200))
+
+
+func _on_button_pressed():
+	LeaveScene.set_visible(true)
+	LeaveScene.popup_centered()

@@ -4,6 +4,8 @@ class_name solver extends Popup
 @onready var codetoSolve = $Control/CodeToSolve
 @onready var cheetSheet = $Control/CheetSheet
 @onready var lineEdit = $Control/LineEdit
+@onready var cheetSheetLvl2 = $Control/CheetSheetLvl2
+
 
 const CodeDictionary = {
 	"doorCode":2163,
@@ -128,12 +130,19 @@ func _on_line_edit_text_submitted(new_text):
 	elif levelCounter == 2:
 		match doorCounter:
 			1:
-				pass
+				if new_text.to_int() == 1245:
+					textLabel.set_text("Congratulations!\nYou have solved the code!")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 				
 func _on_visibility_changed():
 	
 	
 	if levelCounter == 1:
+		cheetSheetLvl2.set_visible(false)
+		cheetSheet.set_visible(true)
 		print(whichDoor, doorCounter)
 		lineEdit.clear()
 		textLabel.set_text("Based on the code on the right suggest a answer for the maze!")
@@ -161,6 +170,8 @@ func _on_visibility_changed():
 				codetoSolve.texture = ResourceLoader.load("res://src/appdata/Maze1Final.png")
 	
 	if levelCounter == 2:
+		cheetSheet.set_visible(false)
+		cheetSheetLvl2.set_visible(true)
 		print("level 2")
 		print(whichDoor, doorCounter)
 		lineEdit.clear()
@@ -168,5 +179,24 @@ func _on_visibility_changed():
 		
 		match doorCounter:
 			1:
-				#codetoSolve.texture = ResourceLoader.load()
-				print()
+				codetoSolve.texture = ResourceLoader.load("res://assets/mazel2c1.png")
+			2:
+				codetoSolve.texture = ResourceLoader.load("res://assets/mazel2c2.png")
+			3:
+				codetoSolve.texture = ResourceLoader.load("res://assets/mazel2c3.png")
+			4:
+				codetoSolve.texture = ResourceLoader.load("res://assets/mazel2c4.png")
+			5:
+				codetoSolve.texture = ResourceLoader.load("res://assets/mazel2c5.png")
+			6:
+				codetoSolve.texture = ResourceLoader.load("res://assets/mazel2c6.png")
+			7:
+				codetoSolve.texture = ResourceLoader.load("res://assets/mazel2c7.png")
+			100:
+				codetoSolve.texture = ResourceLoader.load("res://assets/mazel2f1.png")
+			200:
+				codetoSolve.texture = ResourceLoader.load("res://assets/mazel2f2.png")
+			300:
+				codetoSolve.texture = ResourceLoader.load("res://assets/mazel2f3.png")
+			400:
+				codetoSolve.texture = ResourceLoader.load("res://assets/mazel2f4.png")
