@@ -93,3 +93,4 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ihmy4")
 text = "Next level"
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Button2" to="." method="_on_button_2_pressed"]

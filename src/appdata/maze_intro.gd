@@ -8,8 +8,8 @@ func _on_button_pressed():
 
 
 func _on_button_2_pressed():
-	get_tree().change_scene_to_file("res://src/appdata/maze_game.tscn")
+	get_tree().change_scene_to_file("res://src/appdata/maze1intro.tscn")
 
 
 func _on_button_3_pressed():
-	get_tree().change_scene_to_file("res://src//appdata/maze_level_selection.tscn")
+	get_tree().change_scene_to_file("res://src/appdata/maze_level_selection.tscn")

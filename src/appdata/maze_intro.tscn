@@ -60,7 +60,8 @@ offset_top = -18.624
 offset_right = 83.424
 offset_bottom = 18.376
 theme_override_styles/normal = SubResource("StyleBoxFlat_57u3u")
-text = "Back"
+text = "Back to game selection
+"
 
 [node name="Button2" type="Button" parent="."]
 anchors_preset = -1
@@ -73,7 +74,7 @@ offset_top = -19.384
 offset_right = 83.048
 offset_bottom = 19.616
 theme_override_styles/normal = SubResource("StyleBoxFlat_57u3u")
-text = "Start game!"
+text = "Start game from the first level!"
 
 [node name="Label2" type="Label" parent="."]
 anchors_preset = -1
