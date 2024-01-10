@@ -1,7 +1,9 @@
-[gd_scene load_steps=99 format=3 uid="uid://b2bljhwribfuy"]
+[gd_scene load_steps=130 format=3 uid="uid://b2bljhwribfuy"]
 
 [ext_resource type="Texture2D" uid="uid://ccxoqs0141jdk" path="res://assets/mazelvl3.png" id="1_h1d8t"]
+[ext_resource type="Script" path="res://src/appdata/maze_lvl3.gd" id="1_whg42"]
 [ext_resource type="Script" path="res://src/appdata/CharacterBody2D.gd" id="2_lgx7r"]
+[ext_resource type="PackedScene" uid="uid://du0fwtx53xudu" path="res://src/appdata/popup.tscn" id="4_2kqp2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nup3y"]
 size = Vector2(516, 3.5)
@@ -58,13 +60,13 @@ size = Vector2(49, 4)
 size = Vector2(3, 106)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wcxr0"]
-size = Vector2(128, 3)
+size = Vector2(104, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4t0hb"]
-size = Vector2(3, 20)
+size = Vector2(3, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tj73r"]
-size = Vector2(152, 3)
+size = Vector2(156, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gmnjh"]
 size = Vector2(4, 148)
@@ -220,7 +222,7 @@ size = Vector2(105, 6.75)
 size = Vector2(5.5, 68)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnr1w"]
-size = Vector2(103, 6)
+size = Vector2(30.5, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8xyk"]
 size = Vector2(4.5, 31)
@@ -282,6 +284,9 @@ size = Vector2(84, 3)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7lfmw"]
 size = Vector2(83, 4)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x76ce"]
+size = Vector2(37, 6.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_algru"]
 size = Vector2(15, 15)
 
@@ -292,7 +297,101 @@ b = Vector2(0, 14)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mlhtf"]
 size = Vector2(2, 26)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_uv4nc"]
+a = Vector2(-12, 1)
+b = Vector2(12, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqaay"]
+size = Vector2(24, 1)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_yal3g"]
+a = Vector2(-8, 2)
+b = Vector2(10, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s68vi"]
+size = Vector2(20, 2)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jbk2f"]
+a = Vector2(0, -10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57y2w"]
+size = Vector2(2, 23)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2g6ur"]
+a = Vector2(-4, 2)
+b = Vector2(13, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7wk1c"]
+size = Vector2(20, 1)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7sr7y"]
+a = Vector2(-7, 2)
+b = Vector2(17, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_juphf"]
+size = Vector2(26, 2)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_r5tvl"]
+a = Vector2(-16, -3)
+b = Vector2(14, -3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rq5sc"]
+size = Vector2(33, 3)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hdour"]
+a = Vector2(-8, 1)
+b = Vector2(11, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibvwk"]
+size = Vector2(18, 3)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2pvcf"]
+a = Vector2(-1, -7)
+b = Vector2(-1, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uagi1"]
+size = Vector2(1, 18)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_joj2n"]
+a = Vector2(0, -11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2g8l"]
+size = Vector2(1, 23)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_vhnkx"]
+a = Vector2(0, -6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwebo"]
+size = Vector2(2, 16)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_kahnp"]
+a = Vector2(0, -11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2mvt"]
+size = Vector2(3, 22)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_uv16n"]
+b = Vector2(0, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oftmn"]
+size = Vector2(2, 19)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_dhwjy"]
+a = Vector2(-13, 0)
+b = Vector2(12, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_44bq8"]
+size = Vector2(25, 2)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mlpt7"]
+a = Vector2(-12, 0)
+b = Vector2(14, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exl60"]
+size = Vector2(24, 3)
+
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_whg42")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -407,15 +506,15 @@ position = Vector2(13.5, 152)
 shape = SubResource("RectangleShape2D_2ly8w")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
-position = Vector2(-52, 100.5)
+position = Vector2(-40, 100.5)
 shape = SubResource("RectangleShape2D_wcxr0")
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
-position = Vector2(-114.5, 89)
+position = Vector2(-114.5, 91)
 shape = SubResource("RectangleShape2D_4t0hb")
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
-position = Vector2(-36, 80)
+position = Vector2(-38, 80)
 shape = SubResource("RectangleShape2D_tj73r")
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
@@ -623,7 +722,7 @@ position = Vector2(194.75, -136)
 shape = SubResource("RectangleShape2D_kqv4p")
 
 [node name="CollisionShape2D74" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
-position = Vector2(141, -167)
+position = Vector2(104.75, -167)
 shape = SubResource("RectangleShape2D_lnr1w")
 
 [node name="CollisionShape2D75" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
@@ -706,6 +805,10 @@ shape = SubResource("RectangleShape2D_grjxo")
 position = Vector2(-151.5, -150)
 shape = SubResource("RectangleShape2D_7lfmw")
 
+[node name="CollisionShape2D95" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+position = Vector2(173.5, -166.75)
+shape = SubResource("RectangleShape2D_x76ce")
+
 [node name="Character" type="CharacterBody2D" parent="Control2"]
 position = Vector2(-221, 257)
 script = ExtResource("2_lgx7r")
@@ -739,3 +842,299 @@ offset_top = -13.0
 offset_right = 2.0
 offset_bottom = 15.0
 color = Color(1, 0, 0, 1)
+
+[node name="SecondDoor" type="Area2D" parent="Control2"]
+position = Vector2(140, 191)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/SecondDoor"]
+shape = SubResource("SegmentShape2D_uv4nc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/SecondDoor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/SecondDoor/StaticBody2D"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_dqaay")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/SecondDoor"]
+offset_left = 13.0
+offset_top = -2.0
+offset_right = 16.0
+offset_bottom = 24.0
+rotation = 1.5708
+color = Color(1, 0, 0, 1)
+
+[node name="ThirdDoor" type="Area2D" parent="Control2"]
+position = Vector2(-12, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/ThirdDoor"]
+shape = SubResource("SegmentShape2D_yal3g")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/ThirdDoor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/ThirdDoor/StaticBody2D"]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_s68vi")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/ThirdDoor"]
+offset_left = 11.0
+offset_top = -1.0
+offset_right = 14.0
+offset_bottom = 19.0
+rotation = 1.5708
+color = Color(1, 0, 0, 1)
+
+[node name="FourthDoor" type="Area2D" parent="Control2"]
+position = Vector2(33, -14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FourthDoor"]
+shape = SubResource("SegmentShape2D_jbk2f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/FourthDoor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FourthDoor/StaticBody2D"]
+position = Vector2(2, -0.5)
+shape = SubResource("RectangleShape2D_57y2w")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/FourthDoor"]
+offset_left = -1.0
+offset_top = -12.0
+offset_right = 2.0
+offset_bottom = 12.0
+color = Color(1, 0, 0, 1)
+
+[node name="FifthDoor" type="Area2D" parent="Control2"]
+position = Vector2(-144, -211)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FifthDoor"]
+position = Vector2(-2, -1)
+shape = SubResource("SegmentShape2D_2g6ur")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/FifthDoor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FifthDoor/StaticBody2D"]
+position = Vector2(3, -1.5)
+shape = SubResource("RectangleShape2D_7wk1c")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/FifthDoor"]
+offset_left = 14.0
+offset_top = -1.0
+offset_right = 17.0
+offset_bottom = 21.0
+rotation = 1.5708
+color = Color(1, 0, 0, 1)
+
+[node name="SixthDoor" type="Area2D" parent="Control2"]
+position = Vector2(228, -82)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/SixthDoor"]
+shape = SubResource("SegmentShape2D_7sr7y")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/SixthDoor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/SixthDoor/StaticBody2D"]
+position = Vector2(6, -1)
+shape = SubResource("RectangleShape2D_juphf")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/SixthDoor"]
+offset_left = 20.0
+offset_top = -1.0
+offset_right = 23.0
+offset_bottom = 28.0
+rotation = 1.5708
+color = Color(1, 0, 0, 1)
+
+[node name="FinalDoor" type="Area2D" parent="Control2"]
+position = Vector2(160, -148)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FinalDoor"]
+shape = SubResource("SegmentShape2D_r5tvl")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/FinalDoor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FinalDoor/StaticBody2D"]
+position = Vector2(-1.5, 2.5)
+shape = SubResource("RectangleShape2D_rq5sc")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/FinalDoor"]
+offset_left = 15.0
+offset_top = -3.0
+offset_right = 21.0
+offset_bottom = 30.0
+rotation = 1.5708
+color = Color(1, 0, 0, 1)
+
+[node name="FakeDoor1" type="Area2D" parent="Control2"]
+position = Vector2(-83, 119)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor1"]
+shape = SubResource("SegmentShape2D_hdour")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/FakeDoor1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor1/StaticBody2D"]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_ibvwk")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/FakeDoor1"]
+offset_left = 12.0
+offset_top = -1.0
+offset_right = 15.0
+offset_bottom = 19.0
+rotation = 1.5708
+color = Color(1, 0, 0, 1)
+
+[node name="FakeDoor2" type="Area2D" parent="Control2"]
+position = Vector2(155, 204)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor2"]
+shape = SubResource("SegmentShape2D_2pvcf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/FakeDoor2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor2/StaticBody2D"]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_uagi1")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/FakeDoor2"]
+offset_left = -2.0
+offset_top = -8.0
+offset_right = 1.0
+offset_bottom = 11.0
+color = Color(1, 0, 0, 1)
+
+[node name="FakeDoor3" type="Area2D" parent="Control2"]
+position = Vector2(155, 69)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor3"]
+shape = SubResource("SegmentShape2D_joj2n")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/FakeDoor3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor3/StaticBody2D"]
+position = Vector2(2.5, -0.5)
+shape = SubResource("RectangleShape2D_b2g8l")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/FakeDoor3"]
+offset_left = -1.0
+offset_top = -13.0
+offset_right = 2.0
+offset_bottom = 12.0
+color = Color(1, 0, 0, 1)
+
+[node name="FakeDoor4" type="Area2D" parent="Control2"]
+position = Vector2(-23, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor4"]
+shape = SubResource("SegmentShape2D_vhnkx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/FakeDoor4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor4/StaticBody2D"]
+position = Vector2(-2, 2)
+shape = SubResource("RectangleShape2D_wwebo")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/FakeDoor4"]
+offset_left = -2.0
+offset_top = -7.0
+offset_right = 1.0
+offset_bottom = 11.0
+color = Color(1, 0, 0, 1)
+
+[node name="FakeDoor5" type="Area2D" parent="Control2"]
+position = Vector2(-170, -64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor5"]
+shape = SubResource("SegmentShape2D_kahnp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/FakeDoor5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor5/StaticBody2D"]
+position = Vector2(-3.5, 0)
+shape = SubResource("RectangleShape2D_b2mvt")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/FakeDoor5"]
+offset_left = -2.0
+offset_top = -12.0
+offset_right = 1.0
+offset_bottom = 12.0
+color = Color(1, 0, 0, 1)
+
+[node name="FakeDoor6" type="Area2D" parent="Control2"]
+position = Vector2(-156, -198)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor6"]
+position = Vector2(1, -9)
+shape = SubResource("SegmentShape2D_uv16n")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/FakeDoor6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor6/StaticBody2D"]
+position = Vector2(-2, 0.5)
+shape = SubResource("RectangleShape2D_oftmn")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/FakeDoor6"]
+offset_left = -1.0
+offset_top = -10.0
+offset_right = 2.0
+offset_bottom = 11.0
+color = Color(1, 0, 0, 1)
+
+[node name="FakeDoor7" type="Area2D" parent="Control2"]
+position = Vector2(235, -48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor7"]
+shape = SubResource("SegmentShape2D_dhwjy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/FakeDoor7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor7/StaticBody2D"]
+position = Vector2(-0.5, 2)
+shape = SubResource("RectangleShape2D_44bq8")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/FakeDoor7"]
+offset_left = 13.0
+offset_top = -1.0
+offset_right = 16.0
+offset_bottom = 26.0
+rotation = 1.5708
+color = Color(1, 0, 0, 1)
+
+[node name="FakeDoor8" type="Area2D" parent="Control2"]
+position = Vector2(170, -28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor8"]
+shape = SubResource("SegmentShape2D_mlpt7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/FakeDoor8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor8/StaticBody2D"]
+position = Vector2(1, -2.5)
+shape = SubResource("RectangleShape2D_exl60")
+
+[node name="ColorRect" type="ColorRect" parent="Control2/FakeDoor8"]
+offset_left = 15.0
+offset_top = -2.0
+offset_right = 18.0
+offset_bottom = 26.0
+rotation = 1.5708
+color = Color(1, 0, 0, 1)
+
+[node name="Popup" parent="." instance=ExtResource("4_2kqp2")]
+visible = false
+
+[connection signal="body_entered" from="Control2/FirstDoor" to="." method="_on_first_door_body_entered"]
+[connection signal="body_entered" from="Control2/SecondDoor" to="." method="_on_second_door_body_entered"]
+[connection signal="body_entered" from="Control2/ThirdDoor" to="." method="_on_third_door_body_entered"]
+[connection signal="body_entered" from="Control2/FourthDoor" to="." method="_on_fourth_door_body_entered"]
+[connection signal="body_entered" from="Control2/FifthDoor" to="." method="_on_fifth_door_body_entered"]
+[connection signal="body_entered" from="Control2/SixthDoor" to="." method="_on_sixth_door_body_entered"]
+[connection signal="body_entered" from="Control2/FinalDoor" to="." method="_on_final_door_body_entered"]
+[connection signal="body_entered" from="Control2/FakeDoor1" to="." method="_on_fake_door_1_body_entered"]
+[connection signal="body_entered" from="Control2/FakeDoor2" to="." method="_on_fake_door_2_body_entered"]
+[connection signal="body_entered" from="Control2/FakeDoor3" to="." method="_on_fake_door_3_body_entered"]
+[connection signal="body_entered" from="Control2/FakeDoor4" to="." method="_on_fake_door_4_body_entered"]
+[connection signal="body_entered" from="Control2/FakeDoor5" to="." method="_on_fake_door_5_body_entered"]
+[connection signal="body_entered" from="Control2/FakeDoor6" to="." method="_on_fake_door_6_body_entered"]
+[connection signal="body_entered" from="Control2/FakeDoor7" to="." method="_on_fake_door_7_body_entered"]
+[connection signal="body_entered" from="Control2/FakeDoor8" to="." method="_on_fake_door_8_body_entered"]
+[connection signal="visibility_changed" from="Popup" to="." method="_on_popup_visibility_changed"]
