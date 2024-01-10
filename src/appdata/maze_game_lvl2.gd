@@ -171,6 +171,23 @@ func _on_popup_visibility_changed():
 #			FinalDoor.set_disabled(true)
 #			FinalColor.set_color(Color(1,1,1,0))
 			get_tree().change_scene_to_file("res://src/appdata/maze_win_1st.tscn")
+		if solvers.solved and solvers.doorCounter == 100:
+			FakeDoor1.disabled = true
+			FakeDoor1.disconnect("body_enter", _on_fake_door_1_body_entered)
+			FakeColor1.set_color(Color(1,1,1,0))
+		if solvers.solved and solvers.doorCounter == 200:
+			FakeDoor2.disabled = true
+			FakeDoor2.disconnect("body_enter", _on_fake_door_2_body_entered)
+			FakeColor2.set_color(Color(1,1,1,0))
+		if solvers.solved and solvers.doorCounter == 300:
+			FakeDoor3.disabled = true
+			FakeDoor3.disconnect("body_enter", _on_fake_door_3_body_entered)
+			FakeColor3.set_color(Color(1,1,1,0))
+		if solvers.solved and solvers.doorCounter == 400:
+			FakeDoor4.disabled = true
+			FakeDoor4.disconnect("body_enter", _on_fake_door_4_body_entered)
+			FakeColor4.set_color(Color(1,1,1,0))
+			
 			
 
 func _on_fake_door_1_body_entered(body):
