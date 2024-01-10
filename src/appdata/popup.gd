@@ -210,35 +210,110 @@ func _on_line_edit_text_submitted(new_text):
 	elif levelCounter == 3:
 		match doorCounter:
 			1:
-				pass
+				if new_text.to_int() == 2748:
+					textLabel.set_text("Congratulations!\nYou have solved the code!")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 			2:
-				pass
+				if new_text.to_int() == 2519:
+					textLabel.set_text("Congratulations!\nYou have solved the code!")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 			3:
-				pass
+				if new_text.to_int() == 3275:
+					textLabel.set_text("Congratulations!\nYou have solved the code!")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 			4:
-				pass
+				if new_text.to_int() == 6913:
+					textLabel.set_text("Congratulations!\nYou have solved the code!")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 			5:
-				pass
+				if new_text.to_int() == 2942:
+					textLabel.set_text("Congratulations!\nYou have solved the code!")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 			6:
-				pass
+				if new_text.to_int() == 7478:
+					textLabel.set_text("Congratulations!\nYou have solved the code!")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 			7:
-				pass
+				if new_text.to_int() == 8152:
+					textLabel.set_text("Congratulations!\nYou have solved final the code!")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 			100:
-				pass
+				if new_text.to_int() == 9541:
+					textLabel.set_text("Oops! Seems like you've solved the fake door")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 			200:
-				pass
+				if new_text.to_int() == 6681:
+					textLabel.set_text("Oops! Seems like you've solved the fake door")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 			300:
-				pass
+				if new_text.to_int() == 4637:
+					textLabel.set_text("Oops! Seems like you've solved the fake door")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 			400:
-				pass
+				if new_text.to_int() == 7636:
+					textLabel.set_text("Oops! Seems like you've solved the fake door")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 			500:
-				pass
+				if new_text.to_int() == 2442:
+					textLabel.set_text("Oops! Seems like you've solved the fake door")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 			600:
-				pass
+				if new_text.to_int() == 2942:
+					textLabel.set_text("Oops! Seems like you've solved the fake door")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 			700:
-				pass
+				if new_text.to_int() == 6913:
+					textLabel.set_text("Oops! Seems like you've solved the fake door")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 			800:
-				pass
+				if new_text.to_int() == 4637:
+					textLabel.set_text("Oops! Seems like you've solved the fake door")
+					_set_solve(true)
+					timer_func()
+				else:
+					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 				
 func _on_visibility_changed():
 	
@@ -246,6 +321,7 @@ func _on_visibility_changed():
 	if levelCounter == 1:
 		cheetSheetLvl2.set_visible(false)
 		cheetSheet.set_visible(true)
+		cheatSheetlvl3.set_visible(false)
 		print(whichDoor, doorCounter)
 		lineEdit.clear()
 		textLabel.set_text("Based on the code on the right suggest a answer for the maze!")
@@ -273,8 +349,10 @@ func _on_visibility_changed():
 				codetoSolve.texture = ResourceLoader.load("res://src/appdata/Maze1Final.png")
 	
 	if levelCounter == 2:
+		
 		cheetSheet.set_visible(false)
 		cheetSheetLvl2.set_visible(true)
+		cheatSheetlvl3.set_visible(false)
 		print("level 2")
 		print(whichDoor, doorCounter)
 		lineEdit.clear()
@@ -303,3 +381,45 @@ func _on_visibility_changed():
 				codetoSolve.texture = ResourceLoader.load("res://assets/mazel2f3.png")
 			400:
 				codetoSolve.texture = ResourceLoader.load("res://assets/mazel2f4.png")
+				
+	if levelCounter == 3:
+		
+		cheetSheet.set_visible(false)
+		cheetSheetLvl2.set_visible(false)
+		cheatSheetlvl3.set_visible(true)
+		print("level 3")
+		print(whichDoor, doorCounter)
+		lineEdit.clear()
+		textLabel.set_text("Based on the code on the right suggest a answer for the maze!")
+		
+		match doorCounter:
+			1:
+				codetoSolve.texture = ResourceLoader.load("res://assets/maze3c1.PNG")
+			2:
+				codetoSolve.texture = ResourceLoader.load("res://assets/maze3c2.PNG")
+			3:
+				codetoSolve.texture = ResourceLoader.load("res://assets/maze3c3.PNG")
+			4:
+				codetoSolve.texture = ResourceLoader.load("res://assets/maze3c4.PNG")
+			5:
+				codetoSolve.texture = ResourceLoader.load("res://assets/maze3c5.PNG")
+			6:
+				codetoSolve.texture = ResourceLoader.load("res://assets/maze3c6.PNG")
+			7:
+				codetoSolve.texture = ResourceLoader.load("res://assets/maze3c7.PNG")
+			100:
+				codetoSolve.texture = ResourceLoader.load("res://assets/maze3f1.PNG")
+			200:
+				codetoSolve.texture = ResourceLoader.load("res://assets/maze3f2.PNG")
+			300:
+				codetoSolve.texture = ResourceLoader.load("res://assets/maze3f3.PNG")
+			400:
+				codetoSolve.texture = ResourceLoader.load("res://assets/maze3f4.PNG")
+			500:
+				codetoSolve.texture = ResourceLoader.load("res://assets/maze3f5.PNG")
+			600:
+				codetoSolve.texture = ResourceLoader.load("res://assets/maze3c5.PNG")
+			700:
+				codetoSolve.texture = ResourceLoader.load("res://assets/maze3c4.PNG")
+			800:
+				codetoSolve.texture = ResourceLoader.load("res://assets/maze3f3.PNG")
