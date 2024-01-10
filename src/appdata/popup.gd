@@ -5,6 +5,7 @@ class_name solver extends Popup
 @onready var cheetSheet = $Control/CheetSheet
 @onready var lineEdit = $Control/LineEdit
 @onready var cheetSheetLvl2 = $Control/CheetSheetLvl2
+@onready var cheatSheetlvl3 = $Control/CheatSheetLvl3
 
 
 const CodeDictionary = {
@@ -206,6 +207,39 @@ func _on_line_edit_text_submitted(new_text):
 					timer_func()
 				else:
 					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
+	elif levelCounter == 3:
+		match doorCounter:
+			1:
+				pass
+			2:
+				pass
+			3:
+				pass
+			4:
+				pass
+			5:
+				pass
+			6:
+				pass
+			7:
+				pass
+			100:
+				pass
+			200:
+				pass
+			300:
+				pass
+			400:
+				pass
+			500:
+				pass
+			600:
+				pass
+			700:
+				pass
+			800:
+				pass
+				
 func _on_visibility_changed():
 	
 	
