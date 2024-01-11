@@ -131,7 +131,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="WelcomeScreen4" type="Sprite2D" parent="."]
-position = Vector2(584, 1096)
+position = Vector2(-4672, 6000)
 scale = Vector2(0.597917, 0.601852)
 texture = ExtResource("2_43e7t")
 

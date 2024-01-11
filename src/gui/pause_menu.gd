@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var settings = $SettingsMenu
 
 func _on_menu_button_pressed():
-	pass
+	get_tree().change_scene_to_file("res://src/gui/main_menu.tscn")
 
 
 func _on_profile_button_pressed():
@@ -11,7 +11,7 @@ func _on_profile_button_pressed():
 
 
 func _on_game_selection_button_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://src/gui/game_selection.tscn")
 
 
 func _on_options_pressed():
