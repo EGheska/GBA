@@ -31,6 +31,11 @@ func costyl():
 		lvl3.disabled = true
 		lvl3.text = ""
 	config.save("res://settings2.cfg")
+	
+	if config.get_value("Level2", "noacces") == false:
+		lvl2.disabled = false
+	if config.get_value("Level3", "noacces") == false:
+		lvl3.disabled = false
 
 func _ready():
 	print(config.get_value("Level2", "noacces"))
@@ -42,16 +47,12 @@ func _on_button_pressed():
 
 
 func _on_button_2_pressed():
-	if isNextlevelOpen:
 		get_tree().change_scene_to_file("res://src/appdata/maze2intro.tscn")
-	else:
-		pass
+
 		
 func _on_button_4_pressed():
-	if isThirdLevelOpen:
 		get_tree().change_scene_to_file("res://src/appdata/maze3_intro.tscn")
-	else:
-		pass
+
 
 
 func _on_back_button_pressed():

@@ -184,6 +184,11 @@ func _on_line_edit_text_submitted(new_text):
 			7:
 				if new_text.to_int() == 7329:
 					textLabel.set_text("Congratulations!\nYou have solved the final code!")
+					config.load("res://settings2.cfg")
+					config.set_value("Level3", "noacces", false)
+					print(config.get_value("Level2", "noacces"))
+					print(config.get_value("Level3", "noacces"))
+					config.save("res://settings2.cfg")
 					_set_solve(true)
 					timer_func()
 				else:
