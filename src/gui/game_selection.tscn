@@ -1,50 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://dhj2658etlghd"]
+[gd_scene load_steps=8 format=3 uid="uid://dhj2658etlghd"]
 
 [ext_resource type="Script" path="res://src/gui/game_selection.gd" id="1_sooat"]
-[ext_resource type="Texture2D" uid="uid://nf0f8rk1tlmx" path="res://assets/werkbedrijf-lucrato.png" id="2_hw71x"]
-[ext_resource type="Texture2D" uid="uid://dot7h15ilfddc" path="res://assets/background.jpg" id="2_l7s8t"]
+[ext_resource type="Texture2D" uid="uid://bjfi3i074kvsb" path="res://assets/Back button.png" id="3_d5cl5"]
 [ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="4_5wvys"]
-[ext_resource type="PackedScene" uid="uid://dq8wkquhigvch" path="res://src/gui/settings_menu.tscn" id="4_h4g76"]
+[ext_resource type="Texture2D" uid="uid://csjcqpgmn0wbd" path="res://assets/Hamburger menu button.png" id="4_f5j8y"]
+[ext_resource type="Texture2D" uid="uid://ba66jl05oujt4" path="res://src/gui/Game selection screen.png" id="6_4ypun"]
+[ext_resource type="PackedScene" uid="uid://dg1n1ng1egy1u" path="res://src/gui/pause_menu.tscn" id="6_gm5ha"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57u3u"]
-content_margin_left = 10.0
-content_margin_right = 10.0
-bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_61o7t"]
-content_margin_left = 10.0
-content_margin_right = 10.0
-bg_color = Color(0.00392157, 0.627451, 0.776471, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vgx7l"]
-content_margin_left = 10.0
-content_margin_right = 10.0
-bg_color = Color(0.733333, 0.870588, 0.901961, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_avfh6"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tnlt6"]
-content_margin_left = 10.0
-content_margin_right = 10.0
-bg_color = Color(0.00392157, 0.627451, 0.776471, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ljabw"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25m2k"]
+bg_color = Color(0.823529, 0.0745098, 0.45098, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
 
 [node name="GameSelect" type="CanvasLayer"]
 script = ExtResource("1_sooat")
@@ -55,15 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="."]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_l7s8t")
+color = Color(0.92549, 0.839216, 0.882353, 1)
 
 [node name="GameSelection" type="Control" parent="."]
 layout_mode = 3
@@ -73,97 +33,92 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Werkbedrijf-lucrato" type="Sprite2D" parent="GameSelection"]
-visible = false
-position = Vector2(1072, 88)
-scale = Vector2(0.492593, 0.492593)
-texture = ExtResource("2_hw71x")
-
 [node name="MarginContainer" type="MarginContainer" parent="GameSelection"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 60
-theme_override_constants/margin_top = 80
-theme_override_constants/margin_bottom = 60
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
 
-[node name="GridContainer" type="GridContainer" parent="GameSelection/MarginContainer"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="GameSelection/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameSelection/MarginContainer/VBoxContainer3"]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_constants/h_separation = 400
-theme_override_constants/v_separation = 120
-columns = 2
+theme_override_constants/separation = 962
 
-[node name="GameButton" type="Button" parent="GameSelection/MarginContainer/GridContainer"]
+[node name="BackButton" type="Button" parent="GameSelection/MarginContainer/VBoxContainer3/HBoxContainer"]
+custom_minimum_size = Vector2(126, 0)
 layout_mode = 2
-text = "Game 1"
-
-[node name="GameButton2" type="Button" parent="GameSelection/MarginContainer/GridContainer"]
-layout_mode = 2
-text = "Game 2
-"
-
-[node name="GameButton3" type="Button" parent="GameSelection/MarginContainer/GridContainer"]
-layout_mode = 2
-text = "Game 3"
-
-[node name="GameButton4" type="Button" parent="GameSelection/MarginContainer/GridContainer"]
-layout_mode = 2
-text = "Game 4"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="GameSelection/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
-theme_override_constants/separation = 15
-
-[node name="SettingsButton" type="Button" parent="GameSelection/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/outline_size = 0
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.823529, 0.0745098, 0.45098, 1)
 theme_override_fonts/font = ExtResource("4_5wvys")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_57u3u")
-theme_override_styles/hover = SubResource("StyleBoxFlat_61o7t")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_vgx7l")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_avfh6")
-text = "Settings"
-
-[node name="BackButton" type="Button" parent="GameSelection/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 6
-theme_override_fonts/font = ExtResource("4_5wvys")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_tnlt6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_57u3u")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_vgx7l")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ljabw")
+theme_override_font_sizes/font_size = 30
 text = "Back"
+icon = ExtResource("3_d5cl5")
+flat = true
 
-[node name="lucrato" type="TextureRect" parent="GameSelection"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.889
-anchor_top = 0.074
-anchor_right = 0.951
-anchor_bottom = 0.247
-offset_left = -7.12805
-offset_top = 13.048
-offset_right = 9.448
-offset_bottom = 31.944
-grow_horizontal = 0
-texture = ExtResource("2_hw71x")
-expand_mode = 1
+[node name="MenuButton" type="Button" parent="GameSelection/MarginContainer/VBoxContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+icon = ExtResource("4_f5j8y")
+flat = true
 
-[node name="SettingsMenu" parent="." instance=ExtResource("4_h4g76")]
+[node name="HBoxContainer2" type="HBoxContainer" parent="GameSelection/MarginContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="GameSelection/MarginContainer/VBoxContainer3/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.835294, 0.141176, 0.490196, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("4_5wvys")
+theme_override_font_sizes/font_size = 45
+text = "The Minigames"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameSelection/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 200
+
+[node name="MathGame" type="Button" parent="GameSelection/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(310, 150)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_5wvys")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
+text = "Math race"
+
+[node name="MazeGame" type="Button" parent="GameSelection/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(310, 150)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_5wvys")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
+text = "The labyrinth"
+
+[node name="GameSelectionScreen" type="Sprite2D" parent="."]
+position = Vector2(1864, 568)
+scale = Vector2(0.6, 0.555037)
+texture = ExtResource("6_4ypun")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("6_gm5ha")]
 visible = false
 
-[connection signal="pressed" from="GameSelection/MarginContainer/GridContainer/GameButton" to="." method="_on_game_button_pressed"]
-[connection signal="pressed" from="GameSelection/MarginContainer/GridContainer/GameButton2" to="." method="_on_game_button_2_pressed"]
-[connection signal="pressed" from="GameSelection/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="GameSelection/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="GameSelection/MarginContainer/VBoxContainer3/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="GameSelection/MarginContainer/VBoxContainer3/HBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="GameSelection/MarginContainer/HBoxContainer/MathGame" to="." method="_on_math_game_pressed"]
+[connection signal="pressed" from="GameSelection/MarginContainer/HBoxContainer/MazeGame" to="." method="_on_maze_game_pressed"]

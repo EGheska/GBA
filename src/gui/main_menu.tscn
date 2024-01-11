@@ -1,98 +1,26 @@
-[gd_scene load_steps=19 format=3 uid="uid://bfskk4kagkjnd"]
+[gd_scene load_steps=10 format=3 uid="uid://bfskk4kagkjnd"]
 
 [ext_resource type="Script" path="res://src/gui/main_menu.gd" id="1_4djdb"]
 [ext_resource type="PackedScene" uid="uid://dq8wkquhigvch" path="res://src/gui/settings_menu.tscn" id="1_cmkqd"]
-[ext_resource type="Texture2D" uid="uid://dot7h15ilfddc" path="res://assets/background.jpg" id="2_grd8o"]
 [ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="3_d6gmq"]
-[ext_resource type="Texture2D" uid="uid://nf0f8rk1tlmx" path="res://assets/werkbedrijf-lucrato.png" id="4_ysusw"]
+[ext_resource type="Texture2D" uid="uid://dgcghiy7q0j6v" path="res://src/gui/Robot (2).png" id="3_ove3k"]
 [ext_resource type="PackedScene" uid="uid://dhj2658etlghd" path="res://src/gui/game_selection.tscn" id="6_cro08"]
 
 [sub_resource type="Theme" id="Theme_0dlp4"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihmy4"]
-content_margin_left = 10.0
-content_margin_right = 10.0
-bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_er35l"]
+bg_color = Color(0.823529, 0.0745098, 0.45098, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+expand_margin_left = 1.0
+expand_margin_right = 1.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqdlt"]
-content_margin_left = 10.0
-content_margin_right = 10.0
-bg_color = Color(0.00392157, 0.627451, 0.776471, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uicda"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uc8ij"]
-content_margin_left = 10.0
-content_margin_right = 10.0
-bg_color = Color(0.733333, 0.870588, 0.901961, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kt67b"]
-content_margin_left = 10.0
-content_margin_right = 10.0
-bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_61o7t"]
-content_margin_left = 10.0
-content_margin_right = 10.0
-bg_color = Color(0.00392157, 0.627451, 0.776471, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vgx7l"]
-content_margin_left = 10.0
-content_margin_right = 10.0
-bg_color = Color(0.733333, 0.870588, 0.901961, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vura6"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57u3u"]
-content_margin_left = 10.0
-content_margin_right = 10.0
-bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_te34a"]
-content_margin_left = 10.0
-content_margin_right = 10.0
-bg_color = Color(0.00392157, 0.627451, 0.776471, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gi6qf"]
-content_margin_left = 10.0
-content_margin_right = 10.0
-bg_color = Color(0.733333, 0.870588, 0.901961, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_twfil"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t5xjs"]
+load_path = "res://.godot/imported/Main screen1.png-d3b38fb3f308eebb6d3fcd0224f8e385.ctex"
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_4djdb")
@@ -112,37 +40,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="Menu"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_grd8o")
-
-[node name="Werkbedrijf-lucrato" type="Sprite2D" parent="Menu"]
-visible = false
-position = Vector2(1072, 88)
-scale = Vector2(0.492593, 0.492593)
-texture = ExtResource("4_ysusw")
-
-[node name="lucrato" type="TextureRect" parent="Menu"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.889
-anchor_top = 0.074
-anchor_right = 0.951
-anchor_bottom = 0.247
-offset_left = -7.12805
-offset_top = 13.048
-offset_right = 9.448
-offset_bottom = 31.944
-grow_horizontal = 0
-texture = ExtResource("4_ysusw")
-expand_mode = 1
+color = Color(0.917647, 0.827451, 0.87451, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="Menu"]
 layout_mode = 1
@@ -152,71 +50,92 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_0dlp4")
-theme_override_constants/margin_left = 60
-theme_override_constants/margin_top = 80
-theme_override_constants/margin_bottom = 60
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 49
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = -57
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/MarginContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Menu/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 15
+size_flags_vertical = 0
 
-[node name="Title" type="Label" parent="Menu/MarginContainer/VBoxContainer"]
+[node name="GameTitle" type="Label" parent="Menu/MarginContainer/VBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.823529, 0.0745098, 0.45098, 1)
 theme_override_fonts/font = ExtResource("3_d6gmq")
-theme_override_font_sizes/font_size = 62
-text = "The Game"
+theme_override_font_sizes/font_size = 45
+text = "Lucrato's Minigames"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="MarginBetween" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer"]
+[node name="Label4" type="Label" parent="Menu/MarginContainer/VBoxContainer2"]
 layout_mode = 2
-theme_override_constants/margin_top = 80
+theme_override_constants/outline_size = 5
 
-[node name="StartButton" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+[node name="Label3" type="Label" parent="Menu/MarginContainer/VBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 0
+theme_override_constants/outline_size = 5
+
+[node name="Label" type="Label" parent="Menu/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+
+[node name="StartButton" type="Button" parent="Menu/MarginContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(297, 89)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_d6gmq")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_er35l")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uicda")
+action_mode = 0
+text = "Start"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("3_d6gmq")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_ihmy4")
-theme_override_styles/hover = SubResource("StyleBoxFlat_qqdlt")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_uc8ij")
-toggle_mode = true
-text = "Start Game"
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 438
 
-[node name="MarginBetween" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer/StartButton"]
-layout_mode = 0
-theme_override_constants/margin_top = 80
-
-[node name="MarginBetween" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer/StartButton/MarginBetween"]
+[node name="SettingsButton" type="Button" parent="Menu/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(297, 89)
 layout_mode = 2
-theme_override_constants/margin_top = 80
-
-[node name="SettingsButton" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_d6gmq")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_kt67b")
-theme_override_styles/hover = SubResource("StyleBoxFlat_61o7t")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_vgx7l")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_vura6")
-toggle_mode = true
-text = "Settings"
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_er35l")
+action_mode = 0
+text = "Options
+"
 
-[node name="QuitButton" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="Menu/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(297, 89)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 10
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_d6gmq")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_57u3u")
-theme_override_styles/hover = SubResource("StyleBoxFlat_te34a")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_gi6qf")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_twfil")
-toggle_mode = true
-text = "Quit"
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_er35l")
+action_mode = 0
+text = "Quit
+"
+
+[node name="TextureRect" type="TextureRect" parent="Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.375
+anchor_top = 0.556
+anchor_right = 0.639
+anchor_bottom = 1.16
+offset_left = -3.05176e-05
+offset_top = -0.288025
+offset_right = -0.128052
+offset_bottom = 0.319946
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(144, 208)
+texture = ExtResource("3_ove3k")
 
 [node name="SettingsMenu" parent="." instance=ExtResource("1_cmkqd")]
 visible = false
@@ -224,7 +143,12 @@ visible = false
 [node name="GameSelection" parent="." instance=ExtResource("6_cro08")]
 visible = false
 
+[node name="MainScreen1" type="Sprite2D" parent="."]
+position = Vector2(-640, 328)
+scale = Vector2(0.597917, 0.598148)
+texture = SubResource("CompressedTexture2D_t5xjs")
+
 [connection signal="ready" from="." to="." method="_on_ready"]
-[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer2/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/HBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

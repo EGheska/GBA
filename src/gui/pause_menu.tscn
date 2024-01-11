@@ -1,0 +1,144 @@
+[gd_scene load_steps=6 format=3 uid="uid://dg1n1ng1egy1u"]
+
+[ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="1_3wayp"]
+[ext_resource type="Script" path="res://src/gui/pause_menu.gd" id="1_12hwd"]
+[ext_resource type="Texture2D" uid="uid://bfmqfc4hql88d" path="res://assets/Welcome screen 4.png" id="2_43e7t"]
+[ext_resource type="PackedScene" uid="uid://dq8wkquhigvch" path="res://src/gui/settings_menu.tscn" id="4_urhba"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6k3vo"]
+bg_color = Color(0.764706, 0.12549, 0.45098, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_12hwd")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.917647, 0.827451, 0.87451, 0.686275)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.653
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.256
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.823529, 0.0745098, 0.45098, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_right = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_3wayp")
+theme_override_font_sizes/font_size = 50
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="EmptyLabel" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MenuButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_3wayp")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
+text = "Main menu"
+
+[node name="ProfileButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_3wayp")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
+text = "Profile"
+
+[node name="GameSelectionButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_3wayp")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
+text = "Game selection"
+
+[node name="Options" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_3wayp")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
+text = "Options"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 0
+
+[node name="QuitButton" type="Button" parent="Control/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_3wayp")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
+text = "Quit
+"
+
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_3wayp")
+
+[node name="Label2" type="Label" parent="Control/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="Control/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="Control/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="Control/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="WelcomeScreen4" type="Sprite2D" parent="."]
+position = Vector2(584, 1096)
+scale = Vector2(0.597917, 0.601852)
+texture = ExtResource("2_43e7t")
+
+[node name="SettingsMenu" parent="." instance=ExtResource("4_urhba")]
+
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/ProfileButton" to="." method="_on_profile_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/GameSelectionButton" to="." method="_on_game_selection_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer2/QuitButton" to="." method="_on_quit_button_pressed"]
