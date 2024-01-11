@@ -111,7 +111,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
 text = "The labyrinth"
 
 [node name="GameSelectionScreen" type="Sprite2D" parent="."]
-position = Vector2(1864, 568)
+position = Vector2(4808, -2704)
 scale = Vector2(0.6, 0.555037)
 texture = ExtResource("6_4ypun")
 

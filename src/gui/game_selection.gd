@@ -9,7 +9,8 @@ extends CanvasLayer
 @onready var pauseMenu = $CanvasLayer
 
 func _ready():
-	pass
+	if Input.is_key_pressed(KEY_ESCAPE):
+		pauseMenu.set_visible(true)
 
 func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://src/gui/main_menu.tscn")

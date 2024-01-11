@@ -136,6 +136,7 @@ scale = Vector2(0.597917, 0.601852)
 texture = ExtResource("2_43e7t")
 
 [node name="SettingsMenu" parent="." instance=ExtResource("4_urhba")]
+visible = false
 
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/ProfileButton" to="." method="_on_profile_button_pressed"]

@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://lnv8jrhp2miw"]
+[gd_scene load_steps=8 format=3 uid="uid://lnv8jrhp2miw"]
 
 [ext_resource type="Script" path="res://src/appdata/maze_level_selection.gd" id="1_cb63j"]
+[ext_resource type="Texture2D" uid="uid://bjfi3i074kvsb" path="res://assets/Back button.png" id="2_r6mgi"]
+[ext_resource type="Texture2D" uid="uid://csjcqpgmn0wbd" path="res://assets/Hamburger menu button.png" id="3_4l8lw"]
+[ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="4_fgeg6"]
+[ext_resource type="Texture2D" uid="uid://57j4a1va0gvs" path="res://assets/Game selection screen 2.png" id="5_hu500"]
+[ext_resource type="PackedScene" uid="uid://dg1n1ng1egy1u" path="res://src/gui/pause_menu.tscn" id="6_caipa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25m2k"]
+bg_color = Color(0.823529, 0.0745098, 0.45098, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_cb63j")
@@ -11,53 +23,108 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.917647, 0.827451, 0.87451, 1)
 
-[node name="Button" type="Button" parent="."]
-anchors_preset = -1
-anchor_left = 0.088
-anchor_top = 0.269
-anchor_right = 0.088
-anchor_bottom = 0.269
-offset_left = -31.376
-offset_top = -15.312
-offset_right = 30.624
-offset_bottom = 15.688
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 962
+
+[node name="BackButton" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.835294, 0.141176, 0.490196, 1)
+theme_override_font_sizes/font_size = 30
+text = "Back"
+icon = ExtResource("2_r6mgi")
+flat = true
+
+[node name="PauseButton" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_4l8lw")
+flat = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.835294, 0.141176, 0.490196, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("4_fgeg6")
+theme_override_font_sizes/font_size = 45
+text = "The Labyrinth
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 55
+
+[node name="Button" type="Button" parent="Control/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(310, 150)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_fgeg6")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
 text = "Level 1"
 
-[node name="Button2" type="Button" parent="."]
-anchors_preset = -1
-anchor_left = 0.248
-anchor_top = 0.265
-anchor_right = 0.248
-anchor_bottom = 0.265
-offset_left = -30.696
-offset_top = -15.72
-offset_right = 31.304
-offset_bottom = 15.28
+[node name="Button2" type="Button" parent="Control/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(310, 150)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_fgeg6")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_25m2k")
 text = "Level 2
 "
+icon_alignment = 1
 
-[node name="Button3" type="Button" parent="."]
-anchors_preset = -1
-anchor_left = 0.423
-anchor_top = 0.542
-anchor_right = 0.423
-anchor_bottom = 0.542
-offset_left = -22.296
-offset_top = -15.216
-offset_right = 22.704
-offset_bottom = 15.784
-text = "Back
-"
-
-[node name="Button4" type="Button" parent="."]
-offset_left = 437.0
-offset_top = 156.0
-offset_right = 499.0
-offset_bottom = 187.0
+[node name="Button4" type="Button" parent="Control/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(310, 105)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_fgeg6")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_25m2k")
 text = "Level 3"
+icon_alignment = 1
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[node name="GameSelectionScreen2" type="Sprite2D" parent="."]
+position = Vector2(-4616, -960)
+scale = Vector2(0.6, 0.465763)
+texture = ExtResource("5_hu500")
+
+[node name="Pause" parent="." instance=ExtResource("6_caipa")]
+visible = false
+
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/HBoxContainer/Button4" to="." method="_on_button_4_pressed"]

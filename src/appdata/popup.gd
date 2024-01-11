@@ -7,6 +7,8 @@ class_name solver extends Popup
 @onready var cheetSheetLvl2 = $Control/CheetSheetLvl2
 @onready var cheatSheetlvl3 = $Control/CheatSheetLvl3
 
+var levelAccess = LevelSelelctor.new()
+var config = ConfigFile.new()
 
 const CodeDictionary = {
 	"doorCode":2163,
@@ -39,7 +41,7 @@ static func __get():
 	return whichDoor
 
 func _ready():
-	pass
+	config.load("res://settings2.cfg")
 	
 
 func timer_func():
@@ -55,6 +57,7 @@ func _on_texture_button_pressed():
 
 
 func _on_line_edit_text_submitted(new_text):
+	
 	if levelCounter == 1:
 		match doorCounter:
 			1:
@@ -124,6 +127,12 @@ func _on_line_edit_text_submitted(new_text):
 				if new_text.to_int() == 7358:
 					textLabel.set_text("Congratulations!\nYou have solved the final code!")
 					_set_solve(true)
+					levelAccess.set_isNextLevelOpen(true)
+					config.load("res://settings2.cfg")
+					config.set_value("Level2", "noacces", false)
+					print(config.get_value("Level2", "noacces"))
+					print(config.get_value("Level3", "noacces"))
+					config.save("res://settings2.cfg")
 					await get_tree().create_timer(3).timeout
 					self.set_visible(false)
 				else:
