@@ -4,6 +4,10 @@ class_name LevelSelelctor extends CanvasLayer
 @onready var lvl2 = $Control/MarginContainer/HBoxContainer/Button2
 @onready var lvl3 = $Control/MarginContainer/HBoxContainer/Button4
 
+@onready var BackButton = $Control/MarginContainer/VBoxContainer/HBoxContainer/BackButton
+@onready var PauseButton = $Control/MarginContainer/VBoxContainer/HBoxContainer/PauseButton
+
+
 static var isNextlevelOpen
 
 static var isThirdLevelOpen
@@ -41,6 +45,15 @@ func _ready():
 	print(config.get_value("Level2", "noacces"))
 	print(config.get_value("Level3", "noacces"))
 	costyl()
+	
+	config.load("res://settings.cfg")
+
+	if config.get_value("language", "mode") == "dutch":	
+		BackButton.text = "Terug"
+		PauseButton.text = "Pauze"
+		$Control/MarginContainer/VBoxContainer/HBoxContainer2/Label.text = "Het labyrinth"
+	elif config.get_value("language", "mode") == "english":
+		pass
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://src/appdata/maze1intro.tscn")
@@ -64,3 +77,11 @@ func _on_pause_button_pressed():
 		pause.set_visible(true)
 	else:
 		pause.set_visible(false)
+		
+
+
+func _on_pause_visibility_changed():
+	if pause.is_visible():
+		pass
+	else:
+		get_tree().change_scene_to_file("res://src/appdata/maze_level_selection.tscn")

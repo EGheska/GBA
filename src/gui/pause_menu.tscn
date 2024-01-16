@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dg1n1ng1egy1u"]
+[gd_scene load_steps=6 format=3 uid="uid://dfa66y8w2x1ur"]
 
 [ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="1_3wayp"]
 [ext_resource type="Script" path="res://src/gui/pause_menu.gd" id="1_12hwd"]
@@ -110,7 +110,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_3wayp")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
-text = "Quit
+text = "Back
 "
 
 [node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer2"]
