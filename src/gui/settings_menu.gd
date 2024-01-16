@@ -10,6 +10,8 @@ extends Popup
 @onready var skills_menu = $SettingsTab/Account/MarginContainer/GeneralSettings/SkillsmenuButton
 @onready var PopUp = $"."
 
+@onready var LanguageButton = $SettingsTab/Advanced/MarginContainer/AdvanvedSettings/LanguageButton
+
 @onready var config = ConfigFile.new()
 
 
@@ -27,6 +29,7 @@ func costyl():
 		config.set_value("display", "mode", "window")
 		config.set_value("color", "mode", "normal")
 		config.set_value("audio", "volume", 1)
+		config.set_value("language", "mode", "dutch")
 
 	if config.get_value("display", "mode") == "window":
 		display_options.select(1)
@@ -34,6 +37,11 @@ func costyl():
 	else:
 		display_options.select(0)
 		
+		
+	if config.get_value("language", "mode") == "dutch":
+		LanguageButton.button_pressed = false
+	else:
+		LanguageButton.button_pressed = true
 		
 	if config.get_value("color", "mode") == "blind":
 		Dyslexia.set("button_pressed", true)
@@ -48,6 +56,7 @@ func costyl():
 		AudioServer.set_bus_mute(0, false)
 		print("Volume set to 100")
 		sound_options.set("button_pressed", true)
+
 	config.save("res://settings.cfg")
 	
 
@@ -86,4 +95,15 @@ func _on_dyslexia_button_toggled(button_pressed):
 	elif !button_pressed:
 		config.set_value("color", "mode", "normal")	
 		print(config.get_value("color", "mode"))
+	config.save("res://settings.cfg")
+
+
+func _on_language_button_toggled(button_pressed):
+	config.load("res://settings.cfg")
+	if button_pressed:
+		config.set_value("language", "mode", "english")
+		print("language is english")
+	elif !button_pressed:
+		config.set_value("language", "mode", "dutch")
+		print("language is dutch")
 	config.save("res://settings.cfg")

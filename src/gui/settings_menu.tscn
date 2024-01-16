@@ -26,7 +26,7 @@ corner_radius_bottom_left = 10
 bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dt6i7"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
 border_color = Color(0.8, 0.8, 0.8, 0)
 corner_radius_top_left = 30
 corner_radius_top_right = 30
@@ -35,7 +35,7 @@ corner_radius_bottom_left = 30
 corner_detail = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_36vdy"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(0.00392157, 0.627451, 0.776471, 1)
 border_color = Color(0.8, 0.8, 0.8, 0)
 corner_radius_top_left = 30
 corner_radius_top_right = 30
@@ -44,7 +44,7 @@ corner_radius_bottom_left = 30
 corner_detail = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_utq3f"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(0.733333, 0.870588, 0.901961, 1)
 corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
@@ -218,6 +218,7 @@ layout_mode = 2
 
 [node name="SkillsmenuButton" type="Button" parent="SettingsTab/Account/MarginContainer/GeneralSettings"]
 layout_mode = 2
+toggle_mode = true
 text = "Skills menu"
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
@@ -225,4 +226,5 @@ text = "Skills menu"
 [connection signal="toggled" from="SettingsTab/General/MarginContainer/GeneralSettings/SoundButton" to="." method="_on_sound_button_toggled"]
 [connection signal="toggled" from="SettingsTab/Advanced/MarginContainer/AdvanvedSettings/DyslexiaButton" to="." method="_on_dyslexia_button_toggled"]
 [connection signal="toggled" from="SettingsTab/Advanced/MarginContainer/AdvanvedSettings/LanguageButton" to="." method="_on_check_button_toggled"]
+[connection signal="toggled" from="SettingsTab/Advanced/MarginContainer/AdvanvedSettings/LanguageButton" to="." method="_on_language_button_toggled"]
 [connection signal="toggled" from="SettingsTab/Account/MarginContainer/GeneralSettings/SkillsmenuButton" to="." method="_on_skillsmenu_button_toggled"]

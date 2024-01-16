@@ -1,0 +1,32 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://uvp0kntmxgtp"]
+
+[ext_resource type="Texture2D" uid="uid://r0ut356ok1l2" path="res://test/Pink minigame block.svg" id="1_2pq24"]
+[ext_resource type="Texture2D" uid="uid://bms80yif1fi7o" path="res://test/Beam skills percentage.svg" id="2_7xpn5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ic2eb"]
+texture = ExtResource("1_2pq24")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dtdth"]
+texture = ExtResource("2_7xpn5")
+
+[sub_resource type="FontFile" id="FontFile_g48rs"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/10/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/10/0 = Vector2(0, 0)
+
+[resource]
+default_font = SubResource("FontFile_g48rs")
+default_font_size = 16
+Button/styles/normal = SubResource("StyleBoxTexture_ic2eb")
+CheckButton/styles/normal = SubResource("StyleBoxTexture_dtdth")

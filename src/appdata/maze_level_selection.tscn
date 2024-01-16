@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://csjcqpgmn0wbd" path="res://assets/Hamburger menu button.png" id="3_4l8lw"]
 [ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="4_fgeg6"]
 [ext_resource type="Texture2D" uid="uid://57j4a1va0gvs" path="res://assets/Game selection screen 2.png" id="5_hu500"]
-[ext_resource type="PackedScene" uid="uid://dg1n1ng1egy1u" path="res://src/gui/pause_menu.tscn" id="6_caipa"]
+[ext_resource type="PackedScene" path="res://src/gui/pause_menu.tscn" id="6_caipa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25m2k"]
 bg_color = Color(0.823529, 0.0745098, 0.45098, 1)

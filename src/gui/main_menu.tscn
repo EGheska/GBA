@@ -20,7 +20,6 @@ expand_margin_right = 1.0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uicda"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t5xjs"]
-load_path = "res://.godot/imported/Main screen1.png-d3b38fb3f308eebb6d3fcd0224f8e385.ctex"
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_4djdb")
@@ -107,8 +106,7 @@ theme_override_fonts/font = ExtResource("3_d6gmq")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_er35l")
 action_mode = 0
-text = "Options
-"
+text = "Settings"
 
 [node name="QuitButton" type="Button" parent="Menu/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(297, 89)
@@ -152,3 +150,4 @@ texture = SubResource("CompressedTexture2D_t5xjs")
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer2/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Menu/MarginContainer/HBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Menu/MarginContainer/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="visibility_changed" from="SettingsMenu" to="." method="_on_settings_menu_visibility_changed"]
