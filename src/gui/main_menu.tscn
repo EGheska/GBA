@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://src/gui/main_menu.gd" id="1_4djdb"]
 [ext_resource type="PackedScene" uid="uid://dq8wkquhigvch" path="res://src/gui/settings_menu.tscn" id="1_cmkqd"]
 [ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="3_d6gmq"]
-[ext_resource type="Texture2D" uid="uid://dgcghiy7q0j6v" path="res://src/gui/Robot (2).png" id="3_ove3k"]
+[ext_resource type="Texture2D" uid="uid://cxigc6ebhb6s4" path="res://assets/MazeGameAssets/Снимок экрана 2024-01-17 в 10.25.58.png" id="3_gswls"]
 [ext_resource type="PackedScene" uid="uid://dhj2658etlghd" path="res://src/gui/game_selection.tscn" id="6_cro08"]
 
 [sub_resource type="Theme" id="Theme_0dlp4"]
@@ -162,18 +162,18 @@ text = "Quit
 [node name="TextureRect" type="TextureRect" parent="Menu"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.375
-anchor_top = 0.556
-anchor_right = 0.639
-anchor_bottom = 1.16
-offset_left = -3.05176e-05
-offset_top = -0.288025
-offset_right = -0.128052
-offset_bottom = 0.319946
+anchor_left = 0.325
+anchor_top = 0.448
+anchor_right = 0.663
+anchor_bottom = 1.0
+offset_left = -0.400024
+offset_top = -0.304016
+offset_right = 0.223938
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 0
 pivot_offset = Vector2(144, 208)
-texture = ExtResource("3_ove3k")
+texture = ExtResource("3_gswls")
 
 [node name="SettingsMenu" parent="." instance=ExtResource("1_cmkqd")]
 visible = false

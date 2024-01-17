@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfa66y8w2x1ur"]
+[gd_scene load_steps=16 format=3 uid="uid://dfa66y8w2x1ur"]
 
 [ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="1_3wayp"]
 [ext_resource type="Script" path="res://src/gui/pause_menu.gd" id="1_12hwd"]
@@ -11,6 +11,51 @@ corner_radius_top_left = 25
 corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2eqyt"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3uxau"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3e11"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3w1uf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfr6t"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lxffg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hjnf"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_28ml5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojntx"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m2e7v"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_12hwd")
@@ -73,6 +118,8 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_3wayp")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2eqyt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3uxau")
 text = "Main menu"
 
 [node name="ProfileButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
@@ -81,6 +128,8 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_3wayp")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q3e11")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3w1uf")
 text = "Profile"
 
 [node name="GameSelectionButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
@@ -89,6 +138,8 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_3wayp")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mfr6t")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lxffg")
 text = "Game selection"
 
 [node name="Options" type="Button" parent="Control/MarginContainer/VBoxContainer"]
@@ -97,6 +148,8 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_3wayp")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0hjnf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_28ml5")
 text = "Options"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Control/MarginContainer"]
@@ -110,6 +163,8 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_3wayp")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ojntx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m2e7v")
 text = "Back
 "
 

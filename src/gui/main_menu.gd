@@ -19,6 +19,10 @@ func _ready():
 	elif config.get_value("language", "mode") == "english":
 		SettingButton.text = "Settings"
 		QuitButton.text = "Quit the game"
+		
+	if config.get_value("display", "mode") == "fullscreen":
+		$Menu/MarginContainer/HBoxContainer.add_theme_constant_override("separation", 1500)
+		print("separation added")
 
 func _on_start_button_pressed():
 	if !GameSelection.is_visible():
@@ -43,4 +47,7 @@ func _on_settings_menu_visibility_changed():
 	if settings.is_visible():
 		pass
 	else:
+		if config.get_value("display", "mode") == "fullscreen":
+			$Menu/MarginContainer/HBoxContainer.add_theme_constant_override("separation", 1500)
+			print("separation added")
 		get_tree().change_scene_to_file("res://src/gui/main_menu.tscn")

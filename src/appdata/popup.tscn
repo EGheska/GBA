@@ -3,18 +3,17 @@
 [ext_resource type="Script" path="res://src/appdata/popup.gd" id="1_xxlyu"]
 [ext_resource type="Texture2D" uid="uid://dmk1201koe4nx" path="res://src/appdata/code1Maz`e.png" id="2_noogb"]
 [ext_resource type="Texture2D" uid="uid://51mt5ow1ylin" path="res://src/appdata/codeCheetSheet.png" id="3_33hyb"]
-[ext_resource type="Texture2D" uid="uid://bldjuloj8wgdh" path="res://WhatsApp Image 2023-11-24 at 14.24.03 (1).jpeg" id="4_p47fv"]
 [ext_resource type="Texture2D" uid="uid://dprw3a1kk12pg" path="res://assets/cheetsheetlvl2.png" id="4_w8fv1"]
-[ext_resource type="Texture2D" uid="uid://6uvlavv3xr7r" path="res://src/appdata/question-mark-12-48.png" id="5_m41iy"]
+[ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="5_fm4me"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihmy4"]
 content_margin_left = 10.0
 content_margin_right = 10.0
 bg_color = Color(0.678431, 0.0392157, 0.352941, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1crfk"]
+content_margin_top = 27.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Popup" type="Popup"]
 process_mode = 3
@@ -23,6 +22,7 @@ visible = true
 script = ExtResource("1_xxlyu")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -71,11 +71,17 @@ expand_mode = 3
 
 [node name="CheetSheetLvl2" type="TextureRect" parent="Control"]
 visible = false
-layout_mode = 0
-offset_left = 900.0
-offset_top = 300.0
-offset_right = 1040.0
-offset_bottom = 540.0
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -120.0
+offset_bottom = 120.0
+grow_horizontal = 0
+grow_vertical = 2
 texture = ExtResource("4_w8fv1")
 expand_mode = 1
 
@@ -94,10 +100,13 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_fm4me")
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_ihmy4")
-placeholder_text = "Write your answer here!"
+placeholder_text = "Press here to enter your answer!"
 alignment = 1
 expand_to_text_length = true
+caret_blink = true
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 1
@@ -109,15 +118,12 @@ offset_top = 100.0
 offset_right = 240.5
 offset_bottom = 127.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Based on the code on the right suggest a answer for the maze!"
-
-[node name="LucRato" type="Sprite2D" parent="Control"]
-position = Vector2(961, 133)
-texture = ExtResource("4_p47fv")
+theme_override_colors/font_color = Color(0.823529, 0.0745098, 0.45098, 1)
+theme_override_fonts/font = ExtResource("5_fm4me")
+theme_override_font_sizes/font_size = 34
+text = "Based on the code on the right suggest an answer for the locked door!"
 
 [node name="Label2" type="Label" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -130,7 +136,10 @@ offset_right = -62.0
 offset_bottom = 70.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.823529, 0.0745098, 0.45098, 1)
+theme_override_fonts/font = ExtResource("5_fm4me")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_1crfk")
 text = "Cheet Sheet"
 
 [node name="TextureButton" type="TextureButton" parent="Control"]
@@ -144,7 +153,6 @@ offset_left = -48.0
 offset_top = -48.0
 grow_horizontal = 0
 grow_vertical = 0
-texture_normal = ExtResource("5_m41iy")
 
 [node name="CheatSheetLvl3" type="TextureRect" parent="Control"]
 visible = false

@@ -42,6 +42,7 @@ static func __get():
 
 func _ready():
 	config.load("res://settings2.cfg")
+	lineEdit.focus_mode = 2
 	
 
 func timer_func():

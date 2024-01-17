@@ -1,11 +1,13 @@
-[gd_scene load_steps=83 format=3 uid="uid://bisil64e8ifnv"]
+[gd_scene load_steps=87 format=3 uid="uid://bisil64e8ifnv"]
 
 [ext_resource type="Script" path="res://src/appdata/maze_game.gd" id="1_spyab"]
 [ext_resource type="Texture2D" uid="uid://crh3b3s472q10" path="res://addons/WhatsApp Image 2023-12-06 at 12.18.46.jpeg" id="3_oprqe"]
+[ext_resource type="Texture2D" uid="uid://ct2a62cfumrgy" path="res://assets/MazeGameAssets/Maze lvl 1 without doors.png" id="4_8g06v"]
 [ext_resource type="Script" path="res://src/appdata/CharacterBody2D.gd" id="4_hx27m"]
-[ext_resource type="Texture2D" uid="uid://bldjuloj8wgdh" path="res://WhatsApp Image 2023-11-24 at 14.24.03 (1).jpeg" id="5_cd5y4"]
+[ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="6_hp72c"]
 [ext_resource type="PackedScene" uid="uid://dntea3iaghivx" path="res://src/appdata/leavescene.tscn" id="6_ige1q"]
 [ext_resource type="PackedScene" uid="uid://du0fwtx53xudu" path="res://src/appdata/popup.tscn" id="7_05smw"]
+[ext_resource type="Texture2D" uid="uid://5swdhjmus76d" path="res://src/gui/Back button.png" id="7_qceh6"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_kflki"]
 a = Vector2(-405.883, -403.175)
@@ -297,8 +299,11 @@ b = Vector2(0, 48)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gatox"]
 size = Vector2(1, 48)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8iarn"]
-load_path = "res://.godot/imported/Robot (2) (2).svg-b6aff528adc611be91b506b1a92b1f65.ctex"
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rl312"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v4yq3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ueh1a"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 process_mode = 1
@@ -307,6 +312,7 @@ metadata/_edit_vertical_guides_ = [286.0, 865.0, 330.0]
 metadata/_edit_horizontal_guides_ = [587.0, 74.0]
 
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -336,6 +342,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Maze" type="Sprite2D" parent="Control3"]
+visible = false
 position = Vector2(289.733, 258)
 scale = Vector2(0.717834, 0.63)
 texture = ExtResource("3_oprqe")
@@ -519,7 +526,7 @@ offset_left = -60.0001
 offset_top = 253.0
 offset_right = -27.0001
 offset_bottom = 286.0
-color = Color(0, 0, 0, 1)
+color = Color(0.823529, 0.0745098, 0.45098, 1)
 
 [node name="FakedoorArea1" type="Area2D" parent="Control3"]
 position = Vector2(448, 496)
@@ -762,95 +769,35 @@ shape = SubResource("SegmentShape2D_aj2i1")
 position = Vector2(1, 3)
 shape = SubResource("RectangleShape2D_gatox")
 
+[node name="MazeLvl1WithoutDoors" type="Sprite2D" parent="."]
+position = Vector2(577.555, 331.5)
+scale = Vector2(0.600463, 0.530556)
+texture = ExtResource("4_8g06v")
+
 [node name="Popup" parent="." instance=ExtResource("7_05smw")]
 visible = false
 
-[node name="Label" type="Label" parent="."]
-anchors_preset = -1
-anchor_left = 0.033
-anchor_top = 0.33
-anchor_right = 0.213
-anchor_bottom = 0.488
-offset_left = -0.015995
-offset_top = 0.159988
-offset_right = 72.624
-offset_bottom = 1.776
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Controls:
-To control the character:
-Use arrows on keyboard
-Back: ESC button
-"
-
-[node name="Control2" type="Control" parent="."]
-layout_mode = 3
-anchor_left = 0.146
-anchor_top = 0.778
-anchor_right = 0.146
-anchor_bottom = 0.778
-offset_left = -80.192
-offset_top = -128.144
-offset_right = 87.808
-offset_bottom = 127.856
-
-[node name="Sprite2D" type="Sprite2D" parent="Control2"]
-visible = false
-position = Vector2(80, 120)
-texture = SubResource("CompressedTexture2D_8iarn")
-
-[node name="TextureRect" type="TextureRect" parent="Control2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -22.0
-offset_right = 3.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_cd5y4")
-
-[node name="ScoreLabel" type="Label" parent="Control2"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.038
-anchor_top = 0.08
-anchor_right = 0.102
-anchor_bottom = 0.129
-offset_left = -50.384
-offset_top = -344.48
-offset_right = -13.136
-offset_bottom = -331.024
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Score:"
-
-[node name="ScoreItslef" type="Label" parent="Control2"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.179
-anchor_top = -1.221
-anchor_right = 0.179
-anchor_bottom = -1.221
-offset_left = -20.072
-offset_top = -11.424
-offset_right = 19.928
-offset_bottom = 11.576
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-
 [node name="Button" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.874
-anchor_top = 0.667
-anchor_right = 0.874
-anchor_bottom = 0.667
-offset_left = -22.848
-offset_top = -15.216
-offset_right = 22.152
-offset_bottom = 15.784
+anchor_left = 0.01
+anchor_top = 0.015
+anchor_right = 0.088
+anchor_bottom = 0.083
+offset_left = -0.52
+offset_top = 0.28
+offset_right = -0.376007
+offset_bottom = 0.215996
 grow_horizontal = 2
 grow_vertical = 2
-text = "Back to the level seleciton
-"
+theme_override_colors/font_color = Color(0.823529, 0.0745098, 0.45098, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_hp72c")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rl312")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_v4yq3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ueh1a")
+text = "Back"
+icon = ExtResource("7_qceh6")
 
 [node name="Popup2" parent="." instance=ExtResource("6_ige1q")]
 visible = false
@@ -866,5 +813,4 @@ visible = false
 [connection signal="body_entered" from="Control3/Area2D6" to="." method="_on_area_2d_6_body_entered"]
 [connection signal="body_entered" from="Control3/Area2D7" to="." method="_on_area_2d_7_body_entered"]
 [connection signal="visibility_changed" from="Popup" to="." method="_on_popup_visibility_changed"]
-[connection signal="resized" from="Control2" to="." method="_on_control_2_resized"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

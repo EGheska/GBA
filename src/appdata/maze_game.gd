@@ -63,8 +63,8 @@ func _ready():
 #	await get_tree().crea
 
 func _on_area_2d_body_entered(body):
-	LucRato.set_visible(false)
-	controls.set_visible(false)
+	
+	
 	solvers.solved = false
 	solvers.__set("SecondDoor", 2)
 	if !PopUP.is_visible():
@@ -75,9 +75,9 @@ func _on_area_2d_body_entered(body):
 
 
 func _on_area_2d_2_body_entered(body):
-	LucRato.set_visible(false)
+	
 	solvers.solved = false
-	controls.set_visible(false)
+	
 	solverClass.__set("FinalDoor", 500)
 	if !PopUP.is_visible():
 		PopUP.set_visible(true)
@@ -87,8 +87,7 @@ func _on_area_2d_2_body_entered(body):
 
 
 func _on_area_2d_3_body_entered(body):
-	LucRato.set_visible(false)
-	controls.set_visible(false)
+	
 	solvers.solved = false
 	solverClass.__set("FirstDoor", 1)
 	if !PopUP.is_visible():
@@ -101,8 +100,8 @@ func _on_area_2d_3_body_entered(body):
 func _on_popup_visibility_changed():
 	if !PopUP.is_visible():
 		get_tree().paused = false
-		LucRato.set_visible(true)
-		controls.set_visible(true)
+		
+		
 		if solvers.solved and solvers.doorCounter == 1:
 			CollisionFisrtDoor.set_disabled(true)
 			FirstDoor.set_color(Color(1, 1, 1, 0))
@@ -168,8 +167,8 @@ func _on_popup_visibility_changed():
 #	return result
 
 func _on_area_2d_4_body_entered(body):
-	LucRato.set_visible(false)
-	controls.set_visible(false)
+	
+	
 	solvers.solved = false
 	solvers.__set("ThirdDoor", 3)
 	if !PopUP.is_visible():
@@ -178,8 +177,8 @@ func _on_area_2d_4_body_entered(body):
 		get_tree().paused = true
 
 func _on_fakedoor_area_1_body_entered(body):
-	LucRato.set_visible(false)
-	controls.set_visible(false)
+	
+	
 	solvers.__set("FakeDoor1", 100)
 	solvers.solved = false
 	if !PopUP.is_visible():
@@ -189,8 +188,8 @@ func _on_fakedoor_area_1_body_entered(body):
 
 
 func _on_area_2d_5_body_entered(body):
-	LucRato.set_visible(false)
-	controls.set_visible(false)
+	
+	
 	solvers.__set("FourthDoor", 4)
 	solvers.solved = false
 	if !PopUP.is_visible():
@@ -200,8 +199,8 @@ func _on_area_2d_5_body_entered(body):
 
 
 func _on_area_2d_6_body_entered(body):
-	LucRato.set_visible(false)
-	controls.set_visible(false)
+	
+	
 	solvers.__set("FifthDoor", 5)
 	solvers.solved = false
 	if !PopUP.is_visible():
@@ -211,8 +210,8 @@ func _on_area_2d_6_body_entered(body):
 
 
 func _on_area_2d_7_body_entered(body):
-	LucRato.set_visible(false)
-	controls.set_visible(false)
+	
+	
 	solvers.solved = false
 	solvers.__set("SixthDoor", 6)
 	if !PopUP.is_visible():
@@ -222,8 +221,8 @@ func _on_area_2d_7_body_entered(body):
 
 
 func _on_fakedoor_area_2_body_entered(body):
-	LucRato.set_visible(false)
-	controls.set_visible(false)
+	
+	
 	solvers.__set("FakeDoor2", 200)
 	solvers.solved = false
 	if !PopUP.is_visible():
@@ -233,19 +232,14 @@ func _on_fakedoor_area_2_body_entered(body):
 
 
 func _on_fakedoor_area_3_body_entered(body):
-	LucRato.set_visible(false)
-	controls.set_visible(false)
+	
+	
 	solvers.__set("FakeDoor3", 300)
 	solvers.solved = false
 	if !PopUP.is_visible():
 		PopUP.set_visible(true)
 		PopUP.popup_centered()
 		get_tree().paused = true
-
-
-func _on_control_2_resized():
-	LucRato.set_size(Vector2(400, 200))
-
 
 func _on_button_pressed():
 	LeaveScene.set_visible(true)
