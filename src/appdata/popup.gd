@@ -47,7 +47,7 @@ func _ready():
 
 func timer_func():
 	print("Start")
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(1.5).timeout
 	print("Timeout")
 	self.set_visible(false)
 	textLabel.set_text("Based on the code on the right suggest a answer for the maze!")

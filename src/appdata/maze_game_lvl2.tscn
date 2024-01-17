@@ -1,10 +1,12 @@
-[gd_scene load_steps=90 format=3 uid="uid://duqhv6r3ecuue"]
+[gd_scene load_steps=94 format=3 uid="uid://duqhv6r3ecuue"]
 
 [ext_resource type="Script" path="res://src/appdata/maze_game_lvl2.gd" id="1_bn7af"]
 [ext_resource type="Texture2D" uid="uid://bgwrvascf4rd0" path="res://src/appdata/Снимок экрана 2023-12-19 в 10.34.56.png" id="1_e6iub"]
 [ext_resource type="Script" path="res://src/appdata/CharacterBody2D.gd" id="3_hrd87"]
+[ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="4_bniu2"]
 [ext_resource type="PackedScene" uid="uid://du0fwtx53xudu" path="res://src/appdata/popup.tscn" id="4_ctuhy"]
 [ext_resource type="PackedScene" uid="uid://dntea3iaghivx" path="res://src/appdata/leavescene.tscn" id="5_806d4"]
+[ext_resource type="Texture2D" uid="uid://5swdhjmus76d" path="res://src/gui/Back button.png" id="5_xbf2e"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yp465"]
 a = Vector2(-595.755, -632.93)
@@ -299,6 +301,10 @@ size = Vector2(1, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k5rdq"]
 size = Vector2(2, 35)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_illbr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_te4qv"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_bn7af")
@@ -840,17 +846,24 @@ shape = SubResource("RectangleShape2D_fet74")
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.875
-anchor_top = 0.559
-anchor_right = 0.875
-anchor_bottom = 0.559
-offset_left = -104.0
-offset_top = -15.232
-offset_right = 105.0
-offset_bottom = 15.768
+anchor_left = -0.043
+anchor_top = 0.097
+anchor_right = -0.043
+anchor_bottom = 0.097
+offset_left = 0.536003
+offset_top = 0.143997
+offset_right = 96.536
+offset_bottom = 36.144
 grow_horizontal = 2
 grow_vertical = 2
-text = "Back to the level selection"
+theme_override_colors/font_color = Color(0.764706, 0.12549, 0.45098, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_bniu2")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_illbr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_te4qv")
+text = "Back"
+icon = ExtResource("5_xbf2e")
 
 [node name="Popup" parent="." instance=ExtResource("4_ctuhy")]
 visible = false

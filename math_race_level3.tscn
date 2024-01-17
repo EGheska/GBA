@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://makue8ov77if" path="res://assets/MathRaceAssets/Enemy_car.svg" id="3_ocam0"]
 [ext_resource type="Script" path="res://Enemy_Movement.gd" id="6_gcqa2"]
 [ext_resource type="Texture2D" uid="uid://mjx5yyhipvt7" path="res://assets/MathRaceAssets/Player_car.svg" id="6_ljihm"]
-[ext_resource type="PackedScene" uid="uid://8023y7easerw" path="res://player_scene.tscn" id="6_xaxed"]
+[ext_resource type="PackedScene" path="res://player_scene.tscn" id="6_xaxed"]
 [ext_resource type="PackedScene" uid="uid://of3ei4lci41k" path="res://Victory_Screen.tscn" id="7_g523i"]
 [ext_resource type="PackedScene" uid="uid://c18xh6tcyyumi" path="res://Math_answers.tscn" id="7_ktthu"]
 

@@ -52,8 +52,10 @@ var solvers = solverClass.new()
 var t_begin_the_game
 var t_end_the_game
 
+var stackClass = load("res://levelCounter.gd")
+
 func _ready():
-#	t_begin_the_game = Time.get_ticks_msec()
+	
 	if PopUP.is_visible():
 		PopUP.set_visible(false)
 	solvers.setLevelCounter(1)
@@ -154,6 +156,7 @@ func _on_popup_visibility_changed():
 			AreaCollisionSixthDoor2.disconnect("body_enter", _on_area_2d_7_body_entered)
 		if solvers.solved and solvers.doorCounter == 500:
 #			t_end_the_game = Time.get_ticks_msec()
+			stackClass.push(1)
 			get_tree().change_scene_to_file("res://src/appdata/maze_win_1st.tscn")
 			
 #func _process(delta):

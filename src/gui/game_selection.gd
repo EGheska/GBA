@@ -12,6 +12,8 @@ extends CanvasLayer
 
 @onready var pauseMenu = $CanvasLayer
 
+var history = []
+
 var config = ConfigFile.new()
 
 func _ready():
