@@ -1,0 +1,6 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dv38v3v43arry"]
+
+[ext_resource type="Texture2D" uid="uid://cs1i2xt61ajnn" path="res://assets/LucratoThemeAssets/Incorrect_answer.svg" id="1_c6gfe"]
+
+[resource]
+texture = ExtResource("1_c6gfe")

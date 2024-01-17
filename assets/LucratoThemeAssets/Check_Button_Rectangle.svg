@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 734 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #bf4278;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Beam_skills_percentage" data-name="Beam skills percentage">
+    <path id="Rectangle_10" data-name="Rectangle 10" class="cls-1" d="M15,0h704c8.28,0,15,6.72,15,15h0c0,8.28-6.72,15-15,15H15C6.72,30,0,23.28,0,15h0C0,6.72,6.72,0,15,0Z"/>
+  </g>
+</svg>

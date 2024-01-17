@@ -28,10 +28,10 @@ func _on_start_button_pressed():
 func _on_settings_button_pressed():
 	if SettingsMenu.is_visible():
 		SettingsMenu.set_visible(false)
-		#SettingButton.set_pressed_no_signal(false)
+		SettingButton.set_pressed_no_signal(false)
 	else:
 		SettingsMenu.set_visible(true)
-		#SettingButton.set_pressed_no_signal(false)
+		SettingButton.set_pressed_no_signal(false)
 		SettingsMenu.popup_centered()
 
 func _on_quit_button_pressed():

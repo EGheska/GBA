@@ -1,0 +1,82 @@
+[gd_resource type="Theme" load_steps=23 format=3 uid="uid://c72ukk1bonn6d"]
+
+[ext_resource type="StyleBox" path="res://src/appdata/Unanswered_Math_Button.tres" id="1_0shf0"]
+[ext_resource type="Texture2D" uid="uid://d3evjw3pj7j81" path="res://assets/LucratoThemeAssets/Check_Button_Rectangle.svg" id="2_071er"]
+[ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="3_afcrx"]
+[ext_resource type="Texture2D" uid="uid://cfckpadq32bp" path="res://assets/LucratoThemeAssets/Tab block (selected) options menu.svg" id="4_tp80u"]
+[ext_resource type="Texture2D" uid="uid://wlosut1dor3l" path="res://assets/LucratoThemeAssets/Tab block (unselected) options menu.svg" id="5_f8pkh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l3pfw"]
+texture = ExtResource("2_071er")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_guwkw"]
+texture = ExtResource("2_071er")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ag67k"]
+texture = ExtResource("2_071er")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l4qtr"]
+texture = ExtResource("2_071er")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jvoq3"]
+texture = ExtResource("2_071er")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ehrqc"]
+texture = ExtResource("2_071er")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_py1du"]
+texture = ExtResource("2_071er")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dvko6"]
+texture = ExtResource("2_071er")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fm2ff"]
+texture = ExtResource("2_071er")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f5qup"]
+texture = ExtResource("2_071er")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ei2fl"]
+texture = ExtResource("2_071er")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s6usy"]
+texture = ExtResource("2_071er")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6uqwv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cnb44"]
+texture = SubResource("CompressedTexture2D_6uqwv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wbjca"]
+texture = ExtResource("4_tp80u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uaelb"]
+texture = ExtResource("4_tp80u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8a1aa"]
+texture = ExtResource("5_f8pkh")
+
+[resource]
+Button/styles/focus = ExtResource("1_0shf0")
+Button/styles/hover = ExtResource("1_0shf0")
+Button/styles/normal = ExtResource("1_0shf0")
+CheckBox/styles/focus = SubResource("StyleBoxTexture_l3pfw")
+CheckBox/styles/hover = SubResource("StyleBoxTexture_guwkw")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxTexture_ag67k")
+CheckBox/styles/normal = SubResource("StyleBoxTexture_l4qtr")
+CheckBox/styles/pressed = SubResource("StyleBoxTexture_jvoq3")
+CheckButton/styles/focus = SubResource("StyleBoxTexture_ehrqc")
+CheckButton/styles/hover = SubResource("StyleBoxTexture_py1du")
+CheckButton/styles/hover_pressed = SubResource("StyleBoxTexture_dvko6")
+CheckButton/styles/normal = SubResource("StyleBoxTexture_fm2ff")
+CheckButton/styles/pressed = SubResource("StyleBoxTexture_f5qup")
+Label/colors/font_color = Color(0.835294, 0.141176, 0.490196, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 0)
+Label/font_sizes/font_size = 25
+Label/fonts/font = ExtResource("3_afcrx")
+LineEdit/styles/focus = SubResource("StyleBoxTexture_ei2fl")
+LineEdit/styles/normal = SubResource("StyleBoxTexture_s6usy")
+TabContainer/styles/panel = SubResource("StyleBoxTexture_cnb44")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxTexture_wbjca")
+TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_uaelb")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxTexture_8a1aa")

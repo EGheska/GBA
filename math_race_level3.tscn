@@ -1,0 +1,185 @@
+[gd_scene load_steps=12 format=3 uid="uid://bbecdiv2lngg1"]
+
+[ext_resource type="Script" path="res://math_race_level3.gd" id="1_u0ufm"]
+[ext_resource type="Texture2D" uid="uid://cuaq61c0ugedk" path="res://assets/MathRaceAssets/racetrack_level3_transparent.png" id="2_orvw8"]
+[ext_resource type="Theme" path="res://src/appdata/Lucrato_Theme.tres" id="3_ayiiv"]
+[ext_resource type="Texture2D" uid="uid://makue8ov77if" path="res://assets/MathRaceAssets/Enemy_car.svg" id="3_ocam0"]
+[ext_resource type="Script" path="res://Enemy_Movement.gd" id="6_gcqa2"]
+[ext_resource type="Texture2D" uid="uid://mjx5yyhipvt7" path="res://assets/MathRaceAssets/Player_car.svg" id="6_ljihm"]
+[ext_resource type="PackedScene" path="res://player_scene.tscn" id="6_xaxed"]
+[ext_resource type="PackedScene" uid="uid://of3ei4lci41k" path="res://Victory_Screen.tscn" id="7_g523i"]
+[ext_resource type="PackedScene" uid="uid://c18xh6tcyyumi" path="res://Math_answers.tscn" id="7_ktthu"]
+
+[sub_resource type="Curve2D" id="Curve2D_gabe5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 284, 227, 0, 0, 0, 0, 336, 227, 0, 0, 0, 0, 367, 227, 0, 0, 0, 0, 409, 227, 0, 0, 0, 0, 455, 227, 0, 0, 0, 0, 612, 227, 0, 0, 0, 0, 706, 227, 0, 0, 0, 0, 728, 229, 0, 0, 0, 0, 750, 236, 0, 0, 0, 0, 776, 260, 0, 0, 0, 0, 801, 286, 0, 0, 0, 0, 816, 318, 0, 0, 0, 0, 828, 347, 0, 0, 0, 0, 833, 371, 0, 0, 0, 0, 838, 408, 0, 0, 0, 0, 838, 435, 0, 0, 0, 0, 838, 461, 0, 0, 0, 0, 831, 495, 0, 0, 0, 0, 821, 521, 0, 0, 0, 0, 811, 545, 0, 0, 0, 0, 798, 566, 0, 0, 0, 0, 786, 578, 0, 0, 0, 0, 770, 593, 0, 0, 0, 0, 756, 605, 0, 0, 0, 0, 746, 613, 0, 0, 0, 0, 731, 617, 0, 0, 0, 0, 715, 618, 0, 0, 0, 0, 394, 621, 0, 0, 0, 0, 334, 621, 0, 0, 0, 0, 278, 620, 0, 0, 0, 0, -83, 621, 0, 0, 0, 0, -130, 619, 0, 0, 0, 0, -160, 615, 0, 0, 0, 0, -182, 607, 0, 0, 0, 0, -198, 593, 0, 0, 0, 0, -220, 570, 0, 0, 0, 0, -238, 546, 0, 0, 0, 0, -249, 521, 0, 0, 0, 0, -257, 497, 0, 0, 0, 0, -262, 480, 0, 0, 0, 0, -267, 455, 0, 0, 0, 0, -269, 430, 0, 0, 0, 0, -268, 403, 0, 0, 0, 0, -266, 378, 0, 0, 0, 0, -263, 363, 0, 0, 0, 0, -258, 348, 0, 0, 0, 0, -248, 321, 0, 0, 0, 0, -240, 304, 0, 0, 0, 0, -225, 280, 0, 0, 0, 0, -201, 258, 0, 0, 0, 0, -186, 244, 0, 0, 0, 0, -166, 234, 0, 0, 0, 0, -143, 228, 0, 0, 0, 0, -123, 227, 0, 0, 0, 0, -87, 227, 0, 0, 0, 0, 284, 227)
+}
+point_count = 56
+
+[sub_resource type="Curve2D" id="Curve2D_tawba"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 284, 227, 0, 0, 0, 0, 354, 227, 0, 0, 0, 0, 393, 227, 0, 0, 0, 0, 669, 228, 0, 0, 0, 0, 696, 228, 0, 0, 0, 0, 722, 231, 0, 0, 0, 0, 741, 238, 0, 0, 0, 0, 755, 247, 0, 0, 0, 0, 765, 257, 0, 0, 0, 0, 778, 274, 0, 0, 0, 0, 786, 292, 0, 0, 0, 0, 792, 313, 0, 0, 0, 0, 794, 341, 0, 0, 0, 0, 793, 371, 0, 0, 0, 0, 787, 406, 0, 0, 0, 0, 776, 434, 0, 0, 0, 0, 765, 453, 0, 0, 0, 0, 744, 470, 0, 0, 0, 0, 727, 480, 0, 0, 0, 0, 707, 482, 0, 0, 0, 0, 679, 481, 0, 0, 0, 0, 364, 482, 0, 0, 0, 0, -130, 482, 0, 0, 0, 0, -161, 475, 0, 0, 0, 0, -183, 462, 0, 0, 0, 0, -198, 447, 0, 0, 0, 0, -208, 427, 0, 0, 0, 0, -218, 403, 0, 0, 0, 0, -221, 384, 0, 0, 0, 0, -224, 360, 0, 0, 0, 0, -223, 341, 0, 0, 0, 0, -219, 320, 0, 0, 0, 0, -213, 295, 0, 0, 0, 0, -207, 281, 0, 0, 0, 0, -201, 269, 0, 0, 0, 0, -192, 259, 0, 0, 0, 0, -182, 249, 0, 0, 0, 0, -171, 241, 0, 0, 0, 0, -159, 234, 0, 0, 0, 0, -147, 230, 0, 0, 0, 0, -129, 228, 0, 0, 0, 0, -106, 227, 0, 0, 0, 0, 284, 227)
+}
+point_count = 43
+
+[node name="MathRace" type="CanvasLayer"]
+script = ExtResource("1_u0ufm")
+
+[node name="Racetrack_Background" type="Control" parent="."]
+layout_mode = 3
+anchor_right = 0.997396
+anchor_bottom = 0.834877
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Racetrack_Background" type="TextureRect" parent="Racetrack_Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.131238
+anchor_right = 1.00348
+anchor_bottom = 0.988909
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_orvw8")
+expand_mode = 2
+
+[node name="Math_question" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.437501
+anchor_right = 0.578125
+anchor_bottom = 0.146605
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Math_question"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00617288
+anchor_top = 0.0105263
+anchor_right = 1.00618
+anchor_bottom = 0.88421
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_ayiiv")
+theme_override_font_sizes/font_size = 60
+metadata/_edit_use_anchors_ = true
+
+[node name="Enemy" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Enemy_path" type="Path2D" parent="Enemy"]
+position = Vector2(291, -122)
+curve = SubResource("Curve2D_gabe5")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemy/Enemy_path"]
+position = Vector2(284, 227)
+
+[node name="Enemy_car" type="Sprite2D" parent="Enemy/Enemy_path/PathFollow2D"]
+position = Vector2(-0.0197754, -0.999817)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_ocam0")
+script = ExtResource("6_gcqa2")
+
+[node name="Lap_Label" type="Label" parent="Enemy"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00260417
+anchor_right = 0.295139
+anchor_bottom = 0.0648148
+grow_horizontal = 2
+grow_vertical = 2
+auto_translate = false
+theme = ExtResource("3_ayiiv")
+metadata/_edit_use_anchors_ = true
+
+[node name="SpeedTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="Player" parent="." instance=ExtResource("6_xaxed")]
+
+[node name="Lap_Label" parent="Player" index="0"]
+anchor_left = 0.00347222
+anchor_top = 0.0447531
+anchor_right = 0.197049
+anchor_bottom = 0.109568
+theme = ExtResource("3_ayiiv")
+label_settings = null
+
+[node name="Player_path" parent="Player" index="1"]
+position = Vector2(290, -51)
+curve = SubResource("Curve2D_tawba")
+
+[node name="PathFollow2D" parent="Player/Player_path" index="0"]
+rotation = 0.0
+
+[node name="Player_car" parent="Player/Player_path/PathFollow2D" index="0"]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_ljihm")
+
+[node name="Math_Answer" parent="." instance=ExtResource("7_ktthu")]
+anchor_left = 0.332465
+anchor_top = 0.830246
+anchor_right = 0.692708
+anchor_bottom = 0.996914
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="GridContainer" parent="Math_Answer" index="0"]
+metadata/_edit_use_anchors_ = true
+
+[node name="Score_Label Control" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.777778
+anchor_top = 0.0123457
+anchor_right = 0.922744
+anchor_bottom = 0.0895062
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Current_Score Label" type="Label" parent="Score_Label Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11976
+anchor_top = -0.12
+anchor_right = 1.497
+anchor_bottom = 0.88
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_ayiiv")
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="endgame_screen" parent="." instance=ExtResource("7_g523i")]
+visible = false
+
+[node name="Mistake_Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Question_timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="Correct_Answer_Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="SpeedTimer" to="." method="_on_speed_timer_timeout"]
+[connection signal="pressed" from="Math_Answer/GridContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Math_Answer/GridContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Math_Answer/GridContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Math_Answer/GridContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="timeout" from="Mistake_Timer" to="." method="_on_mistake_timer_timeout"]
+[connection signal="timeout" from="Question_timer" to="." method="_on_question_timer_timeout"]
+[connection signal="timeout" from="Correct_Answer_Timer" to="." method="_on_correct_answer_timer_timeout"]
+
+[editable path="Player"]
+[editable path="Math_Answer"]
+[editable path="endgame_screen"]

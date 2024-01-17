@@ -1,0 +1,158 @@
+[gd_scene load_steps=9 format=3 uid="uid://dek6ctonas5e8"]
+
+[ext_resource type="PackedScene" uid="uid://c18xh6tcyyumi" path="res://Math_answers.tscn" id="1_bmk8i"]
+[ext_resource type="Script" path="res://introduction_race.gd" id="1_s6se2"]
+[ext_resource type="Theme" uid="uid://c72ukk1bonn6d" path="res://src/appdata/Lucrato_Theme.tres" id="2_nhrl1"]
+[ext_resource type="Theme" uid="uid://d1nkb8nf83lha" path="res://src/appdata/Long_Buttons_Lucrato_Theme.tres" id="3_25u18"]
+[ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="5_0vy2v"]
+[ext_resource type="Texture2D" uid="uid://bjfi3i074kvsb" path="res://assets/Back button.png" id="5_ryfcc"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_yeheu"]
+keycode = 32
+
+[sub_resource type="Shortcut" id="Shortcut_bd5ue"]
+events = [SubResource("InputEventKey_yeheu")]
+
+[node name="Introduction" type="CanvasLayer"]
+script = ExtResource("1_s6se2")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nhrl1")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.917647, 0.827451, 0.87451, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit_Button" type="Button" parent="Control/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.138958
+anchor_top = 0.893333
+anchor_right = 0.863958
+anchor_bottom = 0.996667
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_25u18")
+theme_override_font_sizes/font_size = 35
+action_mode = 0
+shortcut = SubResource("Shortcut_bd5ue")
+metadata/_edit_use_anchors_ = true
+
+[node name="Gameplay Explanation" type="Label" parent="Control/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0416667
+anchor_top = 0.126543
+anchor_right = 0.969618
+anchor_bottom = 0.459877
+grow_horizontal = 2
+theme = ExtResource("2_nhrl1")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Title Label" type="Label" parent="Control/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.157118
+anchor_top = 0.00771605
+anchor_right = 0.869792
+anchor_bottom = 0.155864
+theme = ExtResource("2_nhrl1")
+theme_override_font_sizes/font_size = 45
+text = "
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button Introduction" type="Label" parent="Control/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0208333
+anchor_top = 0.442901
+anchor_right = 0.983507
+anchor_bottom = 0.708333
+theme = ExtResource("2_nhrl1")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Math_Answer" parent="Control" instance=ExtResource("1_bmk8i")]
+layout_mode = 1
+anchor_left = 0.319
+anchor_top = 0.718
+anchor_right = 0.681
+anchor_bottom = 0.884
+offset_left = 0.511597
+offset_top = -0.264435
+offset_right = -1.51257
+offset_bottom = 0.168457
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="GridContainer" parent="Control/Math_Answer" index="0"]
+anchors_preset = -1
+anchor_left = -0.00240964
+anchor_right = 0.99759
+offset_left = 1.0
+offset_right = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" parent="Control/Math_Answer/GridContainer" index="0"]
+theme_override_font_sizes/font_size = 50
+text = "1"
+
+[node name="Button2" parent="Control/Math_Answer/GridContainer" index="1"]
+theme_override_font_sizes/font_size = 50
+text = "2"
+
+[node name="Button3" parent="Control/Math_Answer/GridContainer" index="2"]
+theme_override_font_sizes/font_size = 50
+text = "3"
+
+[node name="Button4" parent="Control/Math_Answer/GridContainer" index="3"]
+theme_override_font_sizes/font_size = 50
+text = "4"
+
+[node name="BackButton" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.003
+anchor_top = 0.008
+anchor_right = 0.003
+anchor_bottom = 0.008
+offset_left = -0.456
+offset_top = -0.184
+offset_right = 128.544
+offset_bottom = 49.816
+theme_override_colors/font_color = Color(0.835294, 0.141176, 0.490196, 1)
+theme_override_fonts/font = ExtResource("5_0vy2v")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+icon = ExtResource("5_ryfcc")
+flat = true
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
+[connection signal="pressed" from="Control/ColorRect/Quit_Button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+
+[editable path="Control/Math_Answer"]

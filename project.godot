@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalScript="*res://src/appdata/global_script.gd"
 GlobalSettings="*res://src/appdata/global_settings.gd"
+GlobalScript="*res://global_script.gd"
 
 [display]
 
@@ -32,3 +32,4 @@ mouse_cursor/custom_image="res://src/appdata/code2Maze.PNG"
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.917647, 0.827451, 0.87451, 1)

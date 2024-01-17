@@ -37,7 +37,7 @@ func _on_menu_button_pressed():
 
 
 func _on_math_game_pressed():
-	get_tree().change_scene_to_file("res://src/appdata/introduction.tscn")
+	get_tree().change_scene_to_file("res://introduction.tscn")
 
 
 func _on_maze_game_pressed():

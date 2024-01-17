@@ -1,0 +1,211 @@
+[gd_scene load_steps=12 format=3 uid="uid://cpbeeter00lwt"]
+
+[ext_resource type="Script" path="res://math_race_level2.gd" id="1_ub4ga"]
+[ext_resource type="Texture2D" uid="uid://u8wijhntsuvt" path="res://assets/MathRaceAssets/racetrack_level2_transparent.png" id="2_li6fp"]
+[ext_resource type="Theme" uid="uid://c72ukk1bonn6d" path="res://src/appdata/Lucrato_Theme.tres" id="3_eewdx"]
+[ext_resource type="Texture2D" uid="uid://makue8ov77if" path="res://assets/MathRaceAssets/Enemy_car.svg" id="3_pfpcf"]
+[ext_resource type="Script" path="res://Player_Movement.gd" id="4_aopmv"]
+[ext_resource type="Texture2D" uid="uid://mjx5yyhipvt7" path="res://assets/MathRaceAssets/Player_car.svg" id="5_hj7ko"]
+[ext_resource type="Script" path="res://Enemy_Movement.gd" id="6_gcqa2"]
+[ext_resource type="PackedScene" uid="uid://c18xh6tcyyumi" path="res://Math_answers.tscn" id="7_ktthu"]
+[ext_resource type="PackedScene" uid="uid://of3ei4lci41k" path="res://Victory_Screen.tscn" id="8_53y33"]
+
+[sub_resource type="Curve2D" id="Curve2D_gabe5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 284, 227, 0, 0, 0, 0, 164, 227, 0, 0, 0, 0, 63, 227, 0, 0, 0, 0, -464, 226, 0, 0, 0, 0, -486, 227, 0, 0, 0, 0, -522, 220, 0, 0, 0, 0, -539, 211, 0, 0, 0, 0, -558, 197, 0, 0, 0, 0, -565, 189, 0, 0, 0, 0, -572, 180, 0, 0, 0, 0, -575, 171, 0, 0, 0, 0, -576, 158, 0, 0, 0, 0, -576, 151, 0, 0, 0, 0, -576, 145, 0, 0, 0, 0, -574, 132, 0, 0, 0, 0, -571, 123, 0, 0, 0, 0, -566, 113, 0, 0, 0, 0, -557, 102, 0, 0, 0, 0, -549, 94, 0, 0, 0, 0, -540, 87, 0, 0, 0, 0, -532, 83, 0, 0, 0, 0, -520, 78, 0, 0, 0, 0, -499, 75, 0, 0, 0, 0, -474, 74, 0, 0, 0, 0, -436, 74, 0, 0, 0, 0, -22, 76, 0, 0, 0, 0, -6, 73, 0, 0, 0, 0, 5, 69, 0, 0, 0, 0, 17, 65, 0, 0, 0, 0, 29, 58, 0, 0, 0, 0, 40, 53, 0, 0, 0, 0, 50, 46, 0, 0, 0, 0, 61, 38, 0, 0, 0, 0, 71, 30, 0, 0, 0, 0, 80, 22, 0, 0, 0, 0, 86, 14, 0, 0, 0, 0, 90, 4, 0, 0, 0, 0, 92, -2, 0, 0, 0, 0, 97, -15, 0, 0, 0, 0, 99, -24, 0, 0, 0, 0, 99, -43, 0, 0, 0, 0, 97, -61, 0, 0, 0, 0, 92, -76, 0, 0, 0, 0, 86, -91, 0, 0, 0, 0, 79, -104, 0, 0, 0, 0, 65, -120, 0, 0, 0, 0, 46, -134, 0, 0, 0, 0, 32, -142, 0, 0, 0, 0, 13, -152, 0, 0, 0, 0, -6, -156, 0, 0, 0, 0, -29, -159, 0, 0, 0, 0, -776, -159)
+}
+point_count = 52
+
+[sub_resource type="Curve2D" id="Curve2D_8u0qs"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 284, 227, 0, 0, 0, 0, 174, 228, 0, 0, 0, 0, -476, 228, 0, 0, 0, 0, -506, 226, 0, 0, 0, 0, -530, 225, 0, 0, 0, 0, -546, 220, 0, 0, 0, 0, -567, 214, 0, 0, 0, 0, -585, 204, 0, 0, 0, 0, -599, 195, 0, 0, 0, 0, -609, 184, 0, 0, 0, 0, -620, 173, 0, 0, 0, 0, -630, 158, 0, 0, 0, 0, -637, 145, 0, 0, 0, 0, -641, 136, 0, 0, 0, 0, -642, 126, 0, 0, 0, 0, -642, 115, 0, 0, 0, 0, -641, 96, 0, 0, 0, 0, -635, 76, 0, 0, 0, 0, -625, 61, 0, 0, 0, 0, -614, 45, 0, 0, 0, 0, -602, 34, 0, 0, 0, 0, -590, 23, 0, 0, 0, 0, -570, 11, 0, 0, 0, 0, -553, 3, 0, 0, 0, 0, -535, -1, 0, 0, 0, 0, -514, -2, 0, 0, 0, 0, -44, -2, 0, 0, 0, 0, -28, -6, 0, 0, 0, 0, -12, -12, 0, 0, 0, 0, 2, -18, 0, 0, 0, 0, 14, -26, 0, 0, 0, 0, 21, -36, 0, 0, 0, 0, 30, -48, 0, 0, 0, 0, 36, -61, 0, 0, 0, 0, 38, -76, 0, 0, 0, 0, 36, -90, 0, 0, 0, 0, 29, -107, 0, 0, 0, 0, 23, -118, 0, 0, 0, 0, 16, -128, 0, 0, 0, 0, 3, -139, 0, 0, 0, 0, -10, -145, 0, 0, 0, 0, -27, -153, 0, 0, 0, 0, -45, -155, 0, 0, 0, 0, -65, -155, 0, 0, 0, 0, -778, -155)
+}
+point_count = 45
+
+[node name="MathRace" type="CanvasLayer"]
+script = ExtResource("1_ub4ga")
+
+[node name="Racetrack_Background" type="Control" parent="."]
+layout_mode = 3
+anchor_right = 0.997396
+anchor_bottom = 0.834877
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Racetrack_Background" type="TextureRect" parent="Racetrack_Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.131238
+anchor_right = 1.00348
+anchor_bottom = 0.988909
+offset_top = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_li6fp")
+expand_mode = 2
+
+[node name="Math_question" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.437501
+anchor_right = 0.578125
+anchor_bottom = 0.146605
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Math_question"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.00001
+anchor_bottom = 0.873684
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_eewdx")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Enemy" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Enemy_path" type="Path2D" parent="Enemy"]
+position = Vector2(837, 251)
+curve = SubResource("Curve2D_gabe5")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemy/Enemy_path"]
+position = Vector2(284, 227)
+rotation = 3.14159
+
+[node name="Enemy_car" type="Sprite2D" parent="Enemy/Enemy_path/PathFollow2D"]
+position = Vector2(6, 0)
+rotation = 0.0174533
+scale = Vector2(0.612, 0.53)
+texture = ExtResource("3_pfpcf")
+script = ExtResource("6_gcqa2")
+
+[node name="Lap_Label" type="Label" parent="Enemy"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.724826
+anchor_right = 0.99566
+anchor_bottom = 0.0648148
+grow_horizontal = 2
+grow_vertical = 2
+auto_translate = false
+theme = ExtResource("3_eewdx")
+horizontal_alignment = 2
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Lap_Label" type="Label" parent="Player"]
+layout_mode = 2
+anchor_left = 0.793403
+anchor_top = 0.0540123
+anchor_right = 0.995657
+anchor_bottom = 0.118827
+offset_bottom = -1.52588e-05
+grow_horizontal = 2
+grow_vertical = 2
+auto_translate = false
+theme = ExtResource("3_eewdx")
+horizontal_alignment = 2
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Player_path" type="Path2D" parent="Player"]
+position = Vector2(840, 289)
+curve = SubResource("Curve2D_8u0qs")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Player_path"]
+position = Vector2(284, 227)
+rotation = 3.1325
+
+[node name="Player_car" type="Sprite2D" parent="Player/Player_path/PathFollow2D"]
+position = Vector2(7.9996, 0.0895081)
+rotation = 0.0174533
+scale = Vector2(0.577, 0.5)
+texture = ExtResource("5_hj7ko")
+script = ExtResource("4_aopmv")
+
+[node name="Math_Answer" parent="." instance=ExtResource("7_ktthu")]
+anchor_left = 0.344618
+anchor_top = 0.830246
+anchor_right = 0.704861
+anchor_bottom = 0.996914
+offset_left = -3.05176e-05
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="GridContainer" parent="Math_Answer" index="0"]
+metadata/_edit_use_anchors_ = true
+
+[node name="SpeedTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="Score_Label Control" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.0338542
+anchor_top = 0.0216049
+anchor_right = 0.255208
+anchor_bottom = 0.0987654
+offset_right = 3.05176e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="Current_Score Label" type="Label" parent="Score_Label Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0901961
+anchor_top = -0.24
+anchor_right = 0.67451
+anchor_bottom = 0.76
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_eewdx")
+theme_override_font_sizes/font_size = 35
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="victory_screen" parent="." instance=ExtResource("8_53y33")]
+visible = false
+
+[node name="Mistake_Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Question_timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="Correct_Answer_Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="pressed" from="Math_Answer/GridContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Math_Answer/GridContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Math_Answer/GridContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Math_Answer/GridContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="timeout" from="SpeedTimer" to="." method="_on_speed_timer_timeout"]
+[connection signal="pressed" from="victory_screen/Control/ColorRect/Quit_Button" to="." method="_on_quit_button_pressed"]
+[connection signal="timeout" from="Mistake_Timer" to="." method="_on_mistake_timer_timeout"]
+[connection signal="timeout" from="Question_timer" to="." method="_on_question_timer_timeout"]
+[connection signal="timeout" from="Correct_Answer_Timer" to="." method="_on_correct_answer_timer_timeout"]
+
+[editable path="Math_Answer"]
+[editable path="victory_screen"]

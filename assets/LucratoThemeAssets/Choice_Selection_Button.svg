@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 404 122">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d21373;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Log_in_button" data-name="Log in button">
+    <path id="Rectangle_71-2" data-name="Rectangle 71-2" class="cls-1" d="M61,0h282c33.69,0,61,27.31,61,61h0c0,33.69-27.31,61-61,61H61C27.31,122,0,94.69,0,61h0C0,27.31,27.31,0,61,0Z"/>
+  </g>
+</svg>

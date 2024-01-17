@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://d1nkb8nf83lha"]
+
+[ext_resource type="Texture2D" uid="uid://dki3uivgamg7i" path="res://assets/LucratoThemeAssets/Rectangle 2.svg" id="1_h12d2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ah1x"]
+texture = ExtResource("1_h12d2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7yt7"]
+texture = ExtResource("1_h12d2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fa876"]
+texture = ExtResource("1_h12d2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ffmjq"]
+texture = ExtResource("1_h12d2")
+
+[resource]
+Button/styles/focus = SubResource("StyleBoxTexture_3ah1x")
+Button/styles/hover = SubResource("StyleBoxTexture_k7yt7")
+Button/styles/normal = SubResource("StyleBoxTexture_fa876")
+Button/styles/pressed = SubResource("StyleBoxTexture_ffmjq")

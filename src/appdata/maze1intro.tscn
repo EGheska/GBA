@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmqeqln3x2o4m"]
+[gd_scene load_steps=4 format=3 uid="uid://cmqeqln3x2o4m"]
 
 [ext_resource type="Script" path="res://src/appdata/maze1intro.gd" id="1_fkre3"]
+[ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="2_7weyr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k7xb3"]
+bg_color = Color(0.823529, 0.0745098, 0.45098, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_fkre3")
@@ -11,6 +19,40 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.901961, 0.831373, 0.870588, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.379
+anchor_top = 0.063
+anchor_right = 0.612
+anchor_bottom = 0.153
+offset_left = -1.608
+offset_top = 0.175999
+offset_right = -0.0240479
+offset_bottom = -0.144005
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.764706, 0.12549, 0.45098, 1)
+theme_override_fonts/font = ExtResource("2_7weyr")
+theme_override_font_sizes/font_size = 45
+text = "The Labytinth"
+
+[node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.27
+anchor_top = 0.238
+anchor_right = 0.744
+anchor_bottom = 0.363
+offset_left = 7.95999
+offset_top = -0.223999
+offset_right = -0.0880127
+offset_bottom = -0.223999
+theme_override_colors/font_color = Color(0.764706, 0.12549, 0.45098, 1)
+text = "In this game you have to complete the maze.
+The maze contains the doors which are locked with the code lock.
+To unlock the lock use the code snippit which you can find near by."
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = 8
@@ -18,12 +60,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -28.0
-offset_top = -15.5
-offset_right = 28.0
-offset_bottom = 15.5
+offset_left = -156.0
+offset_top = -42.5
+offset_right = 156.0
+offset_bottom = 42.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_7weyr")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_k7xb3")
 text = "START"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
