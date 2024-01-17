@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://of3ei4lci41k"]
 
 [ext_resource type="Script" path="res://raze_Victory_Screen.gd" id="1_04n8g"]
-[ext_resource type="Theme" path="res://src/appdata/Lucrato_Theme.tres" id="2_i52ma"]
-[ext_resource type="Theme" path="res://src/appdata/Long_Buttons_Lucrato_Theme.tres" id="3_blk2t"]
+[ext_resource type="Theme" uid="uid://c72ukk1bonn6d" path="res://src/appdata/Lucrato_Theme.tres" id="2_i52ma"]
+[ext_resource type="Theme" uid="uid://d1nkb8nf83lha" path="res://src/appdata/Long_Buttons_Lucrato_Theme.tres" id="3_blk2t"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_yeheu"]
 keycode = 32

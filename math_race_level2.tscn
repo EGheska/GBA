@@ -191,7 +191,7 @@ visible = false
 one_shot = true
 
 [node name="Question_timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 20.0
 
 [node name="Correct_Answer_Timer" type="Timer" parent="."]
 wait_time = 0.5

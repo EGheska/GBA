@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://math_race_level3.gd" id="1_u0ufm"]
 [ext_resource type="Texture2D" uid="uid://cuaq61c0ugedk" path="res://assets/MathRaceAssets/racetrack_level3_transparent.png" id="2_orvw8"]
-[ext_resource type="Theme" path="res://src/appdata/Lucrato_Theme.tres" id="3_ayiiv"]
+[ext_resource type="Theme" uid="uid://c72ukk1bonn6d" path="res://src/appdata/Lucrato_Theme.tres" id="3_ayiiv"]
 [ext_resource type="Texture2D" uid="uid://makue8ov77if" path="res://assets/MathRaceAssets/Enemy_car.svg" id="3_ocam0"]
 [ext_resource type="Script" path="res://Enemy_Movement.gd" id="6_gcqa2"]
 [ext_resource type="Texture2D" uid="uid://mjx5yyhipvt7" path="res://assets/MathRaceAssets/Player_car.svg" id="6_ljihm"]
-[ext_resource type="PackedScene" path="res://player_scene.tscn" id="6_xaxed"]
+[ext_resource type="PackedScene" uid="uid://8023y7easerw" path="res://player_scene.tscn" id="6_xaxed"]
 [ext_resource type="PackedScene" uid="uid://of3ei4lci41k" path="res://Victory_Screen.tscn" id="7_g523i"]
 [ext_resource type="PackedScene" uid="uid://c18xh6tcyyumi" path="res://Math_answers.tscn" id="7_ktthu"]
 
@@ -165,7 +165,7 @@ visible = false
 one_shot = true
 
 [node name="Question_timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 20.0
 
 [node name="Correct_Answer_Timer" type="Timer" parent="."]
 wait_time = 0.5

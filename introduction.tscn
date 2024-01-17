@@ -56,14 +56,13 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0416667
-anchor_top = 0.126543
+anchor_top = 0.118827
 anchor_right = 0.969618
-anchor_bottom = 0.459877
+anchor_bottom = 0.452161
 grow_horizontal = 2
 theme = ExtResource("2_nhrl1")
 theme_override_font_sizes/font_size = 35
 horizontal_alignment = 1
-vertical_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 

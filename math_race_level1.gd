@@ -338,7 +338,7 @@ func check_answer(answer_number):
 	question_answer = math_dictionary_level1[question_identifier][answer_identifier]
 	
 	if(question_answer == math_dictionary_level1[question_identifier]["Correct Answer"]):
-		GlobalScript.player_speed = 70
+		GlobalScript.player_speed = 80
 		$SpeedTimer.start()
 		$Correct_Answer_Timer.start()
 		match(answer_number):

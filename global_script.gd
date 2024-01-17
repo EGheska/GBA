@@ -2,7 +2,7 @@ extends Node
 
 @onready var config = ConfigFile.new()
 
-var player_speed = 400 #40 (Lagere waarde om de moeilijkheid te kunnen bewaren maar toch genoeg tijd te geven)
+var player_speed = 40 #40 (Lagere waarde om de moeilijkheid te kunnen bewaren maar toch genoeg tijd te geven)
 const max_laps = 3
 var player_score = 0
 
@@ -40,11 +40,11 @@ func _reset_global_variables():
 
 func _set_player_speed():
 	if levelCounter == 1:
-		player_speed = float(400)
+		player_speed = float(50)
 	elif levelCounter == 2:
-		player_speed = float(400)
+		player_speed = float(50)
 	elif levelCounter == 3:
-		player_speed = float(400)
+		player_speed = float(40)
 
 func get_victory_string():
 	config.load("res://settings.cfg")
