@@ -42,17 +42,19 @@ text = "The Labytinth"
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.27
-anchor_top = 0.238
-anchor_right = 0.744
-anchor_bottom = 0.363
-offset_left = 7.95999
-offset_top = -0.223999
-offset_right = -0.0880127
-offset_bottom = -0.223999
+anchor_top = 0.205
+anchor_right = 0.816
+anchor_bottom = 0.397
+offset_left = -3.04001
+offset_top = 0.159988
+offset_right = -0.0320435
+offset_bottom = -0.256012
 theme_override_colors/font_color = Color(0.764706, 0.12549, 0.45098, 1)
+theme_override_font_sizes/font_size = 20
 text = "In this game you have to complete the maze.
 The maze contains the doors which are locked with the code lock.
-To unlock the lock use the code snippit which you can find near by."
+To unlock the lock use the code snip which you can find near by. 
+To move your character use WASD keys on the keyboard"
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = 8

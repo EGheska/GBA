@@ -41,7 +41,7 @@ func _on_math_game_pressed():
 
 
 func _on_maze_game_pressed():
-	get_tree().change_scene_to_file("res://src/appdata/maze_intro.tscn")
+	get_tree().change_scene_to_file("res://src/appdata/maze1intro.tscn")
 
 
 func _on_canvas_layer_visibility_changed():
