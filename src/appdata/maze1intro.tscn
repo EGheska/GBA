@@ -36,7 +36,7 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(0.764706, 0.12549, 0.45098, 1)
 theme_override_fonts/font = ExtResource("2_7weyr")
 theme_override_font_sizes/font_size = 45
-text = "The Labytinth"
+text = "The Labyrinth"
 
 [node name="Label2" type="Label" parent="ColorRect"]
 layout_mode = 1
