@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://duqhv6r3ecuue"]
+[gd_scene load_steps=97 format=3 uid="uid://duqhv6r3ecuue"]
 
 [ext_resource type="Script" path="res://src/appdata/maze_game_lvl2.gd" id="1_bn7af"]
 [ext_resource type="Texture2D" uid="uid://bgwrvascf4rd0" path="res://src/appdata/Снимок экрана 2023-12-19 в 10.34.56.png" id="1_e6iub"]
@@ -304,6 +304,10 @@ size = Vector2(1, 36)
 size = Vector2(2, 35)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_illbr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1pnlo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_27l43"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_te4qv"]
 
@@ -864,6 +868,8 @@ theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_bniu2")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxEmpty_illbr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1pnlo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_27l43")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_te4qv")
 text = "Back"
 icon = ExtResource("5_xbf2e")

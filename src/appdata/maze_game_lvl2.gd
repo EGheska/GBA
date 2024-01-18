@@ -48,9 +48,13 @@ const solverClass = preload("res://src/appdata/popup.gd")
 
 var solvers = solverClass.new()
 #var levelStack = LevelTracker.new()
+var config = ConfigFile.new()
 
 func _ready():
 #	levelStack.push(2)
+	config.load("res://settings.cfg")
+	if config.get_value("language", "mode") == "dutch":
+		$Button.text = "Terug"
 	if PopUP.is_visible():
 		PopUP.set_visible(false)
 	solvers.setLevelCounter(2)

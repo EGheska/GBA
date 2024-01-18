@@ -40,6 +40,7 @@ func costyl():
 		
 	if config.get_value("language", "mode") == "dutch":
 		LanguageButton.button_pressed = false
+		
 	else:
 		LanguageButton.button_pressed = true
 		

@@ -12,6 +12,7 @@ const solverClass = preload("res://src/appdata/popup.gd")
 @onready var AreaCollisionSecondDoor = $Control3/Area2D/CollisionShape2D
 @onready var CollisionThirdDoor = $Control3/Area2D4/StaticBody2D/CollisionShape2D
 @onready var AreaCollisionThirdDoor = $Control3/Area2D4/CollisionShape2D
+@onready var AreaCollisionThirdDoor2 = $Control3/Area2D4/CollisionShape2D2
 @onready var CollisionFourthDoor = $Control3/Area2D5/StaticBody2D/CollisionShape2D
 @onready var AreaCollisionFourthDoor = $Control3/Area2D5/CollisionShape2D
 @onready var AreaCollisionFourthDoor2 = $Control3/Area2D5/CollisionShape2D2
@@ -53,8 +54,11 @@ var t_begin_the_game
 var t_end_the_game
 
 var stackClass = load("res://levelCounter.gd")
-
+var config = ConfigFile.new()
 func _ready():
+	config.load("res://settings.cfg")
+	if config.get_value("language", "mode") == "dutch":
+		$Button.text = "Terug"
 	
 	if PopUP.is_visible():
 		PopUP.set_visible(false)
@@ -118,6 +122,8 @@ func _on_popup_visibility_changed():
 			CollisionThirdDoor.set_disabled(true)
 			ThirdDoor.set_color(Color(1,1,1,0))
 			AreaCollisionThirdDoor.disabled = true
+			AreaCollisionThirdDoor2.disabled = true
+			AreaCollisionThirdDoor2.disconnect("body_enter", _on_area_2d_4_body_entered)
 			AreaCollisionThirdDoor.disconnect("body_enter", _on_area_2d_4_body_entered)
 		if solvers.solved and solvers.doorCounter == 4:
 			print(solvers.solved)
@@ -146,7 +152,7 @@ func _on_popup_visibility_changed():
 			FakeCollisionThirdDoor.set_disabled(true)
 			FakeThirdDoor.set_color(Color(1,1,1,0))
 			FakeAreaCollisionThirdDoor.disabled = true
-			FakeAreaCollisionThirdDoor.disconnect("body_enter", _on_fakedoor_area_2_body_entered)
+			FakeAreaCollisionThirdDoor.disconnect("body_enter", _on_fakedoor_area_3_body_entered)
 		if solvers.solved and solvers.doorCounter == 6:
 			CollisionSixthDoor.set_disabled(true)
 			AreaCollisionSixthDoor.disabled = true
@@ -170,8 +176,6 @@ func _on_popup_visibility_changed():
 #	return result
 
 func _on_area_2d_4_body_entered(body):
-	
-	
 	solvers.solved = false
 	solvers.__set("ThirdDoor", 3)
 	if !PopUP.is_visible():

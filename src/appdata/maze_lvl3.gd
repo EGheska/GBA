@@ -54,8 +54,12 @@ const solverClass = preload("res://src/appdata/popup.gd")
 
 var solvers = solverClass.new()
 #var lelvelStack = LevelTracker.new()
+var config = ConfigFile.new()
 
 func _ready():
+	config.load("res://settings.cfg")
+	if config.get_value("language", "mode") == "dutch":
+		$Control2/Button.text = "Terug"
 	#lelvelStack.push(3)
 	if PopUP.is_visible():
 		PopUP.set_visible(false)

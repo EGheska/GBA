@@ -1,7 +1,11 @@
 extends Popup
-
+var config = ConfigFile.new()
 func _ready():
-	pass
+	config.load("res://settings.cfg")
+	if config.get_value("language", "mode") == "dutch":
+		$VBoxContainer/HBoxContainer/YraBut.text = "Ja"
+		$VBoxContainer/HBoxContainer/NoBut.text = "Nee"
+		$VBoxContainer/Label.text = "Weet je zeker dat je weg wilt?\nJe voortgang wordt niet opgeslagen"
 	
 
 

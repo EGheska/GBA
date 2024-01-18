@@ -10,6 +10,8 @@ class_name solver extends Popup
 var levelAccess = LevelSelelctor.new()
 var config = ConfigFile.new()
 
+var another_config = ConfigFile.new()
+
 const CodeDictionary = {
 	"doorCode":2163,
 	"2nddoorCode": 6452,
@@ -41,7 +43,13 @@ static func __get():
 	return whichDoor
 
 func _ready():
+	another_config.load("res://settings.cfg")
 	config.load("res://settings2.cfg")
+	
+	if another_config.get_value("language", "mode") == "dutch":
+		$Control/Label.text = "Stel op basis van de code aan de rechterkant een antwoord voor de gesloten deur voor!"
+		lineEdit.text = "Druk hier om uw antwoord in te voeren!"
+	
 	lineEdit.focus_mode = 2
 	
 
@@ -118,7 +126,7 @@ func _on_line_edit_text_submitted(new_text):
 				else:
 					textLabel.set_text("The code does not match.\nMaybe, try one more time?")
 			300:
-				if new_text.to_int() == 9863:
+				if new_text.to_int() == 9873:
 					textLabel.set_text("Oops! Seems like you've solved the fake door")
 					_set_solve(true)
 					timer_func()

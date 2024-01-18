@@ -21,7 +21,7 @@ func _ready():
 		QuitButton.text = "Quit the game"
 		
 	if config.get_value("display", "mode") == "fullscreen":
-		$Menu/MarginContainer/HBoxContainer.add_theme_constant_override("separation", 1500)
+		$Menu/MarginContainer/HBoxContainer.add_theme_constant_override("separation", 1000)
 		print("separation added")
 
 func _on_start_button_pressed():
