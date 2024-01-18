@@ -1,4 +1,4 @@
-[gd_scene load_steps=135 format=3 uid="uid://b2bljhwribfuy"]
+[gd_scene load_steps=138 format=3 uid="uid://b2bljhwribfuy"]
 
 [ext_resource type="Texture2D" uid="uid://ccxoqs0141jdk" path="res://assets/mazelvl3.png" id="1_h1d8t"]
 [ext_resource type="Script" path="res://src/appdata/maze_lvl3.gd" id="1_whg42"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://du0fwtx53xudu" path="res://src/appdata/popup.tscn" id="4_2kqp2"]
 [ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="5_teh8n"]
 [ext_resource type="Texture2D" uid="uid://5swdhjmus76d" path="res://src/gui/Back button.png" id="6_gnyvj"]
+[ext_resource type="PackedScene" uid="uid://dntea3iaghivx" path="res://src/appdata/leavescene.tscn" id="8_v6nij"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nup3y"]
 size = Vector2(516, 3.5)
@@ -394,6 +395,10 @@ b = Vector2(14, 0)
 size = Vector2(24, 3)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ri7vb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f7v0n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tfic6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vaiv6"]
 
@@ -1153,11 +1158,16 @@ theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("5_teh8n")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ri7vb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_f7v0n")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tfic6")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_vaiv6")
 text = "Back"
 icon = ExtResource("6_gnyvj")
 
 [node name="Popup" parent="." instance=ExtResource("4_2kqp2")]
+visible = false
+
+[node name="Popup2" parent="." instance=ExtResource("8_v6nij")]
 visible = false
 
 [connection signal="body_entered" from="Control2/FirstDoor" to="." method="_on_first_door_body_entered"]
@@ -1175,4 +1185,5 @@ visible = false
 [connection signal="body_entered" from="Control2/FakeDoor6" to="." method="_on_fake_door_6_body_entered"]
 [connection signal="body_entered" from="Control2/FakeDoor7" to="." method="_on_fake_door_7_body_entered"]
 [connection signal="body_entered" from="Control2/FakeDoor8" to="." method="_on_fake_door_8_body_entered"]
+[connection signal="pressed" from="Control2/Button" to="." method="_on_button_pressed"]
 [connection signal="visibility_changed" from="Popup" to="." method="_on_popup_visibility_changed"]

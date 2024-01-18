@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://3vla6tvi5oxu"]
+
+[ext_resource type="Script" path="res://finish.gd" id="1_sfuir"]
+[ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="2_f1hfq"]
+[ext_resource type="Texture2D" uid="uid://c4m0pyqutn1l0" path="res://src/gui/Achievement 1.png" id="3_mfpxr"]
+[ext_resource type="Texture2D" uid="uid://b8o0w8ccdj6ic" path="res://assets/Medal 5.png" id="4_a3hja"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_sfuir")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.312
+anchor_top = 0.012
+anchor_right = 0.701
+anchor_bottom = 0.173
+offset_left = 0.575989
+offset_top = 0.224
+offset_right = 0.447937
+offset_bottom = -0.104004
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.796078, 0.686275, 0.137255, 1)
+theme_override_fonts/font = ExtResource("2_f1hfq")
+theme_override_font_sizes/font_size = 60
+text = "Congratulations!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Achievement1" type="Sprite2D" parent="."]
+position = Vector2(-616, 320)
+scale = Vector2(0.608333, 0.596296)
+texture = ExtResource("3_mfpxr")
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.104
+anchor_top = 0.753
+anchor_right = 0.896
+anchor_bottom = 0.914
+offset_left = 0.192001
+offset_top = -7.944
+offset_right = -0.192017
+offset_bottom = -0.272034
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.796078, 0.686275, 0.137255, 1)
+theme_override_fonts/font = ExtResource("2_f1hfq")
+theme_override_font_sizes/font_size = 55
+text = "You have finished the game!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Medal5" type="Sprite2D" parent="."]
+position = Vector2(576, 304)
+scale = Vector2(0.603131, 0.603131)
+texture = ExtResource("4_a3hja")

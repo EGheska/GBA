@@ -1,43 +1,128 @@
-[gd_scene load_steps=2 format=3 uid="uid://dntea3iaghivx"]
+[gd_scene load_steps=11 format=3 uid="uid://dntea3iaghivx"]
 
 [ext_resource type="Script" path="res://src/appdata/leavescript.gd" id="1_7wcf0"]
+[ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="2_dn5d1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vhnbt"]
+bg_color = Color(0.764706, 0.12549, 0.45098, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dvbx"]
+bg_color = Color(0.764706, 0.12549, 0.45098, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0s07"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lfb55"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qvv8s"]
+bg_color = Color(0.764706, 0.12549, 0.45098, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwflg"]
+bg_color = Color(0.764706, 0.12549, 0.45098, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78nex"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ngf05"]
 
 [node name="Popup" type="Popup"]
-size = Vector2i(700, 400)
+size = Vector2i(696, 400)
 visible = true
 script = ExtResource("1_7wcf0")
+metadata/_edit_horizontal_guides_ = [400.0]
+metadata/_edit_vertical_guides_ = [696.0]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 35.0
+offset_top = 65.0
+offset_right = 625.0
+offset_bottom = 105.0
+alignment = 1
 
-[node name="YraBut" type="Button" parent="."]
-offset_left = 400.0
-offset_top = 200.0
-offset_right = 435.0
-offset_bottom = 231.0
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.764706, 0.12549, 0.45098, 1)
+theme_override_fonts/font = ExtResource("2_dn5d1")
+theme_override_font_sizes/font_size = 20
+text = "Are you sure that you want to leave? 
+Your progress will not be saved "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label6" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label7" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 28
+alignment = 1
+
+[node name="YraBut" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_dn5d1")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_vhnbt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0dvbx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s0s07")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lfb55")
 text = "Yes"
 
-[node name="NoBut" type="Button" parent="."]
-offset_left = 200.0
-offset_top = 200.0
-offset_right = 231.0
-offset_bottom = 231.0
+[node name="NoBut" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_dn5d1")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_qvv8s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jwflg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_78nex")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ngf05")
 text = "No"
 
-[node name="Label" type="Label" parent="."]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -266.0
-offset_right = 266.0
-offset_bottom = 26.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Are you sure that you want to leave? Your progress will not be saved "
-
-[connection signal="pressed" from="YraBut" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="NoBut" to="." method="_on_no_but_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/YraBut" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/NoBut" to="." method="_on_no_but_pressed"]

@@ -331,11 +331,11 @@ grow_vertical = 2
 
 [node name="Control2" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -596,7 +596,7 @@ position = Vector2(-6.94739, -533.104)
 shape = SubResource("RectangleShape2D_5ossf")
 
 [node name="Character" type="CharacterBody2D" parent="Control2"]
-position = Vector2(-265, 238)
+position = Vector2(310, 563)
 script = ExtResource("3_hrd87")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/Character"]
@@ -608,10 +608,10 @@ offset_left = -17.0
 offset_top = -16.0
 offset_right = 16.0
 offset_bottom = 17.0
-color = Color(0, 0, 0, 1)
+color = Color(0.835294, 0.141176, 0.490196, 1)
 
 [node name="FisrtDoor" type="Area2D" parent="Control2"]
-position = Vector2(-264, 136)
+position = Vector2(311, 460)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FisrtDoor"]
 position = Vector2(0, 2)
@@ -631,7 +631,7 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_8a8mh")
 
 [node name="SecondDoor" type="Area2D" parent="Control2"]
-position = Vector2(-144, 240)
+position = Vector2(455, 564)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/SecondDoor"]
 shape = SubResource("SegmentShape2D_2arvt")
@@ -650,7 +650,7 @@ position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_fa831")
 
 [node name="ThirdDoor" type="Area2D" parent="Control2"]
-position = Vector2(50, 154)
+position = Vector2(627, 477)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/ThirdDoor"]
 shape = SubResource("SegmentShape2D_1awx1")
@@ -669,7 +669,7 @@ position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_7sq44")
 
 [node name="FourthDoor" type="Area2D" parent="Control2"]
-position = Vector2(-71, -38)
+position = Vector2(505, 286)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FourthDoor"]
 position = Vector2(-21, -13)
@@ -692,7 +692,7 @@ position = Vector2(0, -1)
 shape = SubResource("SegmentShape2D_clj4v")
 
 [node name="FifthDoor" type="Area2D" parent="Control2"]
-position = Vector2(235, -145)
+position = Vector2(810, 178)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FifthDoor"]
 position = Vector2(2, 0)
@@ -715,7 +715,7 @@ position = Vector2(-2, 0)
 shape = SubResource("RectangleShape2D_k5rdq")
 
 [node name="SixthDoor" type="Area2D" parent="Control2"]
-position = Vector2(-85, -189)
+position = Vector2(492, 133)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/SixthDoor"]
 position = Vector2(2.25, 1.25)
@@ -739,7 +739,7 @@ position = Vector2(-2, 0.5)
 shape = SubResource("RectangleShape2D_k5rdq")
 
 [node name="FinalDoor" type="Area2D" parent="Control2"]
-position = Vector2(48, -19)
+position = Vector2(623, 305)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FinalDoor"]
 position = Vector2(2, 4)
@@ -759,7 +759,7 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_fet74")
 
 [node name="FakeDoor1" type="Area2D" parent="Control2"]
-position = Vector2(-216, -80)
+position = Vector2(359, 243)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor1"]
 position = Vector2(1, 2)
@@ -781,7 +781,7 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_fet74")
 
 [node name="FakeDoor2" type="Area2D" parent="Control2"]
-position = Vector2(-118, -209)
+position = Vector2(457, 114)
 rotation = 1.5708
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor2"]
@@ -803,7 +803,7 @@ position = Vector2(-2, 3)
 shape = SubResource("RectangleShape2D_fet74")
 
 [node name="FakeDoor3" type="Area2D" parent="Control2"]
-position = Vector2(261, -175)
+position = Vector2(836, 149)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor3"]
 position = Vector2(4, 2)
@@ -826,7 +826,7 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_fet74")
 
 [node name="FakeDoor4" type="Area2D" parent="Control2"]
-position = Vector2(24, 92)
+position = Vector2(600, 415)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor4"]
 position = Vector2(0, 2)

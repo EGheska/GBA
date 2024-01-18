@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dif3v4qf8em51"]
+[gd_scene load_steps=5 format=3 uid="uid://dif3v4qf8em51"]
 
 [ext_resource type="Script" path="res://src/appdata/maze_win_1st.gd" id="1_ek8vl"]
-[ext_resource type="Texture2D" uid="uid://bldjuloj8wgdh" path="res://WhatsApp Image 2023-11-24 at 14.24.03 (1).jpeg" id="2_62v2c"]
+[ext_resource type="Texture2D" uid="uid://c4m0pyqutn1l0" path="res://src/gui/Achievement 1.png" id="2_ooreq"]
+[ext_resource type="Texture2D" uid="uid://b8o0w8ccdj6ic" path="res://assets/Medal 5.png" id="3_ys43m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihmy4"]
 content_margin_left = 10.0
@@ -16,6 +17,7 @@ corner_radius_bottom_left = 10
 script = ExtResource("1_ek8vl")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -43,11 +45,6 @@ offset_bottom = 48.096
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/Control"]
-position = Vector2(264, 256)
-scale = Vector2(1.85465, 1.74091)
-texture = ExtResource("2_62v2c")
-
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
@@ -61,7 +58,7 @@ offset_right = -0.552063
 offset_bottom = 13.712
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 26
-text = "Congratulations! You have solved the first level of the maze!"
+text = "Congratulations! You have solved the level of the maze!"
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 1
@@ -91,6 +88,15 @@ offset_right = -4454.89
 offset_bottom = -214.328
 theme_override_styles/normal = SubResource("StyleBoxFlat_ihmy4")
 text = "Next level"
+
+[node name="Achievement1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-984, 320)
+texture = ExtResource("2_ooreq")
+
+[node name="Medal5" type="Sprite2D" parent="."]
+position = Vector2(592, 560)
+texture = ExtResource("3_ys43m")
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Button2" to="." method="_on_button_2_pressed"]

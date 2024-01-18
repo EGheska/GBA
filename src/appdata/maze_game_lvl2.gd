@@ -232,5 +232,6 @@ func _on_fake_door_4_body_entered(body):
 
 
 func _on_button_pressed():
-	LeaveScene.set_visible(true)
 	LeaveScene.popup_centered()
+	LeaveScene.set_visible(true)
+	

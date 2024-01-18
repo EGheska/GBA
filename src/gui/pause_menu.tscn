@@ -119,6 +119,7 @@ theme_override_fonts/font = ExtResource("1_3wayp")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2eqyt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2eqyt")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3uxau")
 text = "Main menu"
 
@@ -129,6 +130,7 @@ theme_override_fonts/font = ExtResource("1_3wayp")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_q3e11")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2eqyt")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3w1uf")
 text = "Profile"
 
@@ -139,6 +141,7 @@ theme_override_fonts/font = ExtResource("1_3wayp")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_mfr6t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2eqyt")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_lxffg")
 text = "Game selection"
 
@@ -149,6 +152,7 @@ theme_override_fonts/font = ExtResource("1_3wayp")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0hjnf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2eqyt")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_28ml5")
 text = "Options"
 
@@ -164,6 +168,7 @@ theme_override_fonts/font = ExtResource("1_3wayp")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_6k3vo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ojntx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2eqyt")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_m2e7v")
 text = "Back
 "

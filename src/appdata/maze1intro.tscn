@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmqeqln3x2o4m"]
+[gd_scene load_steps=12 format=3 uid="uid://cmqeqln3x2o4m"]
 
 [ext_resource type="Script" path="res://src/appdata/maze1intro.gd" id="1_fkre3"]
 [ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="2_7weyr"]
@@ -11,7 +11,27 @@ corner_radius_top_right = 45
 corner_radius_bottom_right = 45
 corner_radius_bottom_left = 45
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xyw74"]
+bg_color = Color(0.764706, 0.12549, 0.45098, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ilvpe"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5l7go"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cj3kh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2srka"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ipupu"]
 
@@ -49,38 +69,45 @@ text = "The Labyrinth"
 
 [node name="Label2" type="Label" parent="ColorRect"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.271
-anchor_top = 0.432
-anchor_right = 0.819
-anchor_bottom = 0.617
-offset_left = -0.192017
-offset_top = 0.0639954
-offset_right = 0.511902
-offset_bottom = 4.18396
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -316.0
+offset_top = -62.0
+offset_right = 316.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0.764706, 0.12549, 0.45098, 1)
 theme_override_font_sizes/font_size = 20
 text = "In this game you have to complete the maze.
 The maze contains the doors which are locked with the code lock.
 To unlock the lock use the code snip which you can find near by. 
 To move your character use WASD keys on the keyboard"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = -1
 anchor_left = 0.361
-anchor_top = 0.864
+anchor_top = 0.84
 anchor_right = 0.361
-anchor_bottom = 0.864
+anchor_bottom = 0.84
 offset_left = 0.12796
-offset_top = 0.127991
+offset_top = -0.320007
 offset_right = 312.128
-offset_bottom = 85.128
+offset_bottom = 84.68
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_7weyr")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_k7xb3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xyw74")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ilvpe")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5l7go")
 text = "START"
 
 [node name="Button2" type="Button" parent="."]
@@ -95,13 +122,16 @@ offset_right = 111.936
 offset_bottom = 44.224
 theme_override_colors/font_color = Color(0.823529, 0.0745098, 0.45098, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/h_separation = 10
 theme_override_fonts/font = ExtResource("2_7weyr")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_cj3kh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2srka")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_ipupu")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ahp7q")
 text = "Back"
 icon = ExtResource("3_w7304")
+flat = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

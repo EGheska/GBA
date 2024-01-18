@@ -399,8 +399,8 @@ func _on_visibility_changed():
 				
 	if levelCounter == 3:
 		
-		cheetSheet.set_visible(false)
-		cheetSheetLvl2.set_visible(false)
+		cheetSheet.set_visible(true)
+		cheetSheetLvl2.set_visible(true)
 		cheatSheetlvl3.set_visible(true)
 		print("level 3")
 		print(whichDoor, doorCounter)
