@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bfskk4kagkjnd"]
+[gd_scene load_steps=18 format=3 uid="uid://bfskk4kagkjnd"]
 
 [ext_resource type="Script" path="res://src/gui/main_menu.gd" id="1_4djdb"]
 [ext_resource type="PackedScene" uid="uid://dq8wkquhigvch" path="res://src/gui/settings_menu.tscn" id="1_cmkqd"]
@@ -26,6 +26,15 @@ corner_radius_bottom_left = 45
 expand_margin_left = 1.0
 expand_margin_right = 1.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2v37"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dfdku"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6e73x"]
 bg_color = Color(0.764706, 0.12549, 0.45098, 1)
 corner_radius_top_left = 45
@@ -35,14 +44,12 @@ corner_radius_bottom_left = 45
 expand_margin_left = 1.0
 expand_margin_right = 1.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxs30"]
-bg_color = Color(0.764706, 0.12549, 0.45098, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xn8jn"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
 corner_radius_top_left = 45
 corner_radius_top_right = 45
 corner_radius_bottom_right = 45
 corner_radius_bottom_left = 45
-expand_margin_left = 1.0
-expand_margin_right = 1.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ow8k"]
 
@@ -54,6 +61,15 @@ corner_radius_bottom_right = 45
 corner_radius_bottom_left = 45
 expand_margin_left = 1.0
 expand_margin_right = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lono2"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q5v3n"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t5xjs"]
 
@@ -124,7 +140,8 @@ theme_override_fonts/font = ExtResource("3_d6gmq")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_er35l")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hycit")
-action_mode = 0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n2v37")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dfdku")
 text = "Start"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Menu/MarginContainer"]
@@ -142,9 +159,8 @@ theme_override_fonts/font = ExtResource("3_d6gmq")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_er35l")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6e73x")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bxs30")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xn8jn")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3ow8k")
-action_mode = 0
 text = "Settings"
 
 [node name="QuitButton" type="Button" parent="Menu/MarginContainer/HBoxContainer"]
@@ -155,7 +171,8 @@ theme_override_fonts/font = ExtResource("3_d6gmq")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_er35l")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t34ba")
-action_mode = 0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lono2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q5v3n")
 text = "Quit
 "
 

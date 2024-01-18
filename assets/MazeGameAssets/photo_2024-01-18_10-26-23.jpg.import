@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt36pfveo0lga"
-path="res://.godot/imported/Maze level 2 (1).png-84a596af5571d4e974fb8ab6e7f5e8d9.ctex"
+uid="uid://c24i2y86cj67"
+path="res://.godot/imported/photo_2024-01-18_10-26-23.jpg-3e6cab94f721f4b03cff3734225017ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/MazeGameAssets/Maze level 2 (1).png"
-dest_files=["res://.godot/imported/Maze level 2 (1).png-84a596af5571d4e974fb8ab6e7f5e8d9.ctex"]
+source_file="res://assets/MazeGameAssets/photo_2024-01-18_10-26-23.jpg"
+dest_files=["res://.godot/imported/photo_2024-01-18_10-26-23.jpg-3e6cab94f721f4b03cff3734225017ed.ctex"]
 
 [params]
 

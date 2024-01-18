@@ -47,10 +47,10 @@ const solverClass = preload("res://src/appdata/popup.gd")
 @onready var LeaveScene = $Popup2
 
 var solvers = solverClass.new()
-var levelStack = LevelTracker.new()
+#var levelStack = LevelTracker.new()
 
 func _ready():
-	levelStack.push(2)
+#	levelStack.push(2)
 	if PopUP.is_visible():
 		PopUP.set_visible(false)
 	solvers.setLevelCounter(2)

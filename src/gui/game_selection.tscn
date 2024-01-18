@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dhj2658etlghd"]
+[gd_scene load_steps=15 format=3 uid="uid://dhj2658etlghd"]
 
 [ext_resource type="Script" path="res://src/gui/game_selection.gd" id="1_sooat"]
 [ext_resource type="Texture2D" uid="uid://bjfi3i074kvsb" path="res://assets/Back button.png" id="3_d5cl5"]
@@ -25,6 +25,13 @@ corner_radius_bottom_left = 45
 expand_margin_left = 1.0
 expand_margin_right = 1.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5gv2i"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y422t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ana6"]
@@ -36,10 +43,19 @@ corner_radius_bottom_left = 45
 expand_margin_left = 1.0
 expand_margin_right = 1.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g0q0a"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j58v1"]
 
 [node name="GameSelect" type="CanvasLayer"]
 script = ExtResource("1_sooat")
+metadata/_edit_horizontal_guides_ = [48.0, 8.0]
+metadata/_edit_vertical_guides_ = [8.0, 120.0]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -83,7 +99,7 @@ custom_minimum_size = Vector2(126, 0)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.823529, 0.0745098, 0.45098, 1)
-theme_override_colors/font_hover_color = Color(0.764706, 0.12549, 0.45098, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_5wvys")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_oqj2c")
@@ -126,6 +142,7 @@ theme_override_fonts/font = ExtResource("4_5wvys")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
 theme_override_styles/hover = SubResource("StyleBoxFlat_m2e0k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5gv2i")
 theme_override_styles/focus = SubResource("StyleBoxFlat_y422t")
 text = "Math race"
 
@@ -137,6 +154,7 @@ theme_override_fonts/font = ExtResource("4_5wvys")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7ana6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g0q0a")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_j58v1")
 text = "The labyrinth"
 

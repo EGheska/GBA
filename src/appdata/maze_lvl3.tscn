@@ -1,9 +1,12 @@
-[gd_scene load_steps=130 format=3 uid="uid://b2bljhwribfuy"]
+[gd_scene load_steps=135 format=3 uid="uid://b2bljhwribfuy"]
 
 [ext_resource type="Texture2D" uid="uid://ccxoqs0141jdk" path="res://assets/mazelvl3.png" id="1_h1d8t"]
 [ext_resource type="Script" path="res://src/appdata/maze_lvl3.gd" id="1_whg42"]
 [ext_resource type="Script" path="res://src/appdata/CharacterBody2D.gd" id="2_lgx7r"]
+[ext_resource type="Texture2D" uid="uid://dnf3f13r4aqfy" path="res://assets/MazeGameAssets/Maze lvl 3 without doors.png" id="2_na5ub"]
 [ext_resource type="PackedScene" uid="uid://du0fwtx53xudu" path="res://src/appdata/popup.tscn" id="4_2kqp2"]
+[ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="5_teh8n"]
+[ext_resource type="Texture2D" uid="uid://5swdhjmus76d" path="res://src/gui/Back button.png" id="6_gnyvj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nup3y"]
 size = Vector2(516, 3.5)
@@ -390,8 +393,14 @@ b = Vector2(14, 0)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_exl60"]
 size = Vector2(24, 3)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ri7vb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vaiv6"]
+
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_whg42")
+metadata/_edit_horizontal_guides_ = [8.0, 48.0]
+metadata/_edit_vertical_guides_ = [8.0, 120.0]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -402,6 +411,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -423,391 +433,400 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control2"]
-position = Vector2(21, 19)
-texture = ExtResource("1_h1d8t")
+[node name="MazeLvl3WithoutDoors" type="Sprite2D" parent="Control2"]
+position = Vector2(22.75, 20)
+scale = Vector2(0.531536, 0.528455)
+texture = ExtResource("2_na5ub")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Control2/Sprite2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/MazeLvl3WithoutDoors"]
+visible = false
+position = Vector2(-3.29236, -1.89233)
+scale = Vector2(1.88134, 1.89231)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(0, 257.75)
 shape = SubResource("RectangleShape2D_nup3y")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-258, -1.5)
 shape = SubResource("RectangleShape2D_x23so")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(2.5, -258.5)
 shape = SubResource("RectangleShape2D_62d4b")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(257.25, -0.5)
 shape = SubResource("RectangleShape2D_4xwjv")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-225, 207.5)
 shape = SubResource("RectangleShape2D_doj0n")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-225, 207.5)
 shape = SubResource("RectangleShape2D_doj0n")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-157.5, 207.5)
 shape = SubResource("RectangleShape2D_fseqh")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-205.5, 129)
 shape = SubResource("RectangleShape2D_5xd3n")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-191, 179.5)
 shape = SubResource("RectangleShape2D_c2tfk")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-70.25, 129)
 shape = SubResource("RectangleShape2D_2jq5w")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-125.75, 195.5)
 shape = SubResource("RectangleShape2D_0cgte")
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-42, 231.5)
 shape = SubResource("RectangleShape2D_a66rs")
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-94.5, 171)
 shape = SubResource("RectangleShape2D_171wf")
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-63, 193.5)
 shape = SubResource("RectangleShape2D_u1lji")
 
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-24.5, 158.5)
 shape = SubResource("RectangleShape2D_0s2w1")
 
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-10.75, 174.5)
 shape = SubResource("RectangleShape2D_v0r1k")
 
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-35.875, 193.25)
 shape = SubResource("RectangleShape2D_d6xsi")
 
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-9.5, 207)
 shape = SubResource("RectangleShape2D_iphmc")
 
-[node name="CollisionShape2D19" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(13.5, 152)
 shape = SubResource("RectangleShape2D_2ly8w")
 
-[node name="CollisionShape2D20" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-40, 100.5)
 shape = SubResource("RectangleShape2D_wcxr0")
 
-[node name="CollisionShape2D21" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-114.5, 91)
 shape = SubResource("RectangleShape2D_4t0hb")
 
-[node name="CollisionShape2D22" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-38, 80)
 shape = SubResource("RectangleShape2D_tj73r")
 
-[node name="CollisionShape2D23" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(38, 156)
 shape = SubResource("RectangleShape2D_gmnjh")
 
-[node name="CollisionShape2D24" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(63.125, 226)
 shape = SubResource("RectangleShape2D_ky2bh")
 
-[node name="CollisionShape2D25" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(111.5, 197.5)
 shape = SubResource("RectangleShape2D_ow5ao")
 
-[node name="CollisionShape2D26" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(160.25, 212.5)
 shape = SubResource("RectangleShape2D_6shsa")
 
-[node name="CollisionShape2D27" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(198, 235.5)
 shape = SubResource("RectangleShape2D_gjxkp")
 
-[node name="CollisionShape2D28" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(72.5, 174.5)
 shape = SubResource("RectangleShape2D_kcn6y")
 
-[node name="CollisionShape2D29" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(218, 211.5)
 shape = SubResource("RectangleShape2D_f1cuq")
 
-[node name="CollisionShape2D30" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(198, 189.75)
 shape = SubResource("RectangleShape2D_twusn")
 
-[node name="CollisionShape2D31" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(194, 166.5)
 shape = SubResource("RectangleShape2D_vgmcu")
 
-[node name="CollisionShape2D32" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(133, 119)
 shape = SubResource("RectangleShape2D_ni68j")
 
-[node name="CollisionShape2D33" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(206.75, 142.5)
 shape = SubResource("RectangleShape2D_mahji")
 
-[node name="CollisionShape2D34" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(183, 119.5)
 shape = SubResource("RectangleShape2D_sbwqs")
 
-[node name="CollisionShape2D35" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(206, 91.5)
 shape = SubResource("RectangleShape2D_ntcht")
 
-[node name="CollisionShape2D36" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D36" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(182, 63.375)
 shape = SubResource("RectangleShape2D_4eqkb")
 
-[node name="CollisionShape2D37" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D37" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(112.75, 219.5)
 shape = SubResource("RectangleShape2D_olmj4")
 
-[node name="CollisionShape2D38" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D38" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(84, 228.5)
 shape = SubResource("RectangleShape2D_ndx83")
 
-[node name="CollisionShape2D39" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D39" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(113.5, 237.5)
 shape = SubResource("RectangleShape2D_6a0os")
 
-[node name="CollisionShape2D40" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D40" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(140, 228)
 shape = SubResource("RectangleShape2D_ea5nh")
 
-[node name="CollisionShape2D41" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D41" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(104, 91.5)
 shape = SubResource("RectangleShape2D_ghqey")
 
-[node name="CollisionShape2D42" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D42" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(70.5, 102)
 shape = SubResource("RectangleShape2D_gnn07")
 
-[node name="CollisionShape2D43" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D43" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-23, 57.5)
 shape = SubResource("RectangleShape2D_wesxy")
 
-[node name="CollisionShape2D44" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D44" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-139.5, 67.5)
 shape = SubResource("RectangleShape2D_j4y7w")
 
-[node name="CollisionShape2D45" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D45" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-34, 34)
 shape = SubResource("RectangleShape2D_fw6hu")
 
-[node name="CollisionShape2D46" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D46" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-209, 101)
 shape = SubResource("RectangleShape2D_35hb3")
 
-[node name="CollisionShape2D47" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D47" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-163.5, 53.5)
 shape = SubResource("RectangleShape2D_awdaj")
 
-[node name="CollisionShape2D48" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D48" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-185.5, 54.5)
 shape = SubResource("RectangleShape2D_wy5qq")
 
-[node name="CollisionShape2D49" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D49" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-210.75, 80.5)
 shape = SubResource("RectangleShape2D_nrg4e")
 
-[node name="CollisionShape2D50" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D50" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-208.5, 45)
 shape = SubResource("RectangleShape2D_yhw0p")
 
-[node name="CollisionShape2D51" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D51" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-232.75, 18.75)
 shape = SubResource("RectangleShape2D_ehdb3")
 
-[node name="CollisionShape2D52" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D52" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-136.5, 8.5)
 shape = SubResource("RectangleShape2D_f64fl")
 
-[node name="CollisionShape2D53" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D53" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-43.5, -6.75)
 shape = SubResource("RectangleShape2D_ancjc")
 
-[node name="CollisionShape2D54" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D54" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-125.5, -18)
 shape = SubResource("RectangleShape2D_msjxc")
 
-[node name="CollisionShape2D55" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D55" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-136, -40)
 shape = SubResource("RectangleShape2D_v333w")
 
-[node name="CollisionShape2D56" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D56" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-191, -56.5)
 shape = SubResource("RectangleShape2D_3ybx1")
 
-[node name="CollisionShape2D57" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D57" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(40, 8.5)
 shape = SubResource("RectangleShape2D_uusxv")
 
-[node name="CollisionShape2D58" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D58" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-20.5, -30.5)
 shape = SubResource("RectangleShape2D_y5n5e")
 
-[node name="CollisionShape2D59" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D59" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-92.25, -66.5)
 shape = SubResource("RectangleShape2D_e5syp")
 
-[node name="CollisionShape2D60" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D60" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-161, -83)
 shape = SubResource("RectangleShape2D_ffyoq")
 
-[node name="CollisionShape2D61" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D61" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-75, -96.5)
 shape = SubResource("RectangleShape2D_n3x08")
 
-[node name="CollisionShape2D62" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D62" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(71.5, -19.5)
 shape = SubResource("RectangleShape2D_tsk42")
 
-[node name="CollisionShape2D63" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D63" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(133.5, 8.5)
 shape = SubResource("RectangleShape2D_qhb0b")
 
-[node name="CollisionShape2D64" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D64" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(181, 35.5)
 shape = SubResource("RectangleShape2D_k5h8p")
 
-[node name="CollisionShape2D65" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D65" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(198, -17)
 shape = SubResource("RectangleShape2D_ksevr")
 
-[node name="CollisionShape2D66" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D66" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(228.5, -97)
 shape = SubResource("RectangleShape2D_2yqcq")
 
-[node name="CollisionShape2D67" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D67" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(9.5, -120.5)
 shape = SubResource("RectangleShape2D_7kquk")
 
-[node name="CollisionShape2D68" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D68" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(73, -47.5)
 shape = SubResource("RectangleShape2D_n3tql")
 
-[node name="CollisionShape2D69" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D69" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(73.25, -72.5)
 shape = SubResource("RectangleShape2D_aei51")
 
-[node name="CollisionShape2D70" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D70" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(166, -43)
 shape = SubResource("RectangleShape2D_t1a5r")
 
-[node name="CollisionShape2D71" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D71" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(90, -132.5)
 shape = SubResource("RectangleShape2D_epxix")
 
-[node name="CollisionShape2D72" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D72" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(145.5, -98.625)
 shape = SubResource("RectangleShape2D_hj782")
 
-[node name="CollisionShape2D73" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D73" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(194.75, -136)
 shape = SubResource("RectangleShape2D_kqv4p")
 
-[node name="CollisionShape2D74" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D74" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(104.75, -167)
 shape = SubResource("RectangleShape2D_lnr1w")
 
-[node name="CollisionShape2D75" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D75" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(195.25, -185.5)
 shape = SubResource("RectangleShape2D_v8xyk")
 
-[node name="CollisionShape2D76" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D76" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(119.5, -200.5)
 shape = SubResource("RectangleShape2D_lvvwx")
 
-[node name="CollisionShape2D77" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D77" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-16.5, -229.5)
 shape = SubResource("RectangleShape2D_i42un")
 
-[node name="CollisionShape2D78" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D78" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-83.75, -162.75)
 shape = SubResource("RectangleShape2D_4yier")
 
-[node name="CollisionShape2D79" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D79" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-25, -177.5)
 shape = SubResource("RectangleShape2D_x46cb")
 
-[node name="CollisionShape2D80" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D80" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-54.25, -148.25)
 shape = SubResource("RectangleShape2D_cpqo1")
 
-[node name="CollisionShape2D81" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D81" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(156.5, -225.5)
 shape = SubResource("RectangleShape2D_2aye3")
 
-[node name="CollisionShape2D82" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D82" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(192, -226.5)
 shape = SubResource("RectangleShape2D_d3trb")
 
-[node name="CollisionShape2D83" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D83" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(96.75, -198)
 shape = SubResource("RectangleShape2D_w44p5")
 
-[node name="CollisionShape2D84" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D84" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(49, -163)
 shape = SubResource("RectangleShape2D_1wywa")
 
-[node name="CollisionShape2D85" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D85" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-224.5, -148)
 shape = SubResource("RectangleShape2D_qpt7a")
 
-[node name="CollisionShape2D86" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D86" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-175.5, -241.5)
 shape = SubResource("RectangleShape2D_edaej")
 
-[node name="CollisionShape2D87" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D87" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-201, -228.5)
 shape = SubResource("RectangleShape2D_boi0w")
 
-[node name="CollisionShape2D88" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D88" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-152.5, -204.5)
 shape = SubResource("RectangleShape2D_fwo6f")
 
-[node name="CollisionShape2D89" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D89" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-206, -97.5)
 shape = SubResource("RectangleShape2D_4elbx")
 
-[node name="CollisionShape2D90" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D90" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-191, -112.5)
 shape = SubResource("RectangleShape2D_arlxt")
 
-[node name="CollisionShape2D91" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D91" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-147.5, -124)
 shape = SubResource("RectangleShape2D_6y15l")
 
-[node name="CollisionShape2D92" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D92" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-108, -164.5)
 shape = SubResource("RectangleShape2D_wroal")
 
-[node name="CollisionShape2D93" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D93" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-181, -175.5)
 shape = SubResource("RectangleShape2D_grjxo")
 
-[node name="CollisionShape2D94" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D94" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(-151.5, -150)
 shape = SubResource("RectangleShape2D_7lfmw")
 
-[node name="CollisionShape2D95" type="CollisionShape2D" parent="Control2/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D95" type="CollisionShape2D" parent="Control2/MazeLvl3WithoutDoors/StaticBody2D"]
 position = Vector2(173.5, -166.75)
 shape = SubResource("RectangleShape2D_x76ce")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control2"]
+visible = false
+position = Vector2(21, 19)
+texture = ExtResource("1_h1d8t")
 
 [node name="Character" type="CharacterBody2D" parent="Control2"]
 position = Vector2(-221, 257)
@@ -1118,6 +1137,25 @@ offset_right = 18.0
 offset_bottom = 26.0
 rotation = 1.5708
 color = Color(1, 0, 0, 1)
+
+[node name="Button" type="Button" parent="Control2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -13.7
+anchor_top = -7.4
+anchor_right = -13.7
+anchor_bottom = -7.4
+offset_top = 3.05176e-05
+offset_right = 112.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.823529, 0.0745098, 0.45098, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_teh8n")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ri7vb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vaiv6")
+text = "Back"
+icon = ExtResource("6_gnyvj")
 
 [node name="Popup" parent="." instance=ExtResource("4_2kqp2")]
 visible = false

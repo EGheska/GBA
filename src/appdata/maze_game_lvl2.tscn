@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=3 uid="uid://duqhv6r3ecuue"]
+[gd_scene load_steps=95 format=3 uid="uid://duqhv6r3ecuue"]
 
 [ext_resource type="Script" path="res://src/appdata/maze_game_lvl2.gd" id="1_bn7af"]
 [ext_resource type="Texture2D" uid="uid://bgwrvascf4rd0" path="res://src/appdata/Снимок экрана 2023-12-19 в 10.34.56.png" id="1_e6iub"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://du0fwtx53xudu" path="res://src/appdata/popup.tscn" id="4_ctuhy"]
 [ext_resource type="PackedScene" uid="uid://dntea3iaghivx" path="res://src/appdata/leavescene.tscn" id="5_806d4"]
 [ext_resource type="Texture2D" uid="uid://5swdhjmus76d" path="res://src/gui/Back button.png" id="5_xbf2e"]
+[ext_resource type="Texture2D" uid="uid://cdo0lnmy830w" path="res://assets/MazeGameAssets/MicrosoftTeams-image (1).png" id="8_280cc"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yp465"]
 a = Vector2(-595.755, -632.93)
@@ -308,8 +309,8 @@ size = Vector2(2, 35)
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_bn7af")
-metadata/_edit_vertical_guides_ = [286.0, 870.0, 330.0]
-metadata/_edit_horizontal_guides_ = [587.0, 74.0]
+metadata/_edit_vertical_guides_ = [286.0, 870.0, 330.0, 8.0, 120.0]
+metadata/_edit_horizontal_guides_ = [587.0, 74.0, 8.0, 48.0]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -320,6 +321,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -338,6 +340,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Maze" type="Sprite2D" parent="Control2"]
+visible = false
 position = Vector2(-19, 4)
 scale = Vector2(0.449849, 0.398148)
 texture = ExtResource("1_e6iub")
@@ -787,7 +790,7 @@ shape = SubResource("RectangleShape2D_j0sp2")
 
 [node name="ColorRect" type="ColorRect" parent="Control2/FakeDoor2"]
 offset_left = -1.0
-offset_top = -24.0
+offset_top = -25.0
 offset_right = 2.0
 offset_bottom = 26.0
 color = Color(1, 0, 0, 1)
@@ -808,10 +811,10 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_j0sp2")
 
 [node name="ColorRect" type="ColorRect" parent="Control2/FakeDoor3"]
-offset_left = 24.0
+offset_left = 27.0
 offset_top = -2.0
-offset_right = 28.0
-offset_bottom = 39.0
+offset_right = 31.0
+offset_bottom = 42.0
 rotation = 1.5708
 color = Color(1, 0, 0, 1)
 
@@ -846,14 +849,14 @@ shape = SubResource("RectangleShape2D_fet74")
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = -0.043
-anchor_top = 0.097
-anchor_right = -0.043
-anchor_bottom = 0.097
-offset_left = 0.536003
-offset_top = 0.143997
-offset_right = 96.536
-offset_bottom = 36.144
+anchor_left = 0.007
+anchor_top = 0.012
+anchor_right = 0.007
+anchor_bottom = 0.012
+offset_left = -0.0640001
+offset_top = 0.224
+offset_right = 111.936
+offset_bottom = 40.224
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.764706, 0.12549, 0.45098, 1)
@@ -870,6 +873,11 @@ visible = false
 
 [node name="Popup2" parent="." instance=ExtResource("5_806d4")]
 visible = false
+
+[node name="MicrosoftTeams-image(1)" type="Sprite2D" parent="."]
+position = Vector2(559, 308)
+scale = Vector2(0.645833, 0.57037)
+texture = ExtResource("8_280cc")
 
 [connection signal="body_entered" from="Control2/FisrtDoor" to="." method="_on_fisrt_door_body_entered"]
 [connection signal="body_entered" from="Control2/SecondDoor" to="." method="_on_second_door_body_entered"]

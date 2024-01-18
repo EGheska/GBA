@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://lnv8jrhp2miw"]
+[gd_scene load_steps=17 format=3 uid="uid://lnv8jrhp2miw"]
 
 [ext_resource type="Script" path="res://src/appdata/maze_level_selection.gd" id="1_cb63j"]
 [ext_resource type="Texture2D" uid="uid://bjfi3i074kvsb" path="res://assets/Back button.png" id="2_r6mgi"]
@@ -14,8 +14,58 @@ corner_radius_top_right = 45
 corner_radius_bottom_right = 45
 corner_radius_bottom_left = 45
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6ix0"]
+bg_color = Color(0.764706, 0.12549, 0.45098, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2b8f"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2fsm3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dx5k6"]
+bg_color = Color(0.764706, 0.12549, 0.45098, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gxs4h"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8dju5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hbhl"]
+bg_color = Color(0.764706, 0.12549, 0.45098, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_accxe"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jqg1o"]
+
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_cb63j")
+metadata/_edit_vertical_guides_ = [8.0, 120.0]
+metadata/_edit_horizontal_guides_ = [8.0, 48.0]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -54,7 +104,8 @@ theme_override_constants/separation = 962
 [node name="BackButton" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.835294, 0.141176, 0.490196, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("4_fgeg6")
+theme_override_font_sizes/font_size = 25
 text = "Back"
 icon = ExtResource("2_r6mgi")
 flat = true
@@ -92,6 +143,9 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("4_fgeg6")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a6ix0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u2b8f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2fsm3")
 text = "Level 1"
 
 [node name="Button2" type="Button" parent="Control/MarginContainer/HBoxContainer"]
@@ -100,7 +154,10 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("4_fgeg6")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dx5k6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gxs4h")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_25m2k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8dju5")
 text = "Level 2
 "
 icon_alignment = 1
@@ -111,7 +168,10 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("4_fgeg6")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1hbhl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_accxe")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_25m2k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jqg1o")
 text = "Level 3"
 icon_alignment = 1
 
