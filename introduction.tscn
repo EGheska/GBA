@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dek6ctonas5e8"]
+[gd_scene load_steps=11 format=3 uid="uid://dek6ctonas5e8"]
 
 [ext_resource type="PackedScene" uid="uid://c18xh6tcyyumi" path="res://Math_answers.tscn" id="1_bmk8i"]
 [ext_resource type="Script" path="res://introduction_race.gd" id="1_s6se2"]
@@ -12,6 +12,10 @@ keycode = 32
 
 [sub_resource type="Shortcut" id="Shortcut_bd5ue"]
 events = [SubResource("InputEventKey_yeheu")]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_buhnj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tlekh"]
 
 [node name="Introduction" type="CanvasLayer"]
 script = ExtResource("1_s6se2")
@@ -146,6 +150,8 @@ offset_bottom = 49.816
 theme_override_colors/font_color = Color(0.835294, 0.141176, 0.490196, 1)
 theme_override_fonts/font = ExtResource("5_0vy2v")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_buhnj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tlekh")
 text = "Back"
 icon = ExtResource("5_ryfcc")
 flat = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://bisil64e8ifnv"]
+[gd_scene load_steps=89 format=3 uid="uid://bisil64e8ifnv"]
 
 [ext_resource type="Script" path="res://src/appdata/maze_game.gd" id="1_spyab"]
 [ext_resource type="Texture2D" uid="uid://crh3b3s472q10" path="res://addons/WhatsApp Image 2023-12-06 at 12.18.46.jpeg" id="3_oprqe"]
@@ -306,6 +306,8 @@ size = Vector2(1, 48)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rl312"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v4yq3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tx1od"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ueh1a"]
 
@@ -802,6 +804,7 @@ theme_override_fonts/font = ExtResource("6_hp72c")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxEmpty_rl312")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_v4yq3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tx1od")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ueh1a")
 text = "Back"
 icon = ExtResource("7_qceh6")

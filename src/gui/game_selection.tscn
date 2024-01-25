@@ -25,7 +25,7 @@ corner_radius_bottom_left = 45
 expand_margin_left = 1.0
 expand_margin_right = 1.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5gv2i"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbisq"]
 bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
 corner_radius_top_left = 45
 corner_radius_top_right = 45
@@ -43,7 +43,7 @@ corner_radius_bottom_left = 45
 expand_margin_left = 1.0
 expand_margin_right = 1.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g0q0a"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5sv0"]
 bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
 corner_radius_top_left = 45
 corner_radius_top_right = 45
@@ -142,9 +142,10 @@ theme_override_fonts/font = ExtResource("4_5wvys")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
 theme_override_styles/hover = SubResource("StyleBoxFlat_m2e0k")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5gv2i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xbisq")
 theme_override_styles/focus = SubResource("StyleBoxFlat_y422t")
-text = "Math race"
+action_mode = 0
+text = "Math race "
 
 [node name="MazeGame" type="Button" parent="GameSelection/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(310, 150)
@@ -154,7 +155,7 @@ theme_override_fonts/font = ExtResource("4_5wvys")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7ana6")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_g0q0a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i5sv0")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_j58v1")
 text = "The labyrinth"
 

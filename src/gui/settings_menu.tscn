@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dq8wkquhigvch"]
+[gd_scene load_steps=13 format=3 uid="uid://dq8wkquhigvch"]
 
 [ext_resource type="Script" path="res://src/gui/settings_menu.gd" id="1_q8eo4"]
 [ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="2_ewsvq"]
@@ -50,6 +50,33 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ene2i"]
+bg_color = Color(0.823529, 0.0745098, 0.45098, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_38rum"]
+bg_color = Color(0.764706, 0.12549, 0.45098, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4mrr5"]
+bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lglta"]
 
 [node name="SettingsMenu" type="Popup"]
 position = Vector2i(214, 33)
@@ -218,6 +245,10 @@ layout_mode = 2
 
 [node name="SkillsmenuButton" type="Button" parent="SettingsTab/Account/MarginContainer/GeneralSettings"]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ene2i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_38rum")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4mrr5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lglta")
 toggle_mode = true
 text = "Skills menu"
 
@@ -225,6 +256,6 @@ text = "Skills menu"
 [connection signal="item_selected" from="SettingsTab/General/MarginContainer/GeneralSettings/DisplayModeButton" to="." method="_on_display_mode_button_item_selected"]
 [connection signal="toggled" from="SettingsTab/General/MarginContainer/GeneralSettings/SoundButton" to="." method="_on_sound_button_toggled"]
 [connection signal="toggled" from="SettingsTab/Advanced/MarginContainer/AdvanvedSettings/DyslexiaButton" to="." method="_on_dyslexia_button_toggled"]
-[connection signal="toggled" from="SettingsTab/Advanced/MarginContainer/AdvanvedSettings/LanguageButton" to="." method="_on_check_button_toggled"]
 [connection signal="toggled" from="SettingsTab/Advanced/MarginContainer/AdvanvedSettings/LanguageButton" to="." method="_on_language_button_toggled"]
+[connection signal="toggled" from="SettingsTab/Advanced/MarginContainer/AdvanvedSettings/LanguageButton" to="." method="_on_check_button_toggled"]
 [connection signal="toggled" from="SettingsTab/Account/MarginContainer/GeneralSettings/SkillsmenuButton" to="." method="_on_skillsmenu_button_toggled"]
