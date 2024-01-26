@@ -215,35 +215,35 @@ func _on_popup_visibility_changed():
 			#ucRato.set_visible(true)
 			#controls.set_visible(true)
 			if solvers.solved and solvers.doorCounter == 1:
-				AreaCollision1.disabled = true
-				AreaCollision1.disconnect("body_enter", _on_first_door_body_entered)
-				FirstDoor.set_disabled(true)
-				FisrtColor.set_color(Color(1,1,1,0))
+				$Control2/FirstDoor/StaticBody2D/CollisionShape2D.disabled = true
+				$Control2/FirstDoor/StaticBody2D/CollisionShape2D.disconnect("body_enter", _on_first_door_body_entered)
+				$Control2/FirstDoor/CollisionShape2D.set_disabled(true)
+				$Control2/FirstDoor/ColorRect.set_color(Color(1,1,1,0))
 			if solvers.solved and solvers.doorCounter == 2:
-				AreaCollision2.disabled = true
-				AreaCollision2.disconnect("body_enter", _on_second_door_body_entered)
-				SecondDoor.set_disabled(true)
-				SecondColor.set_color(Color(1,1,1,0))
+				$Control2/SecondDoor/StaticBody2D/CollisionShape2D.disabled = true
+				$Control2/SecondDoor/StaticBody2D/CollisionShape2D.disconnect("body_enter", _on_second_door_body_entered)
+				$Control2/SecondDoor/CollisionShape2D.set_disabled(true)
+				$Control2/SecondDoor/ColorRect.set_color(Color(1,1,1,0))
 			if solvers.solved and solvers.doorCounter == 3:
-				AreaCollision3.disabled = true
-				AreaCollision3.disconnect("body_enter", _on_third_door_body_entered)
-				ThirdDoor.set_disabled(true)
-				ThirdColor.set_color(Color(1,1,1,0))
+				$Control2/ThirdDoor/StaticBody2D/CollisionShape2D.disabled = true
+				$Control2/ThirdDoor/StaticBody2D/CollisionShape2D.disconnect("body_enter", _on_third_door_body_entered)
+				$Control2/ThirdDoor/CollisionShape2D.set_disabled(true)
+				$Control2/ThirdDoor/ColorRect.set_color(Color(1,1,1,0))
 			if solvers.solved and solvers.doorCounter == 4:
-				AreaCollision4.disabled = true
-				AreaCollision4.disconnect("body_enter", _on_fourth_door_body_entered)
-				FourthDoor.set_disabled(true)
-				FourthColor.set_color(Color(1,1,1,0))
+				$Control2/FourthDoor/StaticBody2D/CollisionShape2D.disabled = true
+				$Control2/FourthDoor/StaticBody2D/CollisionShape2D.disconnect("body_enter", _on_fourth_door_body_entered)
+				$Control2/FourthDoor/CollisionShape2D.set_disabled(true)
+				$Control2/FourthDoor/ColorRect.set_color(Color(1,1,1,0))
 			if solvers.solved and solvers.doorCounter == 5:
-				AreaCollision5.disabled = true
-				AreaCollision5.disconnect("body_enter", _on_fifth_door_body_entered)
-				FifthDoor.set_disabled(true)
-				FifthColor.set_color(Color(1,1,1,0))
+				$Control2/FifthDoor/StaticBody2D/CollisionShape2D.disabled = true
+				$Control2/FifthDoor/StaticBody2D/CollisionShape2D.disconnect("body_enter", _on_fifth_door_body_entered)
+				$Control2/FifthDoor/CollisionShape2D.set_disabled(true)
+				$Control2/FifthDoor/ColorRect.set_color(Color(1,1,1,0))
 			if solvers.solved and solvers.doorCounter == 6:
-				AreaCollision6.disabled = true
-				AreaCollision6.disconnect("body_enter", _on_sixth_door_body_entered)
-				SixthDoor.set_disabled(true)
-				SixthColor.set_color(Color(1,1,1,0))
+				$Control2/SixthDoor/StaticBody2D/CollisionShape2D.disabled = true
+				$Control2/SixthDoor/StaticBody2D/CollisionShape2D.disconnect("body_enter", _on_sixth_door_body_entered)
+				$Control2/SixthDoor/CollisionShape2D.set_disabled(true)
+				$Control2/SixthDoor/ColorRect.set_color(Color(1,1,1,0))
 			if solvers.solved and solvers.doorCounter == 7:
 #			AreaCollisionFinal.disabled = true
 #			AreaCollisionFinal.disconnect("body_enter", _on_final_door_body_entered)
@@ -251,37 +251,45 @@ func _on_popup_visibility_changed():
 #			FinalColor.set_color(Color(1,1,1,0))
 				get_tree().change_scene_to_file("res://src/appdata/finish.tscn")
 			if solvers.solved and solvers.doorCounter == 100:
-				FakeDoor1.disabled = true
-				FakeDoor1.disconnect("body_enter", _on_fake_door_1_body_entered)
-				FakeColor1.set_color(Color(1,1,1,0))
+				$Control2/FakeDoor1/StaticBody2D/CollisionShape2Ddisabled.disabled = true
+				$Control2/FakeDoor1/StaticBody2D/CollisionShape2D.disconnect("body_enter", _on_fake_door_1_body_entered)
+				$Control2/FakeDoor1/CollisionShape2D.set_disabled(true)
+				$Control2/FakeDoor1/ColorRect.set_color(Color(1,1,1,0))
 			if solvers.solved and solvers.doorCounter == 200:
-				FakeDoor2.disabled = true
-				FakeDoor2.disconnetc("body_enter", _on_fake_door_2_body_entered)
-				FakeColor2.set_color(Color(1,1,1,0))
+				$Control2/FakeDoor2/StaticBody2D/CollisionShape2D.disabled = true
+				$Control2/FakeDoor2/StaticBody2D/CollisionShape2D.disconnetc("body_enter", _on_fake_door_2_body_entered)
+				$Control2/FakeDoor2/ColorRect.set_color(Color(1,1,1,0))
+				$Control2/FakeDoor2/CollisionShape2D.set_disabled(true)
 			if solvers.solved and solvers.doorCounter == 300:
-				FakeDoor3.disabled = true
-				FakeDoor3.disconnect("body_enter", _on_fake_door_3_body_entered)
-				FakeColor3.set_color(Color(1,1,1,0))
+				$Control2/FakeDoor3/StaticBody2D/CollisionShape2D.disabled = true
+				$Control2/FakeDoor3/StaticBody2D/CollisionShape2D.disconnect("body_enter", _on_fake_door_3_body_entered)
+				$Control2/FakeDoor3/ColorRect.set_color(Color(1,1,1,0))
+				$Control2/FakeDoor3/CollisionShape2D.set_disabled(true)
 			if solvers.solved and solvers.doorCounter == 400:
-				FakeDoor4.disabled = true
-				FakeDoor4.disconnect("body_enter", _on_fake_door_4_body_entered)
-				FakeColor4.set_color(Color(1,1,1,0))
+				$Control2/FakeDoor4/StaticBody2D/CollisionShape2D.disabled = true
+				$Control2/FakeDoor4/StaticBody2D/CollisionShape2D.disconnect("body_enter", _on_fake_door_4_body_entered)
+				$Control2/FakeDoor4/ColorRect.set_color(Color(1,1,1,0))
+				$Control2/FakeDoor4/CollisionShape2D.set_disabled(true)
 			if solvers.solved and solvers.doorCounter == 500:
-				FakeDoor5.disabled = true
-				FakeDoor5.disconnect("body_enter", _on_fake_door_5_body_entered)
-				FakeColor5.set_color(Color(1,1,1,0))
+				$Control2/FakeDoor5/StaticBody2D/CollisionShape2D.disabled = true
+				$Control2/FakeDoor5/StaticBody2D/CollisionShape2D.disconnect("body_enter", _on_fake_door_5_body_entered)
+				$Control2/FakeDoor5/ColorRect.set_color(Color(1,1,1,0))
+				$Control2/FakeDoor5/CollisionShape2D.set_disabled(true)
 			if solvers.solved and solvers.doorCounter == 600:
-				FakeDoor6.disabled = true
-				FakeDoor6.disconnect("body_entec", _on_fake_door_6_body_entered)
-				FakeColor6.set_color(Color(1,1,1,0))
+				$Control2/FakeDoor6/StaticBody2D/CollisionShape2D.disabled = true
+				$Control2/FakeDoor6/StaticBody2D/CollisionShape2D.disconnect("body_entec", _on_fake_door_6_body_entered)
+				$Control2/FakeDoor6/ColorRect.set_color(Color(1,1,1,0))
+				$Control2/FakeDoor6/CollisionShape2D.set_disabled(true)
 			if solvers.solved and solvers.doorCounter == 700:
-				FakeDoor7.disabled = true
-				FakeDoor7.disconnect("body_enter", _on_fake_door_7_body_entered)
-				FakeColor7.set_color(Color(1,1,1,0))
+				$Control2/FakeDoor7/StaticBody2D/CollisionShape2D.disabled = true
+				$Control2/FakeDoor7/StaticBody2D/CollisionShape2D.disconnect("body_enter", _on_fake_door_7_body_entered)
+				$Control2/FakeDoor7/ColorRect.set_color(Color(1,1,1,0))
+				$Control2/FakeDoor7/CollisionShape2D.set_disabled(true)
 			if solvers.solved and solvers.doorCounter == 800:
-				FakeDoor8.disabled = true
-				FakeDoor8.disconnect("body_enter", _on_fake_door_8_body_entered)
-				FakeColor8.set_color(Color(1,1,1,0))
+				$Control2/FakeDoor8/StaticBody2D/CollisionShape2D.disabled = true
+				$Control2/FakeDoor8/StaticBody2D/CollisionShape2D.disconnect("body_enter", _on_fake_door_8_body_entered)
+				$Control2/FakeDoor8/ColorRect.set_color(Color(1,1,1,0))
+				$Control2/FakeDoor8/CollisionShape2D.set_disabled(true)
 
 
 func _on_button_pressed():

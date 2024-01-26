@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=23 format=3 uid="uid://c72ukk1bonn6d"]
 
-[ext_resource type="StyleBox" uid="uid://cvvqpklo6650f" path="res://src/appdata/Unanswered_Math_Button.tres" id="1_0shf0"]
+[ext_resource type="StyleBox" path="res://src/appdata/Unanswered_Math_Button.tres" id="1_0shf0"]
 [ext_resource type="Texture2D" uid="uid://d3evjw3pj7j81" path="res://assets/LucratoThemeAssets/Check_Button_Rectangle.svg" id="2_071er"]
 [ext_resource type="FontFile" uid="uid://dxxefdx78tvkr" path="res://assets/TT Chocolates Trial Bold.otf" id="3_afcrx"]
 [ext_resource type="Texture2D" uid="uid://cfckpadq32bp" path="res://assets/LucratoThemeAssets/Tab block (selected) options menu.svg" id="4_tp80u"]

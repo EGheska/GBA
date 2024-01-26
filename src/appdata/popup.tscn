@@ -107,6 +107,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_ihmy4")
 placeholder_text = "Press here to enter your answer!"
 alignment = 1
+max_length = 4
 expand_to_text_length = true
 caret_blink = true
 
