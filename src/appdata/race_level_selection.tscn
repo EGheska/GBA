@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://daqypcsa4ychx"]
+[gd_scene load_steps=8 format=3 uid="uid://daqypcsa4ychx"]
 
 [ext_resource type="Script" path="res://src/appdata/race_level_selection.gd" id="1_ma2xp"]
 [ext_resource type="Texture2D" uid="uid://bjfi3i074kvsb" path="res://assets/Back button.png" id="2_r6mgi"]
@@ -13,54 +13,6 @@ corner_radius_top_left = 45
 corner_radius_top_right = 45
 corner_radius_bottom_right = 45
 corner_radius_bottom_left = 45
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tplbe"]
-bg_color = Color(0.764706, 0.12549, 0.45098, 1)
-corner_radius_top_left = 45
-corner_radius_top_right = 45
-corner_radius_bottom_right = 45
-corner_radius_bottom_left = 45
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhgdo"]
-bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
-corner_radius_top_left = 45
-corner_radius_top_right = 45
-corner_radius_bottom_right = 45
-corner_radius_bottom_left = 45
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sf1ms"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sic7x"]
-bg_color = Color(0.764706, 0.12549, 0.45098, 1)
-corner_radius_top_left = 45
-corner_radius_top_right = 45
-corner_radius_bottom_right = 45
-corner_radius_bottom_left = 45
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gkp82"]
-bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
-corner_radius_top_left = 45
-corner_radius_top_right = 45
-corner_radius_bottom_right = 45
-corner_radius_bottom_left = 45
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wsqmo"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7o8d"]
-bg_color = Color(0.764706, 0.12549, 0.45098, 1)
-corner_radius_top_left = 45
-corner_radius_top_right = 45
-corner_radius_bottom_right = 45
-corner_radius_bottom_left = 45
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_11u1a"]
-bg_color = Color(0.533333, 0.0196078, 0.282353, 1)
-corner_radius_top_left = 45
-corner_radius_top_right = 45
-corner_radius_bottom_right = 45
-corner_radius_bottom_left = 45
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mue8t"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_ma2xp")
@@ -139,9 +91,6 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("4_fgeg6")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
-theme_override_styles/hover = SubResource("StyleBoxFlat_tplbe")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_yhgdo")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_sf1ms")
 text = "Level 1"
 
 [node name="Button2" type="Button" parent="Control/MarginContainer/HBoxContainer"]
@@ -150,10 +99,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("4_fgeg6")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
-theme_override_styles/hover = SubResource("StyleBoxFlat_sic7x")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_gkp82")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_25m2k")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_wsqmo")
 text = "Level 2
 "
 icon_alignment = 1
@@ -164,10 +110,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("4_fgeg6")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_25m2k")
-theme_override_styles/hover = SubResource("StyleBoxFlat_h7o8d")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_11u1a")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_25m2k")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mue8t")
 text = "Level 3"
 icon_alignment = 1
 

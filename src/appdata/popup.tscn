@@ -107,7 +107,6 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_ihmy4")
 placeholder_text = "Press here to enter your answer!"
 alignment = 1
-max_length = 4
 expand_to_text_length = true
 caret_blink = true
 
@@ -166,6 +165,5 @@ offset_bottom = 40.0
 [connection signal="about_to_popup" from="." to="." method="_on_about_to_popup"]
 [connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
-[connection signal="text_changed" from="Control/LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="text_submitted" from="Control/LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="Control/TextureButton" to="." method="_on_texture_button_pressed"]

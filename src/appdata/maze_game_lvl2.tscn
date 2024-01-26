@@ -343,261 +343,269 @@ offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="MicrosoftTeams-image(1)" type="Sprite2D" parent="Control2"]
+position = Vector2(558, 308)
+scale = Vector2(0.645833, 0.57037)
+texture = ExtResource("8_280cc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control2/MicrosoftTeams-image(1)"]
+position = Vector2(-6.10352e-05, 35.065)
+scale = Vector2(0.696541, 0.698052)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(-6.66882, -6.10352e-05)
+shape = SubResource("SegmentShape2D_yp465")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_cla4y")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_g0stb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_bmujb")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(2.22302, 2.51166)
+shape = SubResource("SegmentShape2D_v5nj8")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_nuhat")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_25xcm")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_mvad7")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_0245j")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_6lgp4")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_y2mwo")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_sl6bt")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(0, 2.51166)
+shape = SubResource("SegmentShape2D_jo45k")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_4pcoc")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_mp0cr")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_6upw8")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_cvfj4")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_nxb23")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_2233f")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_2lhjb")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_8mv2a")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_4crgv")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_lgukt")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_3fo6f")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_poqcf")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ohpk5")
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_lilvy")
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_31krb")
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_7v3ob")
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(-2.2229, 0)
+shape = SubResource("SegmentShape2D_bxm87")
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_7tful")
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_rqo8r")
+
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(44.1807, -315.221)
+shape = SubResource("RectangleShape2D_mpt44")
+
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ct44m")
+
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_e54u1")
+
+[node name="CollisionShape2D36" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_8t7cd")
+
+[node name="CollisionShape2D37" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_b5s8r")
+
+[node name="CollisionShape2D38" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_wqb8h")
+
+[node name="CollisionShape2D39" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(-497.945, -113.023)
+shape = SubResource("RectangleShape2D_8qiba")
+
+[node name="CollisionShape2D40" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(-543.515, -1.27905)
+shape = SubResource("RectangleShape2D_5cn1p")
+
+[node name="CollisionShape2D41" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(-492.11, -426.988)
+shape = SubResource("RectangleShape2D_utvme")
+
+[node name="CollisionShape2D42" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(-440.98, -531.849)
+shape = SubResource("RectangleShape2D_6o7n3")
+
+[node name="CollisionShape2D43" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_2kkim")
+
+[node name="CollisionShape2D44" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+shape = SubResource("SegmentShape2D_gjc60")
+
+[node name="CollisionShape2D45" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(254.807, -158.256)
+shape = SubResource("RectangleShape2D_cbvce")
+
+[node name="CollisionShape2D46" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(417.918, -315.186)
+shape = SubResource("RectangleShape2D_hve43")
+
+[node name="CollisionShape2D47" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(469.325, -263.697)
+shape = SubResource("RectangleShape2D_j2i2n")
+
+[node name="CollisionShape2D48" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(357.898, -159.477)
+shape = SubResource("RectangleShape2D_wh5tn")
+
+[node name="CollisionShape2D49" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(517.119, -110.512)
+shape = SubResource("RectangleShape2D_x3uci")
+
+[node name="CollisionShape2D50" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(574.914, 114.919)
+shape = SubResource("RectangleShape2D_23g3d")
+
+[node name="CollisionShape2D51" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(357.619, 219.756)
+shape = SubResource("RectangleShape2D_m8shb")
+
+[node name="CollisionShape2D52" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(368.734, 163.244)
+shape = SubResource("RectangleShape2D_77pug")
+
+[node name="CollisionShape2D53" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(469.323, 60.9186)
+shape = SubResource("RectangleShape2D_ixyln")
+
+[node name="CollisionShape2D54" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(146.158, 272.535)
+shape = SubResource("RectangleShape2D_enkem")
+
+[node name="CollisionShape2D55" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(260.366, 327.744)
+shape = SubResource("RectangleShape2D_mxj7t")
+
+[node name="CollisionShape2D56" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(473.213, 438.29)
+shape = SubResource("RectangleShape2D_dphru")
+
+[node name="CollisionShape2D57" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(200.344, 433.232)
+shape = SubResource("RectangleShape2D_qdqc5")
+
+[node name="CollisionShape2D58" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(420.418, 433.232)
+shape = SubResource("RectangleShape2D_3wp31")
+
+[node name="CollisionShape2D59" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(150.883, 491.035)
+shape = SubResource("RectangleShape2D_1x0kr")
+
+[node name="CollisionShape2D60" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(257.864, 543.755)
+shape = SubResource("RectangleShape2D_aifh6")
+
+[node name="CollisionShape2D61" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(366.095, 595.895)
+shape = SubResource("RectangleShape2D_j1w4s")
+
+[node name="CollisionShape2D62" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(523.786, 541.255)
+shape = SubResource("RectangleShape2D_xkj13")
+
+[node name="CollisionShape2D63" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(626.042, 432.616)
+shape = SubResource("RectangleShape2D_l7ucq")
+
+[node name="CollisionShape2D64" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(577.693, 381.128)
+shape = SubResource("RectangleShape2D_m85gl")
+
+[node name="CollisionShape2D65" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(629.932, -214.128)
+shape = SubResource("RectangleShape2D_q0tkr")
+
+[node name="CollisionShape2D66" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(472.103, -534.337)
+shape = SubResource("RectangleShape2D_nn6rf")
+
+[node name="CollisionShape2D67" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(579.083, -479.697)
+shape = SubResource("RectangleShape2D_kjn07")
+
+[node name="CollisionShape2D68" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(363.455, -431.383)
+shape = SubResource("RectangleShape2D_mttn4")
+
+[node name="CollisionShape2D69" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(260.087, -534.349)
+shape = SubResource("RectangleShape2D_n30mt")
+
+[node name="CollisionShape2D70" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(148.104, -485.383)
+shape = SubResource("RectangleShape2D_3eo16")
+
+[node name="CollisionShape2D71" type="CollisionShape2D" parent="Control2/MicrosoftTeams-image(1)/StaticBody2D"]
+position = Vector2(-6.94739, -533.104)
+shape = SubResource("RectangleShape2D_5ossf")
+
 [node name="Maze" type="Sprite2D" parent="Control2"]
 visible = false
 position = Vector2(-19, 4)
 scale = Vector2(0.449849, 0.398148)
 texture = ExtResource("1_e6iub")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Control2/Maze"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_yp465")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_cla4y")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_g0stb")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_bmujb")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(2.22302, 2.51166)
-shape = SubResource("SegmentShape2D_v5nj8")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_nuhat")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_25xcm")
-
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_mvad7")
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_0245j")
-
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_6lgp4")
-
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_y2mwo")
-
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_sl6bt")
-
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(0, 2.51166)
-shape = SubResource("SegmentShape2D_jo45k")
-
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_4pcoc")
-
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_mp0cr")
-
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_6upw8")
-
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_cvfj4")
-
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_nxb23")
-
-[node name="CollisionShape2D19" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_2233f")
-
-[node name="CollisionShape2D20" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_2lhjb")
-
-[node name="CollisionShape2D21" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_8mv2a")
-
-[node name="CollisionShape2D22" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_4crgv")
-
-[node name="CollisionShape2D23" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_lgukt")
-
-[node name="CollisionShape2D24" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_3fo6f")
-
-[node name="CollisionShape2D25" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_poqcf")
-
-[node name="CollisionShape2D26" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_ohpk5")
-
-[node name="CollisionShape2D27" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_lilvy")
-
-[node name="CollisionShape2D28" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_31krb")
-
-[node name="CollisionShape2D29" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_7v3ob")
-
-[node name="CollisionShape2D30" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(-2.2229, 0)
-shape = SubResource("SegmentShape2D_bxm87")
-
-[node name="CollisionShape2D31" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_7tful")
-
-[node name="CollisionShape2D32" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_rqo8r")
-
-[node name="CollisionShape2D33" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(44.1807, -315.221)
-shape = SubResource("RectangleShape2D_mpt44")
-
-[node name="CollisionShape2D34" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_ct44m")
-
-[node name="CollisionShape2D35" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_e54u1")
-
-[node name="CollisionShape2D36" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_8t7cd")
-
-[node name="CollisionShape2D37" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_b5s8r")
-
-[node name="CollisionShape2D38" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_wqb8h")
-
-[node name="CollisionShape2D39" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(-491.276, -109.279)
-shape = SubResource("RectangleShape2D_8qiba")
-
-[node name="CollisionShape2D40" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(-543.515, -1.27905)
-shape = SubResource("RectangleShape2D_5cn1p")
-
-[node name="CollisionShape2D41" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(-492.11, -426.988)
-shape = SubResource("RectangleShape2D_utvme")
-
-[node name="CollisionShape2D42" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(-440.98, -531.849)
-shape = SubResource("RectangleShape2D_6o7n3")
-
-[node name="CollisionShape2D43" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_2kkim")
-
-[node name="CollisionShape2D44" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-shape = SubResource("SegmentShape2D_gjc60")
-
-[node name="CollisionShape2D45" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(254.807, -158.256)
-shape = SubResource("RectangleShape2D_cbvce")
-
-[node name="CollisionShape2D46" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(417.918, -315.186)
-shape = SubResource("RectangleShape2D_hve43")
-
-[node name="CollisionShape2D47" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(469.325, -263.697)
-shape = SubResource("RectangleShape2D_j2i2n")
-
-[node name="CollisionShape2D48" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(357.898, -159.477)
-shape = SubResource("RectangleShape2D_wh5tn")
-
-[node name="CollisionShape2D49" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(517.119, -110.512)
-shape = SubResource("RectangleShape2D_x3uci")
-
-[node name="CollisionShape2D50" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(574.914, 114.919)
-shape = SubResource("RectangleShape2D_23g3d")
-
-[node name="CollisionShape2D51" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(357.619, 219.756)
-shape = SubResource("RectangleShape2D_m8shb")
-
-[node name="CollisionShape2D52" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(368.734, 163.244)
-shape = SubResource("RectangleShape2D_77pug")
-
-[node name="CollisionShape2D53" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(469.323, 60.9186)
-shape = SubResource("RectangleShape2D_ixyln")
-
-[node name="CollisionShape2D54" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(146.158, 272.535)
-shape = SubResource("RectangleShape2D_enkem")
-
-[node name="CollisionShape2D55" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(260.366, 327.744)
-shape = SubResource("RectangleShape2D_mxj7t")
-
-[node name="CollisionShape2D56" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(473.213, 438.29)
-shape = SubResource("RectangleShape2D_dphru")
-
-[node name="CollisionShape2D57" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(200.344, 433.232)
-shape = SubResource("RectangleShape2D_qdqc5")
-
-[node name="CollisionShape2D58" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(420.418, 433.232)
-shape = SubResource("RectangleShape2D_3wp31")
-
-[node name="CollisionShape2D59" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(150.883, 491.035)
-shape = SubResource("RectangleShape2D_1x0kr")
-
-[node name="CollisionShape2D60" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(257.864, 543.755)
-shape = SubResource("RectangleShape2D_aifh6")
-
-[node name="CollisionShape2D61" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(366.095, 595.895)
-shape = SubResource("RectangleShape2D_j1w4s")
-
-[node name="CollisionShape2D62" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(523.786, 541.255)
-shape = SubResource("RectangleShape2D_xkj13")
-
-[node name="CollisionShape2D63" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(626.042, 432.616)
-shape = SubResource("RectangleShape2D_l7ucq")
-
-[node name="CollisionShape2D64" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(577.693, 381.128)
-shape = SubResource("RectangleShape2D_m85gl")
-
-[node name="CollisionShape2D65" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(629.932, -214.128)
-shape = SubResource("RectangleShape2D_q0tkr")
-
-[node name="CollisionShape2D66" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(472.103, -534.337)
-shape = SubResource("RectangleShape2D_nn6rf")
-
-[node name="CollisionShape2D67" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(579.083, -479.697)
-shape = SubResource("RectangleShape2D_kjn07")
-
-[node name="CollisionShape2D68" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(363.455, -431.383)
-shape = SubResource("RectangleShape2D_mttn4")
-
-[node name="CollisionShape2D69" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(260.087, -534.349)
-shape = SubResource("RectangleShape2D_n30mt")
-
-[node name="CollisionShape2D70" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(148.104, -485.383)
-shape = SubResource("RectangleShape2D_3eo16")
-
-[node name="CollisionShape2D71" type="CollisionShape2D" parent="Control2/Maze/StaticBody2D"]
-position = Vector2(-6.94739, -533.104)
-shape = SubResource("RectangleShape2D_5ossf")
 
 [node name="Character" type="CharacterBody2D" parent="Control2"]
 position = Vector2(310, 563)
@@ -857,10 +865,10 @@ anchor_left = 0.007
 anchor_top = 0.012
 anchor_right = 0.007
 anchor_bottom = 0.012
-offset_left = -0.0640001
-offset_top = 0.224
-offset_right = 111.936
-offset_bottom = 40.224
+offset_left = 0.936
+offset_top = -1.776
+offset_right = 112.936
+offset_bottom = 38.224
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.764706, 0.12549, 0.45098, 1)
@@ -879,11 +887,6 @@ visible = false
 
 [node name="Popup2" parent="." instance=ExtResource("5_806d4")]
 visible = false
-
-[node name="MicrosoftTeams-image(1)" type="Sprite2D" parent="."]
-position = Vector2(559, 308)
-scale = Vector2(0.645833, 0.57037)
-texture = ExtResource("8_280cc")
 
 [connection signal="body_entered" from="Control2/FisrtDoor" to="." method="_on_fisrt_door_body_entered"]
 [connection signal="body_entered" from="Control2/SecondDoor" to="." method="_on_second_door_body_entered"]

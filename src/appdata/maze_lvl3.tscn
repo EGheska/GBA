@@ -412,8 +412,6 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 8.0
-offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -446,6 +444,7 @@ scale = Vector2(0.531536, 0.528455)
 texture = ExtResource("2_na5ub")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Control2/MazeLvl3WithoutDoors"]
+visible = false
 position = Vector2(-3.29236, -1.89233)
 scale = Vector2(1.88134, 1.89231)
 
@@ -843,7 +842,7 @@ offset_left = -8.0
 offset_top = -7.0
 offset_right = 7.0
 offset_bottom = 8.0
-color = Color(0.823529, 0.0745098, 0.45098, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/Character"]
 position = Vector2(-0.5, 0.5)
