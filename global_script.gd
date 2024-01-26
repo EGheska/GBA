@@ -26,6 +26,7 @@ var try_again_button_string
 var next_level_button_string
 
 var levelCounter = 0
+var mazelevelCounter = 0
 
 var correctly_answered_stylebox = preload("res://src/appdata/Correctly_Answered_Math_Button.tres")
 var unanswered_stylebox = preload("res://src/appdata/Unanswered_Math_Button.tres")
