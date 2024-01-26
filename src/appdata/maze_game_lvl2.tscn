@@ -665,6 +665,7 @@ shape = SubResource("RectangleShape2D_fa831")
 position = Vector2(627, 477)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/ThirdDoor"]
+position = Vector2(0, 3)
 shape = SubResource("SegmentShape2D_1awx1")
 
 [node name="ColorRect" type="ColorRect" parent="Control2/ThirdDoor"]
@@ -677,7 +678,7 @@ color = Color(1, 0, 0, 1)
 [node name="StaticBody2D" type="StaticBody2D" parent="Control2/ThirdDoor"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/ThirdDoor/StaticBody2D"]
-position = Vector2(1, 0)
+position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_7sq44")
 
 [node name="FourthDoor" type="Area2D" parent="Control2"]
@@ -730,7 +731,7 @@ shape = SubResource("RectangleShape2D_k5rdq")
 position = Vector2(492, 133)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/SixthDoor"]
-position = Vector2(2.25, 1.25)
+position = Vector2(2.25, 3.25)
 shape = SubResource("RectangleShape2D_j0sp2")
 
 [node name="ColorRect" type="ColorRect" parent="Control2/SixthDoor"]
@@ -743,11 +744,11 @@ color = Color(1, 0, 0, 1)
 [node name="StaticBody2D" type="StaticBody2D" parent="Control2/SixthDoor"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/SixthDoor/StaticBody2D"]
-position = Vector2(0, 1)
+position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_fet74")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Control2/SixthDoor"]
-position = Vector2(-2, 0.5)
+position = Vector2(-2, 2.5)
 shape = SubResource("RectangleShape2D_k5rdq")
 
 [node name="FinalDoor" type="Area2D" parent="Control2"]
