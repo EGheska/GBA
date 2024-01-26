@@ -344,7 +344,7 @@ size = Vector2(33, 3)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hdour"]
 a = Vector2(-8, 3)
-b = Vector2(12, 3)
+b = Vector2(10, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibvwk"]
 size = Vector2(18, 3)
@@ -412,6 +412,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -953,12 +957,13 @@ color = Color(1, 0, 0, 1)
 position = Vector2(228, -82)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/SixthDoor"]
+position = Vector2(2, 0)
 shape = SubResource("SegmentShape2D_7sr7y")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Control2/SixthDoor"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/SixthDoor/StaticBody2D"]
-position = Vector2(6, -1)
+position = Vector2(8, -2)
 shape = SubResource("RectangleShape2D_juphf")
 
 [node name="ColorRect" type="ColorRect" parent="Control2/SixthDoor"]
@@ -994,17 +999,18 @@ color = Color(1, 0, 0, 1)
 position = Vector2(-83, 119)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor1"]
+position = Vector2(2, 0)
 shape = SubResource("SegmentShape2D_hdour")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Control2/FakeDoor1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control2/FakeDoor1/StaticBody2D"]
-position = Vector2(1, -1)
+position = Vector2(4, -1)
 shape = SubResource("RectangleShape2D_ibvwk")
 
 [node name="ColorRect" type="ColorRect" parent="Control2/FakeDoor1"]
-offset_left = 12.0
-offset_right = 15.0
+offset_left = 13.0
+offset_right = 16.0
 offset_bottom = 20.0
 rotation = 1.5708
 color = Color(1, 0, 0, 1)
